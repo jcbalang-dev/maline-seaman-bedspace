@@ -4,9 +4,16 @@
 module.exports = {
   siteMetadata: {
     title: `Maline's Bedspace Seaman's Dormitory and Transient Inn`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://malineseamanbedspace.com.ph`
   },
-  plugins: ["gatsby-plugin-netlify-cms", "gatsby-plugin-google-gtag", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
+  plugins: ["gatsby-plugin-netlify-cms", {
+    resolve: 'gatsby-plugin-google-gtag',
+    options: {
+      trackingIds: [
+        "G-HR6XS55W4R" // Google Analytics / GA
+      ]
+    }
+  }, "gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/icon.png"
