@@ -1,12 +1,16 @@
-import * as React from 'react'
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Button from 'react-bootstrap/Button';
 
 const Projects = () => {
     return (
-        <section>
-            <div>
-                <h1 className="text-center">Projects</h1><br/>
-            </div>
-        </section>
+       <>
+       <h1>Projects</h1>
+       <Button variant="primary">Primary</Button>
+       </>
+            
+       
     )
 }
 
