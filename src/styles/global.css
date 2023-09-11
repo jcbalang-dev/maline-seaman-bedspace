@@ -1,8 +1,79 @@
+@font-face {
+    font-family: 'TradeGothic';
+    src: url('../fonts/Trade\ Gothic\ LT\ Extended.ttf')
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-VariableFont_wght.ttf')
+}
+
 .bg {
     background-image: url('../images/bg.jpg');
     background-size: cover;
-    width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.cardform{
+    background-color: rgb(217, 217, 217);
+    border-color: rgb(217, 217, 217);
+}
+
+.loginheader {
+    font-family: 'TradeGothic';
+    font-size: 3rem;
+}
+
+.loginsubheader{
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    color: rgb(17, 34, 17);
+}
+
+.formlabellogin{
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    color: rgb(28, 27, 31);
+}
+
+.formtxtboxlogin{
+    height: 56px;
+    border-width: 1px;
+    border-color: rgb(121, 116, 126);
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    color: rgb(28, 27, 31);
+}
+
+.formlogincheckbox{
+    font-family: 'Montserrat';
+    font-size: 0.9rem;
+    color: rgb(17, 34, 17);
+}
+
+.forgotpass a {
+    font-family: 'Montserrat';
+    font-size: 0.9rem;
+    color: rgb(255, 134, 130);
+    text-decoration: none;
+}
+
+.formbtnsubmit{
+    height: 56px;
+    font-family: 'Montserrat';
+    font-size: 0.9rem;
+    color: rgb(17, 34, 17);
+    background-color: rgb(141, 211, 187);
+    border-color:rgb(141, 211, 187);
+}
+
+.formbtnsubmit:hover{
+    height: 56px;
+    font-family: 'Montserrat';
+    font-size: 0.9rem;
+    color: rgb(17, 34, 17);
+    background-color: rgb(93, 161, 139);
+    border-color:rgb(93, 161, 139);
 }
