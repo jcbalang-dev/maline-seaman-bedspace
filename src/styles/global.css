@@ -8,6 +8,11 @@
     src: url('../fonts/Montserrat-VariableFont_wght.ttf')
 }
 
+@font-face {
+    font-family: 'LexendTera';
+    src: url('../fonts/LexendTera-VariableFont_wght.ttf')
+}
+
 .bg {
     background-image: url('../images/bg.jpg');
     background-size: cover;
@@ -76,4 +81,9 @@
     color: rgb(17, 34, 17);
     background-color: rgb(93, 161, 139);
     border-color:rgb(93, 161, 139);
+}
+
+.dashlogoname{
+    font-family: 'LexendTera';
+    font-size: 1rem;
 }
