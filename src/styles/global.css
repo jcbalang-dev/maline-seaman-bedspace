@@ -1,21 +1,21 @@
 @font-face {
     font-family: 'TradeGothic';
-    src: url('../fonts/Trade\ Gothic\ LT\ Extended.ttf')
+    src: url('../fonts/Trade\ Gothic\ LT\ Extended.ttf');
 }
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat-VariableFont_wght.ttf')
+    src: url('../fonts/Montserrat-VariableFont_wght.ttf');
 }
 
 @font-face {
     font-family: 'LexendTera';
-    src: url('../fonts/LexendTera-VariableFont_wght.ttf')
+    src: url('../fonts/LexendTera-VariableFont_wght.ttf');
 }
 
 @font-face {
     font-family: 'Inter';
-    src: url('../fonts/Inter-VariableFont_slnt\,wght.ttf')
+    src: url('../fonts/Inter-VariableFont_slnt,wght.ttf');
 }
 
 * {
@@ -32,7 +32,7 @@
     background-position: center;
 }
 
-.cardform{
+.cardform {
     background-color: rgb(217, 217, 217);
     border-color: rgb(217, 217, 217);
 }
@@ -42,19 +42,19 @@
     font-size: 3rem;
 }
 
-.loginsubheader{
+.loginsubheader {
     font-family: 'Montserrat';
     font-size: 1rem;
     color: rgb(17, 34, 17);
 }
 
-.formlabellogin{
+.formlabellogin {
     font-family: 'Montserrat';
     font-size: 1rem;
     color: rgb(28, 27, 31);
 }
 
-.formtxtboxlogin{
+.formtxtboxlogin {
     height: 56px;
     border-width: 1px;
     border-color: rgb(121, 116, 126);
@@ -63,7 +63,7 @@
     color: rgb(28, 27, 31);
 }
 
-.formlogincheckbox{
+.formlogincheckbox {
     font-family: 'Montserrat';
     font-size: 0.9rem;
     color: rgb(17, 34, 17);
@@ -76,70 +76,101 @@
     text-decoration: none;
 }
 
-.formbtnsubmit{
+.formbtnsubmit {
     height: 56px;
     font-family: 'Montserrat';
     font-size: 0.9rem;
     color: rgb(17, 34, 17);
     background-color: rgb(141, 211, 187);
-    border-color:rgb(141, 211, 187);
+    border-color: rgb(141, 211, 187);
 }
 
-.formbtnsubmit:hover{
+.formbtnsubmit:hover {
     height: 56px;
     font-family: 'Montserrat';
     font-size: 0.9rem;
     color: rgb(17, 34, 17);
     background-color: rgb(93, 161, 139);
-    border-color:rgb(93, 161, 139);
+    border-color: rgb(93, 161, 139);
 }
 
-.homelogoname{
+.homelogoname {
     font-family: 'LexendTera';
     font-size: 1rem;
 }
 
-.menuitemname, .servicesmenu, .servicessubmenu{
+.menuitemname,
+.servicesmenu,
+.servicessubmenu {
     font-family: 'Inter';
     font-size: 1rem;
     font-weight: medium;
     color: rgb(99, 115, 129);
-    cursor: pointer;
     height: 35px;
+    text-decoration: none;
 }
 
-.menuitemname:hover, .servicesmenu:hover, .servicessubmenu:hover{
+.menuitemname:hover,
+.servicesmenu:hover,
+.servicessubmenu:hover {
     color: rgb(48, 86, 211);
     background-color: rgb(244, 247, 255);
     border-right: 3.55px solid rgb(48, 86, 211);
-    cursor: pointer;
 }
 
-.servicesmenu-position{
+.menuitemname:focus,
+.servicesmenu:focus,
+.servicessubmenu:focus {
+    color: rgb(48, 86, 211);
+    background-color: rgb(244, 247, 255);
+    border-right: 3.55px solid rgb(48, 86, 211);
+}
+
+.servicesmenu-position {
     margin-left: 68px;
 }
 
-.divider{
+.divider {
     height: 1px;
-    width: 75%;
     margin-left: 50px;
     background-color: rgb(231, 231, 231);
 }
 
-.username{
+.username {
     font-family: 'Inter';
     font-size: 1rem;
     font-weight: medium;
     color: rgb(99, 115, 129);
 }
 
-.useremail{
+.useremail {
     font-family: 'Inter';
     font-size: 0.9rem;
     font-weight: regular;
     color: rgb(99, 115, 129);
 }
 
+.locationheader {
+    font-family: 'Inter';
+    font-size: 1.3rem;
+    font-weight: semibold;
+    color: rgb(33, 43, 54);
+}
 
+.input-wrapper {
+    background-color: rgb(248, 250, 252);
+    height: 43.6px;
+    border-radius: 10px;
+    padding: 0 15px;
+}
 
+.inputsearch:focus {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+}
 
+#searchicon {
+    color: rgb(99, 115, 129);
+}
