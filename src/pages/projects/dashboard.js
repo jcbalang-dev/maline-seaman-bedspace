@@ -98,11 +98,49 @@ const Dashboard = () => {
                         </Col>
                         <Col xs={4}>
                             <Form inline className="float-right input-wrapper d-flex align-items-center w-100 border border-light-subtle">
-                                <FormControl type="text" placeholder="Search..." className="mr-sm-2 inputsearch bg-transparent border border-0 w-100"/>
-                                <Icon icon="lucide:search" width="21.28" height="21.28" id='searchicon' className='mx-2'/>
+                                <FormControl type="text" placeholder="Search..." className="mr-sm-2 inputsearch bg-transparent border border-0 w-100" />
+                                <Icon icon="lucide:search" width="21.28" height="21.28" id='searchicon' className='mx-2' />
                             </Form>
                         </Col>
                     </Row>
+                    <Container fluid>
+                        <Row className='px-2'>
+                            <Col xs={8}>
+                                <Row>
+                                    <Col>
+                                        <Form>
+                                            <Form.Label className='formradiolabel'>Building Filter Room By :</Form.Label>
+                                            <div className='d-inline-block px-3'>
+                                                <Form.Check
+                                                    inline
+                                                    label="Code"
+                                                    type="radio"
+                                                    id="radiocode"
+                                                    name="radios"
+                                                    className='formradiocheck'
+                                                />
+                                                <Form.Check
+                                                    inline
+                                                    label="Tag"
+                                                    type="radio"
+                                                    id="radiotag"
+                                                    name="radios"
+                                                    className='formradiocheck'
+                                                />
+                                            </div>
+                                        </Form>
+                                    </Col>
+                                    <Col className='openselectmenu'>
+                                        {/* Add content for the 'openselectmenu' here */}
+                                    </Col>
+                                </Row>
+                            </Col>
+                            <Col xs={4}>
+                                {/* Add content for the right column here */}
+                            </Col>
+                        </Row>
+                    </Container>
+
                 </Col>
             </Row>
         </Container>
