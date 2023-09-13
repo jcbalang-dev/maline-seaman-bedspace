@@ -13,6 +13,17 @@
     src: url('../fonts/LexendTera-VariableFont_wght.ttf')
 }
 
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-VariableFont_slnt\,wght.ttf')
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .bg {
     background-image: url('../images/bg.jpg');
     background-size: cover;
@@ -83,7 +94,52 @@
     border-color:rgb(93, 161, 139);
 }
 
-.dashlogoname{
+.homelogoname{
     font-family: 'LexendTera';
     font-size: 1rem;
 }
+
+.menuitemname, .servicesmenu, .servicessubmenu{
+    font-family: 'Inter';
+    font-size: 1rem;
+    font-weight: medium;
+    color: rgb(99, 115, 129);
+    cursor: pointer;
+    height: 35px;
+}
+
+.menuitemname:hover, .servicesmenu:hover, .servicessubmenu:hover{
+    color: rgb(48, 86, 211);
+    background-color: rgb(244, 247, 255);
+    border-right: 3.55px solid rgb(48, 86, 211);
+    cursor: pointer;
+}
+
+.servicesmenu-position{
+    margin-left: 68px;
+}
+
+.divider{
+    height: 1px;
+    width: 75%;
+    margin-left: 50px;
+    background-color: rgb(231, 231, 231);
+}
+
+.username{
+    font-family: 'Inter';
+    font-size: 1rem;
+    font-weight: medium;
+    color: rgb(99, 115, 129);
+}
+
+.useremail{
+    font-family: 'Inter';
+    font-size: 0.9rem;
+    font-weight: regular;
+    color: rgb(99, 115, 129);
+}
+
+
+
+
