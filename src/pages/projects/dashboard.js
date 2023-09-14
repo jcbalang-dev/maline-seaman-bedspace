@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Navbar, Nav, Form, FormControl, Dropdown } from 'react-bootstrap';
+import { Container, Row, Col, Navbar, Nav, Form, FormControl, Dropdown, Button } from 'react-bootstrap';
 import { Icon } from '@iconify/react';
 import logo from '/src/images/logo.png';
 import userfooter from '/src/images/user.png';
@@ -10,7 +10,6 @@ const Dashboard = () => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-
 
     return (
         <Container fluid>
@@ -131,7 +130,6 @@ const Dashboard = () => {
                                             </div>
                                         </Form>
                                     </Col>
-
                                 </Row>
                                 <Row>
                                     <Col className='openselectmenu'>
@@ -146,15 +144,18 @@ const Dashboard = () => {
                                             </Dropdown.Menu>
                                         </Dropdown>
                                     </Col>
-
                                 </Row>
                             </Col>
                             <Col xs={4}>
-                                {/* Add content for the right column here */}
+                                <Row className='px-3'>
+                                    <Col>
+                                        <Button variant="primary" className='chkinoutbtn me-4'>Check In</Button>
+                                        <Button variant="primary" className='chkinoutbtn'>Check Out</Button>
+                                    </Col>
+                                </Row>
                             </Col>
                         </Row>
                     </Container>
-
                 </Col>
             </Row>
         </Container>

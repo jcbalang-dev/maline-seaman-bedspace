@@ -153,7 +153,7 @@
 .locationheader {
     font-family: 'Inter';
     font-size: 1.3rem;
-    font-weight: semibold;
+    font-weight: semi-bold;
     color: rgb(33, 43, 54);
 }
 
@@ -198,4 +198,23 @@
 #dropdown-basic {
     width: 225px;
     border-color: rgb(224, 224, 224);
+}
+
+.chkinoutbtn{
+    padding: 14px;
+    border-color: rgb(48, 86, 211);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: transparent;
+    font-family: 'Inter';
+    font-weight: semi-bold;
+    font-size: 1rem;
+    color: rgb(48, 86, 211);
+    width: 47%;
+}
+
+.chkinoutbtn:hover{
+    background-color: rgb(19, 194, 150);
+    border-color: rgb(19, 194, 150);
 }
