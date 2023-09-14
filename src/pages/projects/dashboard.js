@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Navbar, Nav, Form, FormControl } from 'react-bootstrap';
+import { Container, Row, Col, Navbar, Nav, Form, FormControl, Dropdown } from 'react-bootstrap';
 import { Icon } from '@iconify/react';
 import logo from '/src/images/logo.png';
 import userfooter from '/src/images/user.png';
@@ -10,6 +10,7 @@ const Dashboard = () => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
 
     return (
         <Container fluid>
@@ -104,9 +105,9 @@ const Dashboard = () => {
                         </Col>
                     </Row>
                     <Container fluid>
-                        <Row className='px-2'>
+                        <Row className='px-2 py-3'>
                             <Col xs={8}>
-                                <Row>
+                                <Row className='pb-3'>
                                     <Col>
                                         <Form>
                                             <Form.Label className='formradiolabel'>Building Filter Room By :</Form.Label>
@@ -130,9 +131,22 @@ const Dashboard = () => {
                                             </div>
                                         </Form>
                                     </Col>
+
+                                </Row>
+                                <Row>
                                     <Col className='openselectmenu'>
-                                        {/* Add content for the 'openselectmenu' here */}
+                                        <Dropdown className='selectmenudropdown'>
+                                            <Dropdown.Toggle variant="light" id="dropdown-basic" className='bg-transparent border border-2'>
+                                                <span className='pe-5'>Open Select Menu</span>
+                                            </Dropdown.Toggle>
+                                            <Dropdown.Menu>
+                                                <Dropdown.Item href="#" className='selectmenus'>Select Menu 1</Dropdown.Item>
+                                                <Dropdown.Item href="#" className='selectmenus'>Select Menu 2</Dropdown.Item>
+                                                <Dropdown.Item href="#" className='selectmenus'>Select Menu 3</Dropdown.Item>
+                                            </Dropdown.Menu>
+                                        </Dropdown>
                                     </Col>
+
                                 </Row>
                             </Col>
                             <Col xs={4}>

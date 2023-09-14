@@ -175,14 +175,27 @@
     color: rgb(99, 115, 129);
 }
 
-.formradiolabel{
-    font-family:'Inter';
+.formradiolabel {
+    font-family: 'Inter';
     font-weight: medium;
     font-size: 1rem;
 }
 
-.formradiocheck{
-    font-family:'Inter';
+.formradiocheck {
+    font-family: 'Inter';
     font-weight: regular;
     font-size: 0.8rem;
+}
+
+.selectmenudropdown span,
+.selectmenus {
+    font-family: 'Inter';
+    font-weight: medium;
+    font-size: 0.9rem;
+    color: rgb(99, 115, 129);
+}
+
+#dropdown-basic {
+    width: 225px;
+    border-color: rgb(224, 224, 224);
 }
