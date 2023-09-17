@@ -1,0 +1,28 @@
+from flask import Flask
+from flask_restful import Api
+from dotenv import dotenv_values
+from config import Config
+from db import Database
+from app.controllers.user_controller import UserAuthController
+
+# Initialize the Flask app
+app = Flask(__name__)
+
+# Load environment variables from .env
+env = dotenv_values()
+
+# server port
+api_port = Config.API_PORT
+
+# Database configuration
+db = Database
+
+# Initialize the Flask-RESTful API
+api = Api(app)
+
+# routes
+api.add_resource(UserAuthController, "/login")
+
+# Application run
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=api_port, debug=True)
