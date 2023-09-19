@@ -11,6 +11,7 @@ class Config:
     DB_NAME = env.get('DB_NAME')
     DB_POOL_NAME = env.get('DB_POOL_NAME', 'dls_api')
     DB_POOL_SIZE = env.get('DB_POOL_SIZE', 5)
+    DB_RECONNECT_MAX_RETRY = env.get('DB_RECONNECT_MAX_RETRY', 3)
 
     # server port
     API_PORT = int(env.get('API_PORT', 5000))
