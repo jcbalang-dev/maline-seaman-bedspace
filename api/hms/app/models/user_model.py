@@ -1,4 +1,6 @@
-from app.utils.database import MySQLQueryExecutor
+from db import Database
+
+db = Database()
 
 class User:
     def __init__(self, id, last_name, first_name, middle_name, user_id, email, status):
@@ -12,24 +14,28 @@ class User:
 
 class UserModel:
     def __init__(self):
-        self.db_exec = MySQLQueryExecutor()
+        self.db_connection = Database.get_connection()
 
     def get_all_users(self):
-        self.db_exec.isFetchAll = True
+        db_cursor = self.db_connection.cursor()
         
         query = "SELECT id, last_name, first_name, middle_name, user_id, email, status FROM user"
         
-        users = self.db_exec.execute_query(query)
+        db_cursor.execute(query)
+        users = db_cursor.fetchall()
+        db_cursor.close()
         
         return users 
 
     def get_user(self, user_id, password):
-        self.db_exec.isFetchAll = False
+        db_cursor = self.db_connection.cursor()
         
         query = "SELECT id, last_name, first_name, middle_name, user_id, email, status FROM user WHERE user_id = %s AND password = %s"
         
-        params = (user_id, password)
-        result = self.db_exec.execute_query(query, params)
+        db_cursor.execute(query, (user_id,password))
+        result = db_cursor.fetchone()
+        db_cursor.close()
+
         if result:
             id, last_name, first_name, middle_name, user_id, email, status = result
             
@@ -44,3 +50,4 @@ class UserModel:
             )
         else:
             return None
+        
