@@ -4,6 +4,7 @@ from app.controllers.guest_controller import GetAllGuestController, GetGuestIDCo
 from app.controllers.room_bedspace_controller import GetAllRoomBedSpaceController, GetRoomBedSpaceIDController
 from app.controllers.room_controller import GetAllRoomController, GetRoomIDController
 from app.controllers.building_controller import GetAllBuildingController, GetBuildingIDController
+from app.controllers.room_rate_controller import GetAllRoomRateController, GetRoomRateIDController
 
 class Routes:
     def __init__(self, api):
@@ -22,3 +23,5 @@ class Routes:
         self.api.add_resource(GetRoomIDController, "/room/<string:room_id>")
         self.api.add_resource(GetAllBuildingController, "/buildings")
         self.api.add_resource(GetBuildingIDController, "/building/<string:building_id>")
+        self.api.add_resource(GetAllRoomRateController, "/room_rates")
+        self.api.add_resource(GetRoomRateIDController, "/room_rate/<string:room_rate_id>")
