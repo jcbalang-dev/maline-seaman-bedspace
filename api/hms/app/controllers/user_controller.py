@@ -4,21 +4,29 @@ from app.views.user_view import UserView
 
 user_model = UserModel()
 
-class UserDetailController(Resource):
+class GetAllUserController(Resource):
     def get(self):
         users = user_model.get_all_users()
         if users:
             return UserView.render_users(users)
         else:
             return {'error', 'Data not exists'}, 404
-        
+
+class GetUserIdController(Resource):
+    def get(self, id):
+        user = user_model.get_user(id)
+        if user:
+            return UserView.render_user(user)
+        else:
+            return {'error','User not found'}, 404
+                    
 class UserAuthController(Resource):
     def get(self):
         data = request.get_json()
         username = data.get('username')
         password = data.get('password')
-        user = user_model.get_user(username, password)
+        user = user_model.auth_login(username, password)
         if user:
             return UserView.render_user(user)
         else:
-            return {'error', 'User not found'}, 404
+            return {'error', 'Invalid Log In'}, 404
