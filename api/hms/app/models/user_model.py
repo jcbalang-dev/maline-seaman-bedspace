@@ -1,6 +1,4 @@
-from db import Database
-
-db = Database()
+from app.utils.database import MySQLQueryExecutor
 
 class User:
     def __init__(self, id, last_name, first_name, middle_name, user_id, email, status):
@@ -14,27 +12,48 @@ class User:
 
 class UserModel:
     def __init__(self):
-        self.db_connection = Database.get_connection()
+        self.db_exec = MySQLQueryExecutor()
 
     def get_all_users(self):
-        db_cursor = self.db_connection.cursor()
+        self.db_exec.isFetchAll = True
         
-        query = "SELECT id, last_name, first_name, middle_name, user_id, email, status FROM user"
-        
-        db_cursor.execute(query)
-        users = db_cursor.fetchall()
-        db_cursor.close()
-        
+        query = """
+            SELECT 
+                id , 
+                last_name , 
+                first_name , 
+                middle_name , 
+                user_id , 
+                email , 
+                status 
+            FROM 
+                user
+        """
+        users = self.db_exec.execute_query(query)
+
         return users 
 
-    def get_user(self, user_id, password):
-        db_cursor = self.db_connection.cursor()
+    def get_user(self, id):
+        self.db_exec.isFetchAll = False
+
+        query = """
+            SELECT 
+                id , 
+                last_name , 
+                first_name , 
+                middle_name , 
+                user_id ,
+                email , 
+                status 
+            FROM 
+                user 
+            WHERE 
+                id = %s 
+        """
         
-        query = "SELECT id, last_name, first_name, middle_name, user_id, email, status FROM user WHERE user_id = %s AND password = %s"
-        
-        db_cursor.execute(query, (user_id,password))
-        result = db_cursor.fetchone()
-        db_cursor.close()
+        params = (id, )
+
+        result = self.db_exec.execute_query(query, params)
 
         if result:
             id, last_name, first_name, middle_name, user_id, email, status = result
@@ -50,3 +69,42 @@ class UserModel:
             )
         else:
             return None
+
+    def auth_login(self, user_id, password):
+        self.db_exec.isFetchAll = False
+
+        query = """
+            SELECT 
+                id , 
+                last_name , 
+                first_name , 
+                middle_name , 
+                user_id ,
+                email , 
+                status 
+            FROM 
+                user 
+            WHERE 
+                user_id = %s 
+                AND password = %s
+        """
+        
+        params = (user_id, password, )
+
+        result = self.db_exec.execute_query(query, params)
+
+        if result:
+            id, last_name, first_name, middle_name, user_id, email, status = result
+            
+            return User(
+                id = id,
+                last_name = last_name,
+                first_name = first_name ,
+                middle_name = middle_name,
+                user_id = user_id,
+                email= email,
+                status= status
+            )
+        else:
+            return None
+        
