@@ -1,6 +1,7 @@
 from db import Database
 from config import Config
 from app.utils.decorators import ReconnectOnFailure
+from mysql.connector import Error
 
 class MySQLQueryExecutor:
     def __init__(self, isFetchAll = True ):
@@ -46,3 +47,15 @@ class MySQLQueryExecutor:
         finally:
             connection.close()
 
+    @ReconnectOnFailure()
+    def _execute_delete(self, connection, query, params=None):
+        connection = self.db.get_connection()
+        try:
+            cursor = connection.cursor()
+            cursor.execute(query, params)
+            connection.commit()
+            cursor.close()
+            return cursor.rowcount
+        except Error as e:
+            print(f"Error: {e}")
+            raise
