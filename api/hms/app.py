@@ -8,6 +8,9 @@ from routes import Routes
 # Initialize the Flask app
 app = Flask(__name__)
 
+# Disable JSON sorting alphabetically globally
+app.json.sort_keys = False
+
 # Load environment variables from .env
 env = dotenv_values()
 
