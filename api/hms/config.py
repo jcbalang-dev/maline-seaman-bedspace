@@ -15,3 +15,6 @@ class Config:
 
     # server port
     API_PORT = int(env.get('API_PORT', 5000))
+
+    # flask app json sort key flag 
+    FLASK_JSON_SORT_KEYS = bool(env.get('FLASK_JSON_SORT_KEYS', False))
