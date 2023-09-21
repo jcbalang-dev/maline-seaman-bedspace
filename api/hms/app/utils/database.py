@@ -33,3 +33,16 @@ class MySQLQueryExecutor:
         finally:
             connection.close()
 
+    @ReconnectOnFailure()
+    def execute_update(self, connection, query, params=None):
+        connection = self.db.get_connection()
+        try:
+            cursor = connection.cursor()
+            cursor.execute(query, params)
+            connection.commit()
+            affected_rows = cursor.rowcount
+            cursor.close()
+            return affected_rows
+        finally:
+            connection.close()
+
