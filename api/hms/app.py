@@ -11,6 +11,9 @@ app = Flask(__name__)
 # Load environment variables from .env
 env = dotenv_values()
 
+# Disable JSON sorting alphabetically globally
+app.json.sort_keys = Config.FLASK_JSON_SORT_KEYS
+
 # server port
 api_port = Config.API_PORT
 
