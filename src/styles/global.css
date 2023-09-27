@@ -200,7 +200,7 @@
     border-color: rgb(224, 224, 224);
 }
 
-.chkinoutbtn{
+.chkinoutbtn {
     padding: 14px;
     border-color: rgb(48, 86, 211);
     border-style: solid;
@@ -214,17 +214,17 @@
     width: 47%;
 }
 
-.chkinoutbtn:hover{
+.chkinoutbtn:hover {
     background-color: rgb(19, 194, 150);
     border-color: rgb(19, 194, 150);
 }
 
-.dashcontentcol{
+.dashcontentcol {
     background-color: rgb(236, 236, 236);
 }
 
 .dashavailpending, 
-.dashavailpending:hover{
+.dashavailpending:hover {
     padding: 14px;
     border-color: rgb(48, 86, 211);
     border-style: solid;
@@ -238,7 +238,7 @@
 }
 
 .dashongoing, 
-.dashongoing:hover{
+.dashongoing:hover {
     padding: 14px;
     border-color: rgb(19, 194, 150);
     border-style: solid;
@@ -252,7 +252,7 @@
 }
 
 .dashoutgoing, 
-.dashoutgoing:hover{
+.dashoutgoing:hover {
     padding: 14px;
     border-color: rgb(48, 86, 211);
     border-style: solid;
@@ -266,7 +266,7 @@
 }
 
 .dashout, 
-.dashout:hover{
+.dashout:hover {
     padding: 14px;
     border-color: rgb(33, 43, 54);
     border-style: solid;
@@ -279,14 +279,14 @@
     color: rgb(248, 250, 252);
 }
 
-.servavailpend{
+.servavailpend {
     font-family: 'Inter';
     font-weight: 600;
     font-size: 2rem;
     color: rgb(48, 86, 211);
 }
 
-.servavailpendbtn{
+.servavailpendbtn {
     padding: 14px;
     border-color: rgb(19, 194, 150);
     border-style: solid;
@@ -299,7 +299,7 @@
     color: rgb(248, 250, 252);
 }
 
-.servavailpendlistbtn{
+.servavailpendlistbtn {
     border-radius: 0px;
     width: 231px;
     height: 50px;
@@ -312,14 +312,16 @@
     font-size: 1rem;
 }
 
-.servcancelled{
+.servcancelled,
+.servoutgoing {
     font-family: 'Inter';
     font-weight: 600;
     font-size: 2rem;
     color: rgb(48, 86, 211);
 }
 
-.servcancelledbtn{
+.servcancelledbtn,
+.servoutgoingbtn {
     padding: 14px;
     border-color: rgb(19, 194, 150);
     border-style: solid;
@@ -332,12 +334,25 @@
     color: rgb(248, 250, 252);
 }
 
-.servcancelledlistbtn{
+.servcancelledlistbtn {
     border-radius: 0px;
     width: 231px;
     height: 50px;
     background-color: rgb(217, 217, 217);
     border-color: rgb(33, 43, 54);
+    border-width: 1px;
+    color: black;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.servoutgoinglistbtn {
+    border-radius: 0px;
+    width: 231px;
+    height: 50px;
+    background-color: rgb(217, 217, 217);
+    border-color: rgb(48, 86, 211);
     border-width: 1px;
     color: black;
     font-family: 'Inter';
