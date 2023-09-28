@@ -1,5 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Navbar, Nav, Form, FormControl, Dropdown, Button } from 'react-bootstrap';
+import { 
+  Container, 
+  Row, 
+  Col, 
+  Navbar, 
+  Nav, 
+  Form, 
+  FormControl, 
+  Dropdown, 
+  Button 
+} from 'react-bootstrap';
 import { Icon } from '@iconify/react';
 import logo from '/src/images/logo.png';
 import userfooter from '/src/images/user.png';
@@ -48,7 +58,7 @@ const Home = () => {
                 </Nav.Link>
               </div>
               {/* Services Menu */}
-              <div className='servicesmenu px-5 d-flex align-items-center justify-content-between' onClick={toggleMenu}>
+              <div className='servicesmenu px-5 d-flex align-items-center justify-content-between' role='presentation' onClick={toggleMenu} onKeyDown={toggleMenu}>
                 <div className='d-flex align-items-center'>
                   <Icon icon='lucide:box' width='21.28' height='21.28' />
                   <span className='mx-2'>Services</span>
@@ -170,13 +180,22 @@ const Home = () => {
               <Button variant='primary' className='dashavailpending w-100'>Available Pending</Button>
             </Col>
             <Col className='me-1 dashcontentcol h-100 px-3 pt-4'>
-              <Button variant='primary' className='dashongoing w-100'><Icon icon='lucide:alarm-clock' width='24' height='24' className='me-2' />On- Going</Button>
+              <Button variant='primary' className='dashongoing w-100'>
+                <Icon icon='lucide:alarm-clock' width='24' height='24' className='me-2' />
+                On- Going
+              </Button>
             </Col>
             <Col className='me-1 dashcontentcol h-100 px-3 pt-4'>
-              <Button variant='primary' className='dashoutgoing w-100'><Icon icon='lucide:help-circle' width='24' height='24' className='me-2' />Out- Going</Button>
+              <Button variant='primary' className='dashoutgoing w-100'>
+                <Icon icon='lucide:help-circle' width='24' height='24' className='me-2' />
+                Out- Going
+              </Button>
             </Col>
             <Col className='me-1 dashcontentcol h-100 px-3 pt-4'>
-              <Button variant='primary' className='dashout w-100'><Icon icon='lucide:shopping-cart' width='24' height='24' hFlip={true} className='me-2' />Out</Button>
+              <Button variant='primary' className='dashout w-100'>
+                <Icon icon='lucide:shopping-cart' width='24' height='24' hFlip={true} className='me-2' />
+                Out
+              </Button>
             </Col>
           </Row>
         </Col>
