@@ -2,6 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import * as styles from '../../styles/projects.module.css'
 
+import { Link } from 'gatsby'
 import { Container, Row, Col, Image, Form, Button, Card } from 'react-bootstrap'
 import logo from '/src/images/logo.png'
 
@@ -13,9 +14,9 @@ const Projects = () => {
                 <Container className={`${styles.bg} pt-5`}>
                     <Row>
                         <Col xs={4} md={3} lg={2}>
-                            <a href="#!">
+                            <Link to='/projects/'>
                                 <Image src={logo} alt="logo" fluid />
-                            </a>
+                            </Link>
                         </Col>
                     </Row>
 
@@ -40,7 +41,7 @@ const Projects = () => {
                                             <Form.Group className="position-relative mb-5" controlId="formBasicCheckbox">
                                                 <Form.Check type="checkbox" label="Remember me" className={`${styles.formlogincheckbox} fw-medium position-absolute pt-2`} />
                                                 <Form.Text className={`position-absolute top-0 end-0 ${styles.forgotpass}`}>
-                                                    <a href="#!">Forgot Password</a>
+                                                    <Link to='/projects/'>Forgot Password</Link>
                                                 </Form.Text>
                                             </Form.Group>
 
