@@ -29,17 +29,17 @@ const Projects = () => {
                                         <Form>
                                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                                 <Form.Label className={styles.formlabellogin}>Email address</Form.Label>
-                                                <Form.Control type="email" placeholder="contactdolittle@gmail.com" className='formtxtboxlogin' />
+                                                <Form.Control type="email" placeholder="contactdolittle@gmail.com" className={styles.formtxtboxlogin} />
                                             </Form.Group>
 
                                             <Form.Group className="mb-3" controlId="formBasicPassword">
                                                 <Form.Label className={styles.formlabellogin}>Password</Form.Label>
-                                                <Form.Control type="password" placeholder="•••••••••••••••••••••••••" className='formtxtboxlogin' />
+                                                <Form.Control type="password" placeholder="•••••••••••••••••••••••••" className={styles.formtxtboxlogin} />
                                             </Form.Group>
 
                                             <Form.Group className="position-relative mb-5" controlId="formBasicCheckbox">
-                                                <Form.Check type="checkbox" label="Remember me" className='formlogincheckbox fw-medium position-absolute pt-2' />
-                                                <Form.Text className='position-absolute top-0 end-0 forgotpass'>
+                                                <Form.Check type="checkbox" label="Remember me" className={`${styles.formlogincheckbox} fw-medium position-absolute pt-2`} />
+                                                <Form.Text className={`position-absolute top-0 end-0 ${styles.forgotpass}`}>
                                                     <a href="#!">Forgot Password</a>
                                                 </Form.Text>
                                             </Form.Group>
