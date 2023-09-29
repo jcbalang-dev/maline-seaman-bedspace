@@ -14,7 +14,7 @@ import { Icon } from '@iconify/react';
 import logo from '/src/images/logo.png';
 import userfooter from '/src/images/user.png';
 
-const ServiceAvailPend = () => {
+const ServicesOnGoing = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
 
   const toggleMenu = () => {
@@ -170,16 +170,16 @@ const ServiceAvailPend = () => {
             <Col className='me-1 dashcontentcol h-100 px-3 pt-4'>
               <Row className='p-3'>
                 <Col xs={10}>
-                  <p className='servavailpend my-auto'>Available Pending</p>
+                  <p className='servongoing my-auto'>On-Going</p>
                 </Col>
                 <Col xs={2} className='pe-4'>
-                  <Button variant="primary" className='servavailpendbtn float-end w-75 my-auto'>Back</Button>
+                  <Button variant="primary" className='servongoingbtn float-end w-75 my-auto'>Back</Button>
                 </Col>
               </Row>
               <Row className='p-3'>
                 <Col>
-                  <Button variant="primary" className='servavailpendlistbtn d-block mb-3'>0002-1856C</Button>
-                  <Button variant="primary" className='servavailpendlistbtn d-block mb-3'>0001-1856C</Button>
+                  <Button variant="primary" className='servongoinglistbtn d-block mb-3'>0002-1856C</Button>
+                  <Button variant="primary" className='servongoinglistbtn d-block mb-3'>0001-1856C</Button>
                 </Col>
               </Row>
             </Col>
@@ -190,4 +190,4 @@ const ServiceAvailPend = () => {
   );
 };
 
-export default ServiceAvailPend;
+export default ServicesOnGoing;
