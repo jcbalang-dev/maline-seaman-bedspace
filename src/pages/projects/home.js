@@ -1,11 +1,89 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Navbar, Nav, Form, FormControl, Dropdown, Button } from 'react-bootstrap';
+import { Container, Row, Col, Navbar, Nav, Form, FormControl, Dropdown, Button, Modal } from 'react-bootstrap';
 import { Icon } from '@iconify/react';
 import logo from '/src/images/logo.png';
 import userfooter from '/src/images/user.png';
+import '/src/styles/global.css';
+import defaultImage from '/src/images/logo.png';
+
+const MyVerticallyCenteredModal = (props) => {
+  const [image, setImage] = useState(null);
+
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = () => {
+      setImage(reader.result);
+    };
+
+    reader.readAsDataURL(file);
+  };
+
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+      className='modalsettings'
+    >
+      <Modal.Header closeButton className='border border-0 pb-0'>
+        <Modal.Title id="contained-modal-title-vcenter modalsettingstitle">
+          Welcome user
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body className='pt-0 modalsettingsbody'>
+        <small className='modalsettingseditpro'>Edit your profile quickly</small>
+        <div className='pt-4'>
+          <Row>
+            <Col className='modalsettingsinput'>
+              <div className='form-group'>
+                <label htmlFor='adminName' className='inputSettingsLabel'>Admin Name</label>
+                <input type='text' className='form-control inputSettingsLabel mb-2' id='adminName' placeholder='Contact DoLittleStudio' />
+              </div>
+              <div className='form-group mt-3'>
+                <label htmlFor='password' className='inputSettingsLabel'>Change Password</label>
+                <input type='password' className='form-control inputSettingsLabel mb-2' id='password' placeholder='********' />
+              </div>
+              <div className='form-group mt-3'>
+                <label htmlFor='confirmPassword' className='inputSettingsLabel'>Retype Password</label>
+                <input type='password' className='form-control inputSettingsLabel mb-2' id='confirmPassword' placeholder='********' />
+              </div>
+            </Col>
+            <Col className='modalsettingsimage'>
+              <label htmlFor='changephoto' className='inputSettingsLabel'>Change Photo</label>
+              <div className="upload-image-container">
+                <label htmlFor="profileImage" className="upload-image-label">
+                  {image ? (
+                    <img src={image} alt="Uploaded" className="img-fluid fixed-imageSettings-size bg-secondary" />
+                  ) : (
+                    <img src={defaultImage} alt="Default" className="img-fluid fixed-imageSettings-size bg-secondary" />
+                  )}
+                  <input
+                    type="file"
+                    id="profileImage"
+                    accept="image/*"
+                    onChange={handleImageUpload}
+                    style={{ display: 'none' }}
+                  />
+                </label>
+              </div>
+            </Col>
+          </Row>
+        </div>
+      </Modal.Body>
+      <Modal.Footer className='border border-0 pb-4'>
+        <Button className='btn modalsettingsconfirm me-4' onClick={props.onHide}>Confirm</Button>
+        <Button className='btn modalsettingscancel' onClick={props.onHide}>Cancel</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+};
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [modalShowSettings, setModalShowSettings] = React.useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -60,10 +138,14 @@ const Home = () => {
                 <Icon icon='lucide:message-square' width='21.28' height='21.28' />
                 <span className='mx-2'>Chat</span>
               </Nav.Link>
-              <Nav.Link href='#' className='px-5 menuitemname d-flex align-items-center'>
+              <Nav.Link href='#' className='px-5 menuitemname d-flex align-items-center' onClick={() => setModalShowSettings(true)}>
                 <Icon icon='lucide:settings' width='21.28' height='21.28' />
                 <span className='mx-2'>Settings</span>
               </Nav.Link>
+              <MyVerticallyCenteredModal
+                show={modalShowSettings}
+                onHide={() => setModalShowSettings(false)}
+              />
               <Nav.Link href='#' className='px-5 menuitemname d-flex align-items-center'>
                 <Icon icon='lucide:log-out' width='21.28' height='21.28' />
                 <span className='mx-2'>Logout</span>
