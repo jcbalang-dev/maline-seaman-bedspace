@@ -13,6 +13,7 @@ import {
 import { Icon } from '@iconify/react';
 import logo from '/src/images/logo.png';
 import userfooter from '/src/images/user.png';
+import '/src/styles/global.css';
 
 const ServiceAvailPend = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
@@ -72,10 +73,6 @@ const ServiceAvailPend = () => {
             <div className='divider position-relative w-75'></div>
             {/* Sidebar Footer Navigation */}
             <div className='sidenav-footer py-5'>
-              <Nav.Link href="#" className='px-5 menuitemname d-flex align-items-center'>
-                <Icon icon="lucide:message-square" width="21.28" height="21.28" />
-                <span className='mx-2'>Chat</span>
-              </Nav.Link>
               <Nav.Link href="#" className='px-5 menuitemname d-flex align-items-center'>
                 <Icon icon="lucide:settings" width="21.28" height="21.28" />
                 <span className='mx-2'>Settings</span>
