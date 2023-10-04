@@ -1,115 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import {
-  Container,
-  Row,
-  Col,
-  Navbar,
-  Nav,
-  Form,
-  FormControl,
-  Dropdown,
-  Button,
-  Modal
-} from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Container, Row, Col, Navbar, Nav, Form, FormControl, Dropdown, Button } from 'react-bootstrap';
 import { Icon } from '@iconify/react';
 import logo from '/src/images/logo.png';
 import userfooter from '/src/images/user.png';
-import { format } from 'date-fns';
-import '/src/styles/global.css';
-import defaultImage from '/src/images/logo.png';
-
-const MyVerticallyCenteredModal = (props) => {
-  const [image, setImage] = useState(null);
-
-  const handleImageUpload = (event) => {
-    const file = event.target.files[0];
-    const reader = new FileReader();
-
-    reader.onload = () => {
-      setImage(reader.result);
-    };
-
-    reader.readAsDataURL(file);
-  };
-
-  return (
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-      className='modalsettings'
-    >
-      <Modal.Header closeButton className='border border-0 pb-0'>
-        <Modal.Title id="contained-modal-title-vcenter modalsettingstitle">
-          Welcome user
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body className='pt-0 modalsettingsbody'>
-        <small className='modalsettingseditpro'>Edit your profile quickly</small>
-        <div className='pt-4'>
-          <Row>
-            <Col className='modalsettingsinput'>
-              <div className='form-group'>
-                <label htmlFor='adminName' className='inputSettingsLabel'>Admin Name</label>
-                <input type='text' className='form-control inputSettingsLabel mb-2' id='adminName' placeholder='Contact DoLittleStudio' />
-              </div>
-              <div className='form-group mt-3'>
-                <label htmlFor='password' className='inputSettingsLabel'>Change Password</label>
-                <input type='password' className='form-control inputSettingsLabel mb-2' id='password' placeholder='********' />
-              </div>
-              <div className='form-group mt-3'>
-                <label htmlFor='confirmPassword' className='inputSettingsLabel'>Retype Password</label>
-                <input type='password' className='form-control inputSettingsLabel mb-2' id='confirmPassword' placeholder='********' />
-              </div>
-            </Col>
-            <Col className='modalsettingsimage'>
-              <label htmlFor='changephoto' className='inputSettingsLabel'>Change Photo</label>
-              <div className="upload-image-container">
-                <label htmlFor="profileImage" className="upload-image-label">
-                  {image ? (
-                    <img src={image} alt="Uploaded" className="img-fluid fixed-imageSettings-size bg-secondary" />
-                  ) : (
-                    <img src={defaultImage} alt="Default" className="img-fluid fixed-imageSettings-size bg-secondary" />
-                  )}
-                  <input
-                    type="file"
-                    id="profileImage"
-                    accept="image/*"
-                    onChange={handleImageUpload}
-                    style={{ display: 'none' }}
-                  />
-                </label>
-              </div>
-            </Col>
-          </Row>
-        </div>
-      </Modal.Body>
-      <Modal.Footer className='border border-0 pb-4'>
-        <Button className='btn modalsettingsconfirm me-4' onClick={props.onHide}>Confirm</Button>
-        <Button className='btn modalsettingscancel' onClick={props.onHide}>Cancel</Button>
-      </Modal.Footer>
-    </Modal>
-  );
-};
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
-  const [currentDateTime, setCurrentDateTime] = useState(null);
-  const [modalShowSettings, setModalShowSettings] = React.useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      const now = new Date();
-      setCurrentDateTime(format(now, "MMMM d, yyyy - hh:mma"));
-    }, 60000); // Update every minute
-
-    return () => clearInterval(intervalId);
-  }, []);
 
   return (
     <Container fluid>
@@ -124,20 +24,16 @@ const Home = () => {
             </Navbar.Brand>
             {/* Sidebar Navigation */}
             <Nav className='flex-column w-100'>
-              <div className='homemenu'>
-                <Nav.Link href='#' className='menuitemname d-flex align-items-center'>
-                  <Icon icon='lucide:home' width='21.28' height='21.28' />
-                  <span className='mx-2'>Home</span>
-                </Nav.Link>
-              </div>
-              <div className='menuitemname-position'>
-                <Nav.Link href='#' className='menuitemname d-flex align-items-center'>
-                  <Icon icon='lucide:layout-dashboard' width='21.28' height='21.28' />
-                  <span className='mx-2'>Dashboard</span>
-                </Nav.Link>
-              </div>
+              <Nav.Link href='#' className='px-5 menuitemname d-flex align-items-center'>
+                <Icon icon='lucide:home' width='21.28' height='21.28' />
+                <span className='mx-2'>Home</span>
+              </Nav.Link>
+              <Nav.Link href='#' className='px-5 menuitemname d-flex align-items-center'>
+                <Icon icon='lucide:layout-dashboard' width='21.28' height='21.28' />
+                <span className='mx-2'>Dashboard</span>
+              </Nav.Link>
               {/* Services Menu */}
-              <div className='servicesmenu px-5 d-flex align-items-center justify-content-between' role='presentation' onClick={toggleMenu} onKeyDown={toggleMenu}>
+              <div className='servicesmenu px-5 d-flex align-items-center justify-content-between' onClick={toggleMenu}>
                 <div className='d-flex align-items-center'>
                   <Icon icon='lucide:box' width='21.28' height='21.28' />
                   <span className='mx-2'>Services</span>
@@ -160,14 +56,14 @@ const Home = () => {
             <div className='divider position-relative w-75'></div>
             {/* Sidebar Footer Navigation */}
             <div className='sidenav-footer py-5'>
-              <Nav.Link href='#' className='px-5 menuitemname d-flex align-items-center' onClick={() => setModalShowSettings(true)}>
+              <Nav.Link href='#' className='px-5 menuitemname d-flex align-items-center'>
+                <Icon icon='lucide:message-square' width='21.28' height='21.28' />
+                <span className='mx-2'>Chat</span>
+              </Nav.Link>
+              <Nav.Link href='#' className='px-5 menuitemname d-flex align-items-center'>
                 <Icon icon='lucide:settings' width='21.28' height='21.28' />
                 <span className='mx-2'>Settings</span>
               </Nav.Link>
-              <MyVerticallyCenteredModal
-                show={modalShowSettings}
-                onHide={() => setModalShowSettings(false)}
-              />
               <Nav.Link href='#' className='px-5 menuitemname d-flex align-items-center'>
                 <Icon icon='lucide:log-out' width='21.28' height='21.28' />
                 <span className='mx-2'>Logout</span>
@@ -187,7 +83,6 @@ const Home = () => {
         </Col>
         {/* Content */}
         <Col sm={9} md={10} className='content position-relative min-vh-100 d-flex flex-column'>
-          {/* Content header */}
           <Row className='d-flex align-items-center py-4 border-bottom border-light-subtle'>
             <Col xs={8}>
               <h1 className='locationheader my-auto'>1856C Agoncillo St. Malate Manila</h1>
@@ -199,9 +94,8 @@ const Home = () => {
               </Form>
             </Col>
           </Row>
-          {/* Content body */}
           <Container fluid className='pb-3'>
-            <Row className='px-2 pt-3'>
+            <Row className='px-2 py-3'>
               <Col xs={8}>
                 <Row className='pb-3'>
                   <Col>
@@ -250,38 +144,21 @@ const Home = () => {
                     <Button variant='primary' className='chkinoutbtn'>Check Out</Button>
                   </Col>
                 </Row>
-                <Row className='px-3 pt-3'>
-                  <Col className='text-end'>
-                    <div className='dashboarddateandtime'>
-                      <span>{currentDateTime}</span>
-                    </div>
-                  </Col>
-                </Row>
               </Col>
             </Row>
           </Container>
-          {/* Content footer */}
           <Row className='flex-grow-1'>
             <Col className='me-1 dashcontentcol h-100 px-3 pt-4'>
               <Button variant='primary' className='dashavailpending w-100'>Available Pending</Button>
             </Col>
             <Col className='me-1 dashcontentcol h-100 px-3 pt-4'>
-              <Button variant='primary' className='dashongoing w-100'>
-                <Icon icon='lucide:alarm-clock' width='24' height='24' className='me-2' />
-                On- Going
-              </Button>
+              <Button variant='primary' className='dashongoing w-100'><Icon icon='lucide:alarm-clock' width='24' height='24' className='me-2'/>On- Going</Button>
             </Col>
             <Col className='me-1 dashcontentcol h-100 px-3 pt-4'>
-              <Button variant='primary' className='dashoutgoing w-100'>
-                <Icon icon='lucide:help-circle' width='24' height='24' className='me-2' />
-                Out- Going
-              </Button>
+              <Button variant='primary' className='dashoutgoing w-100'><Icon icon='lucide:help-circle' width='24' height='24' className='me-2'/>Out- Going</Button>
             </Col>
             <Col className='me-1 dashcontentcol h-100 px-3 pt-4'>
-              <Button variant='primary' className='dashout w-100'>
-                <Icon icon='lucide:shopping-cart' width='24' height='24' hFlip={true} className='me-2' />
-                Out
-              </Button>
+              <Button variant='primary' className='dashout w-100'><Icon icon='lucide:shopping-cart' width='24' height='24' hFlip={true} className='me-2'/>Out</Button>
             </Col>
           </Row>
         </Col>
