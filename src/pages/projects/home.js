@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Container,
-  Row,
-  Col,
-  Navbar,
-  Nav,
-  Form,
-  FormControl,
-  Dropdown,
-  Button,
+import { 
+  Container, 
+  Row, 
+  Col, 
+  Navbar, 
+  Nav, 
+  Form, 
+  FormControl, 
+  Dropdown, 
+  Button 
 } from 'react-bootstrap';
 import { Icon } from '@iconify/react';
 import logo from '/src/images/logo.png';
 import userfooter from '/src/images/user.png';
 import { format } from 'date-fns';
-import '/src/styles/global.css';
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
@@ -59,13 +58,13 @@ const Home = () => {
                 </Nav.Link>
               </div>
               {/* Services Menu */}
-              <button className='servicesmenu px-5 d-flex align-items-center justify-content-between' onClick={toggleMenu} onKeyDown={toggleMenu}>
+              <div className='servicesmenu px-5 d-flex align-items-center justify-content-between' role='presentation' onClick={toggleMenu} onKeyDown={toggleMenu}>
                 <div className='d-flex align-items-center'>
                   <Icon icon='lucide:box' width='21.28' height='21.28' />
                   <span className='mx-2'>Services</span>
                 </div>
                 <Icon icon={isMenuOpen ? 'akar-icons:chevron-up' : 'akar-icons:chevron-down'} width='16' height='16' />
-              </button>
+              </div>
               {/* Services Submenu (conditionally rendered) */}
               {isMenuOpen && (
                 <div className='servicesmenu-position'>
