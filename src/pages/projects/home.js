@@ -1,26 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Navbar, Nav, Form, FormControl, Dropdown, Button } from 'react-bootstrap';
 import { Icon } from '@iconify/react';
 import logo from '/src/images/logo.png';
 import userfooter from '/src/images/user.png';
-import { format } from 'date-fns';
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
-  const [currentDateTime, setCurrentDateTime] = useState(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      const now = new Date();
-      setCurrentDateTime(format(now, "MMMM d, yyyy - hh:mma"));
-    }, 60000); // Update every minute
-
-    return () => clearInterval(intervalId);
-  }, []);
 
   return (
     <Container fluid>
@@ -106,7 +95,7 @@ const Home = () => {
             </Col>
           </Row>
           <Container fluid className='pb-3'>
-            <Row className='px-2 pt-3'>
+            <Row className='px-2 py-3'>
               <Col xs={8}>
                 <Row className='pb-3'>
                   <Col>
@@ -153,13 +142,6 @@ const Home = () => {
                   <Col>
                     <Button variant='primary' className='chkinoutbtn me-4'>Check In</Button>
                     <Button variant='primary' className='chkinoutbtn'>Check Out</Button>
-                  </Col>
-                </Row>
-                <Row className='px-3 pt-3'>
-                  <Col className='text-end'>
-                    <div className='dashboarddateandtime'>
-                      <span>{currentDateTime}</span>
-                    </div>
                   </Col>
                 </Row>
               </Col>

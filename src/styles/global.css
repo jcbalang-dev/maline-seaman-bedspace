@@ -224,12 +224,6 @@
     border-color: rgb(19, 194, 150);
 }
 
-.dashboarddateandtime span{
-    font-family: 'Inter';
-    font-weight: 600;
-    font-size: 1.3rem;
-}
-
 .dashcontentcol {
     background-color: rgb(236, 236, 236);
 }
