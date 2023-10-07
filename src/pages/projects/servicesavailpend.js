@@ -74,10 +74,6 @@ const ServiceAvailPend = () => {
             {/* Sidebar Footer Navigation */}
             <div className='sidenav-footer py-5'>
               <Nav.Link href="#" className='px-5 menuitemname d-flex align-items-center'>
-                <Icon icon="lucide:message-square" width="21.28" height="21.28" />
-                <span className='mx-2'>Chat</span>
-              </Nav.Link>
-              <Nav.Link href="#" className='px-5 menuitemname d-flex align-items-center'>
                 <Icon icon="lucide:settings" width="21.28" height="21.28" />
                 <span className='mx-2'>Settings</span>
               </Nav.Link>
