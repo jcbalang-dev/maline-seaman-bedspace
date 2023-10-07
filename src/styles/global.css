@@ -127,7 +127,12 @@
     border-right: 3.55px solid rgb(48, 86, 211);
 }
 
-.servicesmenu-position {
+.homemenu {
+    margin-left: 40px;
+}
+
+.servicesmenu-position,
+.menuitemname-position {
     margin-left: 68px;
 }
 
@@ -224,7 +229,7 @@
     background-color: rgb(236, 236, 236);
 }
 
-.dashavailpending, 
+.dashavailpending,
 .dashavailpending:hover {
     padding: 14px;
     border-color: rgb(48, 86, 211);
@@ -238,7 +243,7 @@
     color: rgb(48, 86, 211);
 }
 
-.dashongoing, 
+.dashongoing,
 .dashongoing:hover {
     padding: 14px;
     border-color: rgb(19, 194, 150);
@@ -252,7 +257,7 @@
     color: rgb(248, 250, 252);
 }
 
-.dashoutgoing, 
+.dashoutgoing,
 .dashoutgoing:hover {
     padding: 14px;
     border-color: rgb(48, 86, 211);
@@ -266,7 +271,7 @@
     color: rgb(248, 250, 252);
 }
 
-.dashout, 
+.dashout,
 .dashout:hover {
     padding: 14px;
     border-color: rgb(33, 43, 54);
