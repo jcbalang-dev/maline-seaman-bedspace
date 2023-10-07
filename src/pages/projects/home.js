@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Navbar, Nav, Form, FormControl, Dropdown, Button, Modal } from 'react-bootstrap';
 import { Icon } from '@iconify/react';
+
 import logo from '/src/images/logo.png';
 import userfooter from '/src/images/user.png';
-import '/src/styles/global.css';
 import defaultImage from '/src/images/logo.png';
+
+import '/src/styles/global.css';
 
 const MyVerticallyCenteredModal = (props) => {
   const [image, setImage] = useState(null);
@@ -102,22 +104,26 @@ const Home = () => {
             </Navbar.Brand>
             {/* Sidebar Navigation */}
             <Nav className='flex-column w-100'>
-              <Nav.Link href='#' className='px-5 menuitemname d-flex align-items-center'>
-                <Icon icon='lucide:home' width='21.28' height='21.28' />
-                <span className='mx-2'>Home</span>
-              </Nav.Link>
-              <Nav.Link href='#' className='px-5 menuitemname d-flex align-items-center'>
-                <Icon icon='lucide:layout-dashboard' width='21.28' height='21.28' />
-                <span className='mx-2'>Dashboard</span>
-              </Nav.Link>
+              <div className='homemenu'>
+                <Nav.Link href='#' className='menuitemname d-flex align-items-center'>
+                  <Icon icon='lucide:home' width='21.28' height='21.28' />
+                  <span className='mx-2'>Home</span>
+                </Nav.Link>
+              </div>
+              <div className='menuitemname-position'>
+                <Nav.Link href='#' className='menuitemname d-flex align-items-center'>
+                  <Icon icon='lucide:layout-dashboard' width='21.28' height='21.28' />
+                  <span className='mx-2'>Dashboard</span>
+                </Nav.Link>
+              </div>
               {/* Services Menu */}
-              <div className='servicesmenu px-5 d-flex align-items-center justify-content-between' onClick={toggleMenu}>
+              <button className='servicesmenu px-5 d-flex align-items-center justify-content-between' onClick={toggleMenu} onKeyDown={toggleMenu}>
                 <div className='d-flex align-items-center'>
                   <Icon icon='lucide:box' width='21.28' height='21.28' />
                   <span className='mx-2'>Services</span>
                 </div>
                 <Icon icon={isMenuOpen ? 'akar-icons:chevron-up' : 'akar-icons:chevron-down'} width='16' height='16' />
-              </div>
+              </button>
               {/* Services Submenu (conditionally rendered) */}
               {isMenuOpen && (
                 <div className='servicesmenu-position'>
@@ -234,13 +240,13 @@ const Home = () => {
               <Button variant='primary' className='dashavailpending w-100'>Available Pending</Button>
             </Col>
             <Col className='me-1 dashcontentcol h-100 px-3 pt-4'>
-              <Button variant='primary' className='dashongoing w-100'><Icon icon='lucide:alarm-clock' width='24' height='24' className='me-2'/>On- Going</Button>
+              <Button variant='primary' className='dashongoing w-100'><Icon icon='lucide:alarm-clock' width='24' height='24' className='me-2' />On- Going</Button>
             </Col>
             <Col className='me-1 dashcontentcol h-100 px-3 pt-4'>
-              <Button variant='primary' className='dashoutgoing w-100'><Icon icon='lucide:help-circle' width='24' height='24' className='me-2'/>Out- Going</Button>
+              <Button variant='primary' className='dashoutgoing w-100'><Icon icon='lucide:help-circle' width='24' height='24' className='me-2' />Out- Going</Button>
             </Col>
             <Col className='me-1 dashcontentcol h-100 px-3 pt-4'>
-              <Button variant='primary' className='dashout w-100'><Icon icon='lucide:shopping-cart' width='24' height='24' hFlip={true} className='me-2'/>Out</Button>
+              <Button variant='primary' className='dashout w-100'><Icon icon='lucide:shopping-cart' width='24' height='24' hFlip={true} className='me-2' />Out</Button>
             </Col>
           </Row>
         </Col>
