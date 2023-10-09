@@ -108,6 +108,7 @@
     color: rgb(99, 115, 129);
     height: 35px;
     text-decoration: none;
+    border: 0;
 }
 
 .menuitemname:hover,
@@ -126,7 +127,7 @@
     border-right: 3.55px solid rgb(48, 86, 211);
 }
 
-.servicesmenu-position {
+.servicesmenuposition {
     margin-left: 68px;
 }
 
