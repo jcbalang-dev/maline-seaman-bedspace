@@ -1,21 +1,11 @@
 import React, { useState } from 'react';
-import { 
-  Container, 
-  Row, 
-  Col, 
-  Navbar, 
-  Nav, 
-  Form, 
-  FormControl, 
-  Dropdown, 
-  Button 
-} from 'react-bootstrap';
+import { Container, Row, Col, Navbar, Nav, Form, FormControl, Dropdown, Button } from 'react-bootstrap';
 import { Icon } from '@iconify/react';
 import * as styles from '../../styles/projects.module.css'
 import logo from '/src/images/logo.png';
 import userfooter from '/src/images/user.png';
 
-const ServicesOnGoing = () => {
+const Dashboard = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
 
   const toggleMenu = () => {
@@ -168,21 +158,17 @@ const ServicesOnGoing = () => {
             </Row>
           </Container>
           <Row className='flex-grow-1'>
-            <Col className='me-1 dashcontentcol h-100 px-3 pt-4'>
-              <Row className='p-3'>
-                <Col xs={10}>
-                  <p className='servongoing my-auto'>On-Going</p>
-                </Col>
-                <Col xs={2} className='pe-4'>
-                  <Button variant="primary" className='servongoingbtn float-end w-75 my-auto'>Back</Button>
-                </Col>
-              </Row>
-              <Row className='p-3'>
-                <Col>
-                  <Button variant="primary" className='servongoinglistbtn d-block mb-3'>0002-1856C</Button>
-                  <Button variant="primary" className='servongoinglistbtn d-block mb-3'>0001-1856C</Button>
-                </Col>
-              </Row>
+            <Col className={`me-1 ${styles.dashcontentcol} h-100 px-3 pt-4`}>
+              <Button variant="primary" className={`${styles.dashavailpending} w-100`}>Available Pending</Button>
+            </Col>
+            <Col className={`me-1 ${styles.dashcontentcol} h-100 px-3 pt-4`}>
+              <Button variant="primary" className={`${styles.dashongoing} w-100`}><Icon icon="lucide:alarm-clock" width="24" height="24" className='me-2'/>On- Going</Button>
+            </Col>
+            <Col className={`me-1 ${styles.dashcontentcol} h-100 px-3 pt-4`}>
+              <Button variant="primary" className={`${styles.dashoutgoing} w-100`}><Icon icon="lucide:help-circle" width="24" height="24" className='me-2'/>Out- Going</Button>
+            </Col>
+            <Col className={`me-1 ${styles.dashcontentcol} h-100 px-3 pt-4`}>
+              <Button variant="primary" className={`${styles.dashout} w-100`}><Icon icon="lucide:shopping-cart" width="24" height="24" hFlip={true} className='me-2'/>Out</Button>
             </Col>
           </Row>
         </Col>
@@ -191,4 +177,4 @@ const ServicesOnGoing = () => {
   );
 };
 
-export default ServicesOnGoing;
+export default Dashboard;
