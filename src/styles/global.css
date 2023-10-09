@@ -108,6 +108,7 @@
     color: rgb(99, 115, 129);
     height: 35px;
     text-decoration: none;
+    border: 0;
 }
 
 .menuitemname:hover,
@@ -126,7 +127,12 @@
     border-right: 3.55px solid rgb(48, 86, 211);
 }
 
-.servicesmenu-position {
+.homemenu {
+    margin-left: 40px;
+}
+
+.servicesmenu-position,
+.menuitemname-position {
     margin-left: 68px;
 }
 
@@ -223,7 +229,7 @@
     background-color: rgb(236, 236, 236);
 }
 
-.dashavailpending, 
+.dashavailpending,
 .dashavailpending:hover {
     padding: 14px;
     border-color: rgb(48, 86, 211);
@@ -237,7 +243,7 @@
     color: rgb(48, 86, 211);
 }
 
-.dashongoing, 
+.dashongoing,
 .dashongoing:hover {
     padding: 14px;
     border-color: rgb(19, 194, 150);
@@ -251,7 +257,7 @@
     color: rgb(248, 250, 252);
 }
 
-.dashoutgoing, 
+.dashoutgoing,
 .dashoutgoing:hover {
     padding: 14px;
     border-color: rgb(48, 86, 211);
@@ -265,7 +271,7 @@
     color: rgb(248, 250, 252);
 }
 
-.dashout, 
+.dashout,
 .dashout:hover {
     padding: 14px;
     border-color: rgb(33, 43, 54);
@@ -279,6 +285,7 @@
     color: rgb(248, 250, 252);
 }
 
+.servongoing ,
 .servavailpend {
     font-family: 'Inter';
     font-weight: 600;
@@ -286,6 +293,7 @@
     color: rgb(48, 86, 211);
 }
 
+.servongoingbtn ,
 .servavailpendbtn {
     padding: 14px;
     border-color: rgb(19, 194, 150);
@@ -299,12 +307,13 @@
     color: rgb(248, 250, 252);
 }
 
+.servongoinglistbtn ,
 .servavailpendlistbtn {
     border-radius: 0px;
     width: 231px;
     height: 50px;
     background-color: rgb(217, 217, 217);
-    border-color: rgb(48, 86, 211);
+    border-color: rgb(19, 194, 150);
     border-width: 1px;
     color: black;
     font-family: 'Inter';
@@ -358,4 +367,72 @@
     font-family: 'Inter';
     font-weight: 600;
     font-size: 1rem;
+}
+
+.modalsettings .modal-content {
+    border-radius: 46px;
+    border-width: 12px;
+    border-color: rgb(19, 194, 150);
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(247, 247, 247);
+  }
+
+.modalsettingstitle{
+    color: rgb(33, 43, 54);
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.modalsettingseditpro{
+    color: rgb(99, 115, 129);
+    font-family: 'Inter';
+    font-weight: 400;
+}
+
+.modalsettingsbody{
+    padding-bottom: 150px;
+}
+
+.inputSettingsLabel{
+    color: rgb(33, 43, 54);
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding-bottom: 10px;
+}
+
+.modalsettingsinput{
+    margin-right: 50px;
+}
+
+.fixed-imageSettings-size {
+    width: 136px;
+    height: 131px;
+}
+
+.modalsettingsconfirm{
+    width: 150px;
+    background-color: rgb(48, 86, 211);
+    color: rgb(248, 250, 252);
+    font-family: 'Inter';
+    font-size: 0.9rem;
+}
+
+.modalsettingscancel{
+    width: 150px;
+    background-color: rgb(33, 43, 54);
+    color: rgb(248, 250, 252);
+    font-family: 'Inter';
+    font-size: 0.9rem;
+}
+
+.modalsettingsconfirm:hover,
+.modalsettingscancel:hover{
+    width: 150px;
+    background-color: rgb(19, 194, 150);
+    color: rgb(248, 250, 252);
+    font-family: 'Inter';
+    font-size: 0.9rem;
 }
