@@ -13,9 +13,9 @@ class GetAllBuildingController(Resource):
             return {'error', 'Data not exists'}, 404
         
 class GetBuildingIDController(Resource):
-        def get(self, building_id):      
-            building = building_model.get(building_id)
-            if building:
-                return BuildingView.render_building(building)
-            else:
-                return {'error', 'Building not found'}, 404
+    def get(self, building_id):      
+        building = building_model.get(building_id)
+        if building:
+            return BuildingView.render_building(building)
+        else:
+            return {'error', 'Building not found'}, 404

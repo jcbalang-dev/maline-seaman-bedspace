@@ -4,16 +4,16 @@ class BuildingView:
     @staticmethod
     def serialize_building(building):
         return {
-            'id' : building.id,
-            'code' : building.code,
-            'tag' : building.tag,
-            'slug' : building.slug,
-            'name' : building.name,
-            'address' : building.address,
-            'description' : building.description,
-            'added_by': building.added_by,
+            'id' : building.id ,
+            'code' : building.code ,
+            'tag' : building.tag ,
+            'slug' : building.slug ,
+            'name' : building.name ,
+            'address' : building.address ,
+            'description' : building.description ,
+            'added_by': building.added_by ,
             'added_date' : building.added_date ,
-            'updated_by' : building.updated_by,
+            'updated_by' : building.updated_by ,
             'updated_date' : building.updated_date
         }
 

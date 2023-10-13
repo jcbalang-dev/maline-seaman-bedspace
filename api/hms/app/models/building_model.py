@@ -23,16 +23,16 @@ class BuildingModel:
     def _create_object(self, row) -> Building:
         id, code, tag, slug, name, address, description, added_by, added_date, updated_by, updated_date = row
         return Building(
-            id = id,
-            code = code,
-            tag = tag,
-            slug = slug,
-            name = name,
-            address = address,
-            description = description,
-            added_by = added_by,
-            added_date = added_date,
-            updated_by = updated_by,
+            id = id ,
+            code = code ,
+            tag = tag ,
+            slug = slug ,
+            name = name ,
+            address = address ,
+            description = description ,
+            added_by = added_by ,
+            added_date = added_date ,
+            updated_by = updated_by ,
             updated_date = updated_date
         )
         
