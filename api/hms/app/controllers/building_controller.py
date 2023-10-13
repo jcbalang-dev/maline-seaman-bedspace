@@ -1,12 +1,12 @@
 from flask_restful import Resource
-from app.models.bulding_model import BuildingModel
+from app.models.building_model import BuildingModel
 from app.views.building_view import BuildingView
 
 building_model = BuildingModel()
 
 class GetAllBuildingController(Resource):
     def get(self):
-        buildings = building_model.get_all_buildings()
+        buildings = building_model.get_all()
         if buildings:
             return BuildingView.render_buildings(buildings)
         else:
@@ -14,7 +14,7 @@ class GetAllBuildingController(Resource):
         
 class GetBuildingIDController(Resource):
         def get(self, building_id):      
-            building = building_model.get_building(building_id)
+            building = building_model.get(building_id)
             if building:
                 return BuildingView.render_building(building)
             else:
