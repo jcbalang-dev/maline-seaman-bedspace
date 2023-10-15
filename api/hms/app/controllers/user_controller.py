@@ -6,7 +6,7 @@ user_model = UserModel()
 
 class GetAllUserController(Resource):
     def get(self):
-        users = user_model.get_all_users()
+        users = user_model.get_all()
         if users:
             return UserView.render_users(users)
         else:
@@ -14,7 +14,7 @@ class GetAllUserController(Resource):
 
 class GetUserIdController(Resource):
     def get(self, id):
-        user = user_model.get_user(id)
+        user = user_model.get(id)
         if user:
             return UserView.render_user(user)
         else:
