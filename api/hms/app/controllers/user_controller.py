@@ -21,7 +21,7 @@ class GetUserIdController(Resource):
             return {'error','User not found'}, 404
                     
 class UserAuthController(Resource):
-    def get(self):
+    def post(self):
         data = request.get_json()
         username = data.get('username')
         password = data.get('password')
