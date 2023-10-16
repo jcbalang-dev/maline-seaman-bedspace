@@ -19,5 +19,6 @@ class Config:
 
     # flask app json sort key flag 
     FLASK_JSON_SORT_KEYS = bool(env.get('FLASK_JSON_SORT_KEYS', False))
+    
     #CORS origins
     CORS_ALLOWED_ORIGINS = os.environ.get("CORS_ALLOWED_ORIGINS", "*")
