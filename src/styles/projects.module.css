@@ -18,12 +18,6 @@
     src: url('../fonts/Inter-VariableFont_slnt,wght.ttf');
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .bg {
     background-image: url('../images/bg.jpg');
     background-size: cover;
