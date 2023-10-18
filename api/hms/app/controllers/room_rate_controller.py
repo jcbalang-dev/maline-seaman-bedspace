@@ -6,7 +6,7 @@ room_rate_model = RoomRateModel()
 
 class GetAllRoomRateController(Resource):
     def get(self):
-        room_rates = room_rate_model.get_all_room_rates()
+        room_rates = room_rate_model.get_all()
         if room_rates:
             return RoomRateView.render_room_rates(room_rates)
         else:
@@ -14,7 +14,7 @@ class GetAllRoomRateController(Resource):
         
 class GetRoomRateIDController(Resource):
         def get(self, room_rate_id):      
-            room_rate = room_rate_model.get_room_rate(room_rate_id)
+            room_rate = room_rate_model.get(room_rate_id)
             if room_rate:
                 return RoomRateView.render_room_rate(room_rate)
             else:
