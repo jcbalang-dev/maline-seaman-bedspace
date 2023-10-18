@@ -1,0 +1,25 @@
+.footersub1 {
+    padding: 115px 0 0 0;
+}
+
+.container h5 {
+    color: rgb(84, 104, 231);
+    font-size: 1.3rem;
+}
+
+.container ul li {
+    color: rgb(245, 245, 245);
+    list-style: none;
+}
+
+.lexendreg {
+    font-size: 0.9rem;
+}
+
+.lexendlight {
+    font-size: 1.5rem;
+}
+
+.tradeext {
+    font-family: 'TradeExt';
+}
