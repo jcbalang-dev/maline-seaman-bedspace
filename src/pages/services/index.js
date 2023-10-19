@@ -3,11 +3,12 @@ import Layout from '../../components/Layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Icon } from '@iconify/react'
 import facebookFill from '@iconify-icons/akar-icons/facebook-fill'
+import * as styles from '../../styles/services.module.css'
 
 const Services = ({ data }) => {
     return (
         <Layout>
-            <section class="hero2 px-5">
+            <section class={`hero2 px-5`}>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
