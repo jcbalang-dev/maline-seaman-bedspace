@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import * as styles from '../styles/home.module.css'
+import * as styles from '../styles/hero.module.css'
 
 const Hero = () => {
     return (
