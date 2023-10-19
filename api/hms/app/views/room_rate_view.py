@@ -115,5 +115,5 @@ class RoomRateView:
                 "updated_date": room_rate.updated_date
             }
             result.append(dict)
-        return jsonify({'rooms' : result})
+        return jsonify({'room_rates' : result})
         
