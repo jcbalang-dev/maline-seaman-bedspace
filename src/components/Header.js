@@ -5,7 +5,7 @@ import { Navbar, Nav, Container, NavDropdown, Button } from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
 
 import { StaticImage } from 'gatsby-plugin-image'
-import HeaderBackground from '../images/bg.jpg'
+import HeaderBackground from '../images/website/bg.png'
 
 const headerStyle = {
     backgroundImage: `url(${HeaderBackground})`,
@@ -37,7 +37,7 @@ const Header = () => {
                             src='../images/logo.png'
                             alt={ title }
                             loading='lazy'
-                            class='img-fluid'
+                            className='img-fluid'
                             height="131"
                             width="132"
                         />
