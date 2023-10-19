@@ -44,12 +44,10 @@ const Header = () => {
     return (
         <header style={headerStyle}>
             <Container>
-
-
                 <Navbar expand="lg" variant="light">
                     <Navbar.Brand href="/">
                         <StaticImage
-                            src='../images/logo.png'
+                            src='../images/website/logo.png'
                             alt={title}
                             loading='lazy'
                             className='img-fluid'
