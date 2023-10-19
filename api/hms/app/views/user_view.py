@@ -4,13 +4,13 @@ class UserView:
     @staticmethod
     def serialize_user(user):
         return {
-            'id' : user.id,
-            'last_name' : user.last_name,
-            'first_name' : user.first_name,
-            'middle_name' : user.middle_name,
-            'user_id' : user.user_id,
-            'email' : user.email,
-            'status' : user.status,
+            'id' : user.id ,
+            'last_name' : user.last_name ,
+            'first_name' : user.first_name ,
+            'middle_name' : user.middle_name ,
+            'user_id' : user.user_id ,
+            'email' : user.email ,
+            'status' : user.status
         }
     
     @staticmethod
@@ -21,14 +21,13 @@ class UserView:
         result = []
         for user in users:
             user_dict = {
-            'id' : user[0],
-            'last_name' : user[1],
-            'first_name' : user[2],
-            'middle_name' : user[3],
-            'user_id' : user[4],
-            'email' : user[5],
-            'status' : user[6],
+                'id' : user.id ,
+                'last_name' : user.last_name ,
+                'first_name' : user.first_name ,
+                'middle_name' : user.middle_name ,
+                'user_id' : user.user_id ,
+                'email' : user.email ,
+                'status' : user.status
             }
             result.append(user_dict)
-        
-        return{'users' : result}
+        return jsonify( {'users' : result} )

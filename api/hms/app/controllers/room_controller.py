@@ -6,7 +6,7 @@ room_model = RoomModel()
 
 class GetAllRoomController(Resource):
     def get(self):
-        rooms = room_model.get_all_rooms()
+        rooms = room_model.get_all()
         if rooms:
             return RoomView.render_rooms(rooms)
         else:
@@ -14,7 +14,7 @@ class GetAllRoomController(Resource):
         
 class GetRoomIDController(Resource):
         def get(self, room_id):      
-            room = room_model.get_room(room_id)
+            room = room_model.get(room_id)
             if room:
                 return RoomView.render_room(room)
             else:
