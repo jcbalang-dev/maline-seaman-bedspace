@@ -4,8 +4,13 @@
 }
 
 @font-face {
-    font-family: 'TradeExt';
-    src: url('../fonts/Trade-Gothic-LT-Extended.ttf');
+    font-family: 'JosefinsItalic';
+    src: url('../fonts/JosefinSans-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'LexendLight';
+    src: url('../fonts/LexendDeca-Light.ttf');
 }
 
 .footersub1 {
@@ -29,8 +34,9 @@
 
 .lexendlight {
     font-size: 1.5rem;
+    font-family: 'LexendLight';
 }
 
-.tradeext {
-    font-family: 'TradeExt';
+.josefinsitalic {
+    font-family: 'JosefinsItalic';
 }

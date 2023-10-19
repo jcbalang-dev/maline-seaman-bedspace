@@ -1,19 +1,22 @@
 import * as React from 'react'
+import { useState } from 'react'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Navbar, Nav, Container, NavDropdown, Button } from 'react-bootstrap'
+import { Navbar, Nav, Container } from 'react-bootstrap'
 import { graphql, useStaticQuery } from 'gatsby'
 
 import { StaticImage } from 'gatsby-plugin-image'
 import HeaderBackground from '../images/website/bg.png'
+import { Icon } from '@iconify/react'
+import Hero from './Hero'
+import Social from './Social'
 
 const headerStyle = {
     backgroundImage: `url(${HeaderBackground})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    height: '50em'
 }
+
 
 const Header = () => {
     const data = useStaticQuery(graphql`
@@ -28,44 +31,63 @@ const Header = () => {
 
     const { title } = data.site.siteMetadata
 
+    const [isServicesHovered, setIsServicesHovered] = useState(false);
+
+    const handleServicesMouseEnter = () => {
+        setIsServicesHovered(true);
+    };
+
+    const handleServicesMouseLeave = () => {
+        setIsServicesHovered(false);
+    };
+
     return (
         <header style={headerStyle}>
-            <Navbar bg="transparent" variant="light" expand="lg" className='shadow-none'>
-                <Container fluid>
-                    <Navbar.Brand href='/' className='me2'>
-                        <StaticImage 
+            <Container>
+
+
+                <Navbar expand="lg" variant="light">
+                    <Navbar.Brand href="/">
+                        <StaticImage
                             src='../images/logo.png'
-                            alt={ title }
+                            alt={title}
                             loading='lazy'
                             className='img-fluid'
                             height="131"
                             width="132"
                         />
                     </Navbar.Brand>
-                    <Button
-                        className="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarButtonsExample"
-                        aria-controls="navbarButtonsExample"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <i className="fas fa-bars"></i>
-                    </Button>
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="ml-auto">
-                            <Nav.Link href="/">Home</Nav.Link>
-                            <Nav.Link href="/about">About</Nav.Link>
-                            <NavDropdown href="/services" title="Services" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="/services/singlebed">Single Bedroom</NavDropdown.Item>
-                                <NavDropdown.Item href="/services/doubledeck">Double Deck Bedroom</NavDropdown.Item>
-                            </NavDropdown>
-                            <Nav.Link href="/contactus">Contact Us</Nav.Link>
+                    <Navbar.Toggle aria-controls="navbarButtonsExample" aria-label="Toggle navigation">
+                        <Icon icon="lucide:menu" width="24" height="24" />
+                    </Navbar.Toggle>
+                    <Navbar.Collapse id="navbarButtonsExample">
+                        <Nav className="me-auto">
+                            <Nav.Link href="/" className='text-white mx-4 circularmed'>Home</Nav.Link>
+                            <Nav.Link href="/about" className='text-white mx-4 circularmed'>About</Nav.Link>
+                            <Nav.Link
+                                href="/services"
+                                onMouseEnter={handleServicesMouseEnter}
+                                onMouseLeave={handleServicesMouseLeave}
+                                className='text-white mx-4 circularmed'
+                            >
+                                Services
+                                <Icon
+                                    icon={isServicesHovered ? 'lucide:chevron-up' : 'lucide:chevron-down'}
+                                    width="24"
+                                    height="24"
+                                />
+                                <Nav className="sub-nav">
+                                    <Nav.Link href="/services/single-bedroom" className='rounded circularmed'>Single Bedroom</Nav.Link>
+                                    <Nav.Link href="/services/double-deck-bedroom" className='rounded circularmed'>Double-Deck Bedroom</Nav.Link>
+                                </Nav>
+                            </Nav.Link>
+                            <Nav.Link href="contactus.js" className='text-white mx-4 circularmed'>Contact Us</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
-                </Container>
-            </Navbar>
+                </Navbar>
+                <Hero />
+            </Container>
+            <Social />
         </header>
     )
 }

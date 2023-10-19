@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'CircularMed';
+    font-family: CircularMed;
     src: url('../fonts/circular-std-medium-500.ttf');
 }
 
@@ -8,12 +8,21 @@
     src: url('../fonts/JosefinSans-Bold.ttf');
 }
 
+@font-face {
+    font-family: JosefinsLight;
+    src: url('../fonts/JosefinSans-Light.ttf');
+}
+
 .circularmed {
     font-family: 'CircularMed';
 }
 
 .josefinsbold {
     font-family: 'JosefinsBold';
+}
+
+.josefinslight {
+    font-family: 'JosefinsLight';
 }
 
 * {
@@ -27,7 +36,6 @@
     height: auto;
 }
 
-
 .nav-link {
     position: relative;
     font-size: 1rem;
@@ -35,7 +43,7 @@
 
 .nav-link:hover,
 .nav-link:focus {
-    color: white;
+    color: black;
 }
 
 .nav-link::after {
@@ -61,7 +69,7 @@
 .sub-nav {
     display: none;
     position: absolute;
-    background-color: #343a40;
+    background-color: #eee;
     padding: 5px;
     border-radius: 5px;
     margin-top: 10px;

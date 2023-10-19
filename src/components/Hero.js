@@ -1,17 +1,18 @@
 import * as React from 'react'
-import { Container } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
+import * as styles from '../styles/home.module.css'
 
 const Hero = () => {
     return (
         <Container>
-            <div class="row ">
-                <div class="col-md-5">
-                    <div class="hero1" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                        <p class="josefinsbold">Navigating Comfort:</p>
-                        <span class="josefinslight">Maline's Bedspace Seaman's Dormitory & Transient Inn</span>
+            <Row>
+                <Col md={5}>
+                    <div className={styles.hero1}>
+                        <p className="josefinsbold">Navigating Comfort:</p>
+                        <span className="josefinslight">Maline's Bedspace Seaman's Dormitory & Transient Inn</span>
                     </div>
-                </div>
-            </div>
+                </Col>
+            </Row>
         </Container>
     )
 }
