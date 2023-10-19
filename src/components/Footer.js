@@ -74,7 +74,7 @@ export default function Footer({ data }) {
           </Col>
         </Row>
         <Row>
-          <p className={styles.lexendreg}>© Copyright <span>{ currentYear }</span>. All Rights Reserved. DolittleStudio</p>          
+          <p className={`${styles.lexendreg} text-center pt-5`}>© Copyright <span>{ currentYear }</span>. All Rights Reserved. DolittleStudio</p>          
         </Row>
       </Container>
     </footer>
