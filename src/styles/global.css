@@ -1,0 +1,108 @@
+@font-face {
+    font-family: CircularMed;
+    src: url('../fonts/circular-std-medium-500.ttf');
+}
+
+@font-face {
+    font-family: JosefinsBold;
+    src: url('../fonts/JosefinSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: JosefinsLight;
+    src: url('../fonts/JosefinSans-Light.ttf');
+}
+
+@font-face {
+    font-family: JosefinsItalic;
+    src: url('../fonts/JosefinSans-Italic.ttf');
+}
+
+@font-face {
+    font-family: MontserratMedium;
+    src: url('../fonts/Montserrat-Medium.ttf');
+}
+
+.circularmed {
+    font-family: 'CircularMed';
+}
+
+.josefinsbold {
+    font-family: 'JosefinsBold';
+}
+
+.josefinslight {
+    font-family: 'JosefinsLight';
+}
+
+.josefinsitalic {
+    font-family: 'JosefinsItalic';
+}
+
+.montserratmedium {
+    font-family: 'MontserratMedium';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 132px;
+    height: auto;
+}
+
+.nav-link {
+    position: relative;
+    font-size: 1rem;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: black;
+}
+
+.nav-link::after {
+    content: '';
+    border-radius: 35px;
+    height: 4px;
+    width: 100%;
+    background-color: rgb(223, 105, 81);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: all 0.2s;
+    pointer-events: none;
+
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+    opacity: 1;
+}
+
+.sub-nav {
+    display: none;
+    position: absolute;
+    background-color: #eee;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 200%;
+}
+
+.nav-link:hover .sub-nav {
+    display: block;
+}
+
+Footer {
+    background-color: rgb(35, 35, 64);
+    padding: 0 0 115px 0;
+}
+
+Footer img {
+    width: 175px;
+}
