@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'LexendReg';
+    src: url('../fonts/LexendDeca-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'TradeExt';
+    src: url('../fonts/Trade-Gothic-LT-Extended.ttf');
+}
+
 .footersub1 {
     padding: 115px 0 0 0;
 }
@@ -13,6 +23,7 @@
 }
 
 .lexendreg {
+    font-family: 'LexendReg';
     font-size: 0.9rem;
 }
 
