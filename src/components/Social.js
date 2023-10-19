@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Row, Col } from 'react-bootstrap'
 import { Icon } from '@iconify/react'
-import * as styles from '../styles/home.module.css'
+import * as styles from '../styles/social.module.css'
 
 const Social = () => {
     return (
