@@ -8,9 +8,15 @@
 
 .hero2sub1 h1 {
     color: rgb(102, 120, 138);
-    font-family: MontserratMed;
+    font-family: 'MontserratMedium';
 }
 
 .hero2sub2 {
     padding: 25px 0 25px 0;
+}
+
+.lines {
+    height: 62px;
+    width: 10px;
+    background-color: rgb(183, 199, 214);
 }

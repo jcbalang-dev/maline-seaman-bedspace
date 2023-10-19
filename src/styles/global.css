@@ -13,6 +13,16 @@
     src: url('../fonts/JosefinSans-Light.ttf');
 }
 
+@font-face {
+    font-family: JosefinsItalic;
+    src: url('../fonts/JosefinSans-Italic.ttf');
+}
+
+@font-face {
+    font-family: MontserratMedium;
+    src: url('../fonts/Montserrat-Medium.ttf');
+}
+
 .circularmed {
     font-family: 'CircularMed';
 }
@@ -23,6 +33,14 @@
 
 .josefinslight {
     font-family: 'JosefinsLight';
+}
+
+.josefinsitalic {
+    font-family: 'JosefinsItalic';
+}
+
+.montserratmedium {
+    font-family: 'MontserratMedium';
 }
 
 * {
