@@ -21,6 +21,11 @@
 }
 
 @font-face {
+    font-family: JosefinsRegular;
+    src: url('../fonts/JosefinSans-Regular.ttf');
+}
+
+@font-face {
     font-family: MontserratMedium;
     src: url('../fonts/Montserrat-Medium.ttf');
 }
@@ -59,6 +64,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+header{
+    background-color: rgb(22, 137, 190)
+}
+
+header img {
+    margin-top: -1px;
+    width: 132px;
+}
+
+big {
+    font-family: 'JosefinsRegular';
+    font-size: 1.4em;
+}
+
+nav-link {
+    padding-right: 100px;
 }
 
 .logo {
