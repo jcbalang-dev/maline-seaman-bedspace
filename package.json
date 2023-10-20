@@ -18,6 +18,7 @@
     "@iconify-icons/akar-icons": "^1.2.18",
     "@iconify/icons-mdi": "^1.2.47",
     "@iconify/react": "^4.1.1",
+    "aos": "^3.0.0-beta.6",
     "bootstrap": "^5.3.1",
     "gatsby": "^5.11.0",
     "gatsby-plugin-google-gtag": "^5.11.0",
