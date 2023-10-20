@@ -54,6 +54,11 @@
     height: auto;
 }
 
+
+.navbar{
+    box-shadow: none;
+}
+
 .nav-link {
     position: relative;
     font-size: 1rem;

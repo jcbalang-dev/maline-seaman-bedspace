@@ -5,6 +5,9 @@ import { Icon } from '@iconify/react'
 import facebookFill from '@iconify-icons/akar-icons/facebook-fill'
 import * as styles from '../styles/home.module.css'
 import { Container, Row, Col } from 'react-bootstrap'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const Home = ({ data }) => {
   return (
