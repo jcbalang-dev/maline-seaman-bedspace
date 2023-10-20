@@ -70,14 +70,14 @@ const Services = ({ data }) => {
                             <div className={`${styles.content} position-absolute text-center text-white`}>
                                 <h1>Double Deck</h1>
                                 <p>For couples or more people</p>
-                                <a href="double.html" role="button" className={`${styles.btn} text-dark text-capitalize d-flex justify-content-center align-items-center mx-auto px-3`}>
-                                <Icon
-                                    icon={mingcuteSendFill}
-                                    width={24}
-                                    height={24}
-                                />
-                                <span className="text-dark">See Details</span>
-                                </a>
+                                <Link to="/services/double-bed" role="button" className={`${styles.btn} text-dark text-capitalize d-flex justify-content-center align-items-center mx-auto px-3`} >
+                                    <Icon
+                                        icon={mingcuteSendFill}
+                                        width={24}
+                                        height={24}
+                                    />
+                                    <span className="text-dark">See Details</span>
+                                </Link>
                             </div>
                         </Col>
                     </Row>
