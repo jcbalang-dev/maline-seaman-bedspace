@@ -1,13 +1,13 @@
 import * as React from 'react'
-import Layout from '../../components/Layout'
+import SimpleLayout from '../../components/SimpleLayout'
 
 const SingleBedroom = ({ data }) => {
     return (
-        <Layout>
+        <SimpleLayout>
             <section>
                 <h1>Single Bed</h1>
             </section>
-        </Layout>
+        </SimpleLayout>
     )
 }
 
