@@ -16,7 +16,7 @@ const Services = ({ data }) => {
                 <Container>
                     <Row>
                         <Col md={12} className="text-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                            <p>Welcome aboard to your home at Maline's Bedspace Seaman's Dormitory & Transient Inn!</p>
+                            <p className={styles.montserratmedium}>Welcome aboard to your home at Maline's Bedspace Seaman's Dormitory & Transient Inn!</p>
                         </Col>
                     </Row>
                 </Container>
@@ -44,13 +44,13 @@ const Services = ({ data }) => {
                             <div className={`${styles.content} position-absolute text-center text-white`}>
                                 <h1>Single Bed</h1>
                                 <p>Our affordable price bedroom for a Single Person</p>
-                                <Link to="/services/single-bed" role="button" className={`${styles.btn} text-dark text-capitalize d-flex justify-content-center align-items-center mx-auto px-3`} >
+                                <Link to="/services/single-bed" role="button" className={`${styles.btn} text-dark text-capitalize d-flex justify-content-center align-items-center mx-auto px-2 rounded text-decoration-none`} >
                                     <Icon
                                         icon={mingcuteSendFill}
                                         width={24}
                                         height={24}
                                     />
-                                    <span className="text-dark">See Details</span>
+                                    <span className={`${styles.montserratmedium} text-dark`}>See Details</span>
                                 </Link>
                             </div>
                         </Col>
@@ -70,13 +70,13 @@ const Services = ({ data }) => {
                             <div className={`${styles.content} position-absolute text-center text-white`}>
                                 <h1>Double Deck</h1>
                                 <p>For couples or more people</p>
-                                <Link to="/services/double-bed" role="button" className={`${styles.btn} text-dark text-capitalize d-flex justify-content-center align-items-center mx-auto px-3`} >
+                                <Link to="/services/double-bed" role="button" className={`${styles.btn} text-dark text-capitalize d-flex justify-content-center align-items-center mx-auto px-2 rounded text-decoration-none`} >
                                     <Icon
                                         icon={mingcuteSendFill}
                                         width={24}
                                         height={24}
                                     />
-                                    <span className="text-dark">See Details</span>
+                                    <span className={`${styles.montserratmedium} text-dark`}>See Details</span>
                                 </Link>
                             </div>
                         </Col>
@@ -94,7 +94,7 @@ const Services = ({ data }) => {
                 </Container>
             </section>
             
-            <section className={`${styles.hero} px-5`}>
+            <section className={`${styles.hero2} px-5`}>
                 <Container>
                     <Row className="d-flex justify-content-center align-items-center">
                         <Col md={6}>
@@ -104,14 +104,14 @@ const Services = ({ data }) => {
                                 <h1>Social Media</h1>
                             </Col>
                         </Row>
-                        <Row py-5 data-aos="fade-up" data-aos-duration="1000">
+                        <Row className='py-5' data-aos="fade-up" data-aos-duration="1000">
                             <Col xs={12} className="d-flex justify-content-center align-items-center">
                             <h2 className="josefinsitalic">Your home ashore awaits at Maline's Bedspace Seaman's Dormitory & Transient Inn. Discover comfort, community, and convenience tailored exclusively for seafarers. 🏠⚓ #SeafarersHaven #HomeAwayFromHome</h2>
                             </Col>
                         </Row>
                         <Row>
                             <Col xs={12} data-aos="fade-up" data-aos-duration="1000">
-                            <a href="https://www.facebook.com/lynsbedspace09260073532" target="_blank">
+                            <a href="https://www.facebook.com/lynsbedspace09260073532" target="_blank" rel="noreferrer">
                                 <div className="d-flex justify-content-center align-items-center">
                                 <Icon
                                     icon={facebookFill}
@@ -120,7 +120,7 @@ const Services = ({ data }) => {
                                     style={{ color: '#1877f2' }}
                                 />
                                 <span className="px-3 pt-3">
-                                    <h2 className="josefinsitalic text-dark">/Malines Transient</h2>
+                                    <h2 className='josefinsitalic text-dark'>/Malines Transient</h2>
                                 </span>
                                 </div>
                             </a>
