@@ -20,3 +20,27 @@
     width: 10px;
     background-color: rgb(183, 199, 214);
 }
+
+.hero2services{
+    padding: 170px 0 170px 0;
+}
+
+.content .btn{
+    background-color: rgb(141, 211, 187);
+}
+
+.content a {
+    width: 120px;
+    font-size: 12px;
+    padding: 10px 16px 8px;
+}
+
+.content h1 {
+    font-family: 'BiryaniBold';
+    font-size: 1.5rem;
+}
+
+.content p {
+    font-family: 'MontserratRegular';
+    font-size: 0.9rem;
+}
