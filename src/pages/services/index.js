@@ -6,6 +6,7 @@ import facebookFill from '@iconify-icons/akar-icons/facebook-fill'
 import mingcuteSendFill from '@iconify-icons/mingcute/send-fill'
 import * as styles from '../../styles/services.module.css'
 import { Container, Row, Col, Carousel } from 'react-bootstrap'
+import { Link } from 'gatsby-link'
 
 
 const Services = ({ data }) => {
@@ -43,14 +44,14 @@ const Services = ({ data }) => {
                             <div className={`${styles.content} position-absolute text-center text-white`}>
                                 <h1>Single Bed</h1>
                                 <p>Our affordable price bedroom for a Single Person</p>
-                                <a href="single.html" role="button" className={`${styles.btn} text-dark text-capitalize d-flex justify-content-center align-items-center mx-auto px-3`}>
-                                <Icon
-                                    icon={mingcuteSendFill}
-                                    width={24}
-                                    height={24}
-                                />
-                                <span className="text-dark">See Details</span>
-                                </a>
+                                <Link to="/services/single-bed" role="button" className={`${styles.btn} text-dark text-capitalize d-flex justify-content-center align-items-center mx-auto px-3`} >
+                                    <Icon
+                                        icon={mingcuteSendFill}
+                                        width={24}
+                                        height={24}
+                                    />
+                                    <span className="text-dark">See Details</span>
+                                </Link>
                             </div>
                         </Col>
                     </Row>
