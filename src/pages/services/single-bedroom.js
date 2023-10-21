@@ -45,7 +45,7 @@ const SingleBedroom = ({ data }) => {
                 <Container>
                     <Row>
                         <Col md={6}>
-                            <p className="d-inline-block lh-1 tradeext fw-bold fs-2 pe-3">Single Bed</p>
+                            <p className="d-inline-block lh-1 tradeext fw-bold fs-2 pe-3">Single Bedroom</p>
                             
                             <p className='lh-1 montserratmedium'>
                                 <div style={locationIcon}></div>
