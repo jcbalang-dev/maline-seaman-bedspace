@@ -2,6 +2,9 @@ import * as React from 'react'
 import SimpleLayout from '../components/SimpleLayout'
 import { Container, Row, Col } from 'react-bootstrap';
 import * as styles from '../styles/contact-us.module.css'
+import { Icon } from '@iconify/react'
+import locationOutline from '@iconify-icons/ion/location-outline'
+import telephoneIcon from '@iconify-icons/bi/telephone'
 
 const ContactUsPage = ({ data }) => {
     return (
@@ -14,7 +17,7 @@ const ContactUsPage = ({ data }) => {
                                 <Col>
                                     <Row>
                                         <Col className="d-inline-block px-1" xs={1}>
-                                            <iconify-icon icon="ion:location-outline" width="60" height="60"></iconify-icon>
+                                            <Icon icon={locationOutline} width={60} height={60} />
                                         </Col>
                                         <Col className="d-inline-block px-4" xs={11}>
                                             <p className="fs-3 lh-1 montserratbold d-inline-block">Location:</p>
@@ -27,7 +30,7 @@ const ContactUsPage = ({ data }) => {
                                 <Col>
                                     <Row>
                                         <Col className="d-inline-block px-1" xs={1}>
-                                            <iconify-icon icon="bi:telephone" width="50" height="50" rotate="90deg"></iconify-icon>
+                                            <Icon icon={telephoneIcon} width="50" height="50" rotate="90deg" />
                                         </Col>
                                         <Col className="d-inline-block px-4" xs={11}>
                                             <p className="fs-3 lh-1 montserratbold d-inline-block">Contact Number:</p>
