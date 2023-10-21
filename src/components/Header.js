@@ -79,7 +79,7 @@ const Header = () => {
                                     <Nav.Link href="/services/double-deck-bedroom" className='rounded circularmed'>Double-Deck Bedroom</Nav.Link>
                                 </Nav>
                             </Nav.Link>
-                            <Nav.Link href="contactus.js" className='text-white mx-4 circularmed'>Contact Us</Nav.Link>
+                            <Nav.Link href="/contact-us/" className='text-white mx-4 circularmed'>Contact Us</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
