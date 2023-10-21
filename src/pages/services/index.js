@@ -44,7 +44,7 @@ const Services = ({ data }) => {
                             <div className={`${styles.content} position-absolute text-center text-white`}>
                                 <h1>Single Bed</h1>
                                 <p>Our affordable price bedroom for a Single Person</p>
-                                <Link to="/services/single-bed" role="button" className={`${styles.btn} text-dark text-capitalize d-flex justify-content-center align-items-center mx-auto px-2 rounded text-decoration-none`} >
+                                <Link to="/services/single-bedroom" role="button" className={`${styles.btn} text-dark text-capitalize d-flex justify-content-center align-items-center mx-auto px-2 rounded text-decoration-none`} >
                                     <Icon
                                         icon={mingcuteSendFill}
                                         width={24}
@@ -70,7 +70,7 @@ const Services = ({ data }) => {
                             <div className={`${styles.content} position-absolute text-center text-white`}>
                                 <h1>Double Deck</h1>
                                 <p>For couples or more people</p>
-                                <Link to="/services/double-bed" role="button" className={`${styles.btn} text-dark text-capitalize d-flex justify-content-center align-items-center mx-auto px-2 rounded text-decoration-none`} >
+                                <Link to="/services/double-deck-bedroom" role="button" className={`${styles.btn} text-dark text-capitalize d-flex justify-content-center align-items-center mx-auto px-2 rounded text-decoration-none`} >
                                     <Icon
                                         icon={mingcuteSendFill}
                                         width={24}

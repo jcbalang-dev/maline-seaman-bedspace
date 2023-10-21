@@ -21,6 +21,16 @@
 }
 
 @font-face {
+    font-family: JosefinsRegular;
+    src: url('../fonts/JosefinSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'TradeGothicLTExtended';
+    src: url('../fonts/Trade-Gothic-LT-Extended.otf');
+}
+
+@font-face {
     font-family: MontserratMedium;
     src: url('../fonts/Montserrat-Medium.ttf');
 }
@@ -28,6 +38,11 @@
 @font-face {
     font-family: MontserratRegular;
     src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: MontserratBold;
+    src: url('../fonts/Montserrat-Bold.ttf');
 }
 
 @font-face {
@@ -55,17 +70,50 @@
     font-family: 'MontserratMedium';
 }
 
+.montserratbold {
+    font-family: 'MontserratBold';
+}
+
+.tradeext {
+    font-family: 'TradeGothicLTExtended';
+}
+
+.montserratregular {
+    font-family: 'MontserratRegular';
+}
+
+.biryanibold {
+    font-family: 'BiryaniBold';
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+header{
+    background-color: rgb(22, 137, 190)
+}
+
+header img {
+    margin-top: -1px;
+    width: 132px;
+}
+
+big {
+    font-family: 'JosefinsRegular';
+    font-size: 1.4em;
+}
+
+nav-link {
+    padding-right: 100px;
+}
+
 .logo {
     width: 132px;
     height: auto;
 }
-
 
 .navbar{
     box-shadow: none;
