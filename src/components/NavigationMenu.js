@@ -85,7 +85,7 @@ const NavigationMenu = () => {
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item className="px-4">
-                                <Nav.Link as={Link} to="/contactus" className="text-white">
+                                <Nav.Link as={Link} to="/contact-us/" className="text-white">
                                     Contact Us
                                 </Nav.Link>
                             </Nav.Item>
