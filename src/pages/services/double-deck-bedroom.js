@@ -150,8 +150,8 @@ const DoubleDeckBedroom = ({ data }) => {
                                                                 />
                                                             </div>
                                                         </div>
-                                                        <button className="carousel-control-prev" type="button" data-mdb-target="#carouselImageIndicators" data-mdb-slide="prev"></button>
-                                                        <button className="carousel-control-next" type="button" data-mdb-target="#carouselImageIndicators" data-mdb-slide="next"></button>
+                                                        <button className="carousel-control-prev" type="button" aria-label="Previous Slide" data-mdb-target="#carouselImageIndicators" data-mdb-slide="prev"></button>
+                                                        <button className="carousel-control-next" type="button" aria-label="Next Slide" data-mdb-target="#carouselImageIndicators" data-mdb-slide="next"></button>
                                                     </div>
                                                 </div>
                                             </div>
