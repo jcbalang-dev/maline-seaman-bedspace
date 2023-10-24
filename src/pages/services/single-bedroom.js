@@ -123,28 +123,28 @@ const SingleBedroom = ({ data }) => {
                                                         <div className="carousel-inner">
                                                             <div className="carousel-item active">
                                                                 <StaticImage
-                                                                    src="../images/website/singleimg1.png"
+                                                                    src="../../images/website/singleimg1.png"
                                                                     alt="singleimg1"
                                                                     className="d-block w-100 h-100"
                                                                 />
                                                             </div>
                                                             <div className="carousel-item">
                                                                 <StaticImage
-                                                                    src="../images/website/singleimg2.png"
+                                                                    src="../../images/website/singleimg2.png"
                                                                     alt="singleimg2"
                                                                     className="d-block w-100 h-100"
                                                                 />
                                                             </div>
                                                             <div className="carousel-item">
                                                                 <StaticImage
-                                                                    src="../images/website/singleimg3.png"
+                                                                    src="../../images/website/singleimg3.png"
                                                                     alt="singleimg3"
                                                                     className="d-block w-100 h-100"
                                                                 />
                                                             </div>
                                                             <div className="carousel-item">
                                                                 <StaticImage
-                                                                    src="../images/website/singleimg4.png"
+                                                                    src="../../images/website/singleimg4.png"
                                                                     alt="singleimg4"
                                                                     className="d-block w-100 h-100"
                                                                 />
