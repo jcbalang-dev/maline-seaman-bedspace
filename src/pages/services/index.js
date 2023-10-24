@@ -16,7 +16,7 @@ const Services = ({ data }) => {
                 <Container>
                     <Row>
                         <Col md={12} className="text-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                            <p className={styles.montserratmedium}>Welcome aboard to your home at Maline's Bedspace Seaman's Dormitory & Transient Inn!</p>
+                            <p className="montserratmedium">Welcome aboard to your home at Maline's Bedspace Seaman's Dormitory & Transient Inn!</p>
                         </Col>
                     </Row>
                 </Container>
@@ -50,7 +50,7 @@ const Services = ({ data }) => {
                                         width={24}
                                         height={24}
                                     />
-                                    <span className={`${styles.montserratmedium} text-dark`}>See Details</span>
+                                    <span className="montserratmedium text-dark">See Details</span>
                                 </Link>
                             </div>
                         </Col>
@@ -76,7 +76,7 @@ const Services = ({ data }) => {
                                         width={24}
                                         height={24}
                                     />
-                                    <span className={`${styles.montserratmedium} text-dark`}>See Details</span>
+                                    <span className="montserratmedium text-dark">See Details</span>
                                 </Link>
                             </div>
                         </Col>
