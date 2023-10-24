@@ -235,6 +235,7 @@ const SingleBedroom = ({ data }) => {
                             <Row>
                             <Col md={12}>
                                 <iframe
+                                    title="MSD Building Location"
                                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3861.4496164178604!2d120.9917471!3d14.5734373!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c986c8f53d9b%3A0xec0007e2721da26e!2s1856c%20Agoncillo%20St%2C%20Malate%2C%20Manila%2C%201004%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1693649349986!5m2!1sen!2sph"
                                     width="100%" 
                                     height="450" 
