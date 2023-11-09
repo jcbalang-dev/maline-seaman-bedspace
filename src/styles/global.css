@@ -1,89 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
-
 @font-face {
-    font-family: CircularMed;
-    src: url('../fonts/circular-std-medium-500.ttf');
+    font-family: 'TradeGothic';
+    src: url('../fonts/Trade\ Gothic\ LT\ Extended.ttf');
 }
 
 @font-face {
-    font-family: JosefinsBold;
-    src: url('../fonts/JosefinSans-Bold.ttf');
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-VariableFont_wght.ttf');
 }
 
 @font-face {
-    font-family: JosefinsLight;
-    src: url('../fonts/JosefinSans-Light.ttf');
+    font-family: 'LexendTera';
+    src: url('../fonts/LexendTera-VariableFont_wght.ttf');
 }
 
 @font-face {
-    font-family: JosefinsItalic;
-    src: url('../fonts/JosefinSans-Italic.ttf');
-}
-
-@font-face {
-    font-family: JosefinsRegular;
-    src: url('../fonts/JosefinSans-Regular.ttf');
-}
-
-@font-face {
-    font-family: 'TradeGothicLTExtended';
-    src: url('../fonts/Trade-Gothic-LT-Extended.otf');
-}
-
-@font-face {
-    font-family: MontserratMedium;
-    src: url('../fonts/Montserrat-Medium.ttf');
-}
-
-@font-face {
-    font-family: MontserratRegular;
-    src: url('../fonts/Montserrat-Regular.ttf');
-}
-
-@font-face {
-    font-family: MontserratBold;
-    src: url('../fonts/Montserrat-Bold.ttf');
-}
-
-@font-face {
-    font-family: BiryaniBold;
-    src: url('../fonts/Biryani-Bold.ttf');
-}
-
-.circularmed {
-    font-family: 'CircularMed';
-}
-
-.josefinsbold {
-    font-family: 'JosefinsBold';
-}
-
-.josefinslight {
-    font-family: 'JosefinsLight';
-}
-
-.josefinsitalic {
-    font-family: 'JosefinsItalic';
-}
-
-.montserratmedium {
-    font-family: 'MontserratMedium';
-}
-
-.montserratbold {
-    font-family: 'MontserratBold';
-}
-
-.tradeext {
-    font-family: 'TradeGothicLTExtended';
-}
-
-.montserratregular {
-    font-family: 'MontserratRegular';
-}
-
-.biryanibold {
-    font-family: 'BiryaniBold';
+    font-family: 'Inter';
+    src: url('../fonts/Inter-VariableFont_slnt,wght.ttf');
 }
 
 * {
@@ -92,82 +24,338 @@
     box-sizing: border-box;
 }
 
-header{
-    background-color: rgb(22, 137, 190)
+.bg {
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-header img {
-    margin-top: -1px;
-    width: 132px;
+.cardform {
+    background-color: rgb(217, 217, 217);
+    border-color: rgb(217, 217, 217);
 }
 
-big {
-    font-family: 'JosefinsRegular';
-    font-size: 1.4em;
+.loginheader {
+    font-family: 'TradeGothic';
+    font-size: 3rem;
 }
 
-nav-link {
-    padding-right: 100px;
+.loginsubheader {
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    color: rgb(17, 34, 17);
 }
 
-.logo {
-    width: 132px;
-    height: auto;
+.formlabellogin {
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    color: rgb(28, 27, 31);
 }
 
-.navbar{
-    box-shadow: none;
+.formtxtboxlogin {
+    height: 56px;
+    border-width: 1px;
+    border-color: rgb(121, 116, 126);
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    color: rgb(28, 27, 31);
 }
 
-.nav-link {
-    position: relative;
+.formlogincheckbox {
+    font-family: 'Montserrat';
+    font-size: 0.9rem;
+    color: rgb(17, 34, 17);
+}
+
+.forgotpass a {
+    font-family: 'Montserrat';
+    font-size: 0.9rem;
+    color: rgb(255, 134, 130);
+    text-decoration: none;
+}
+
+.formbtnsubmit {
+    height: 56px;
+    font-family: 'Montserrat';
+    font-size: 0.9rem;
+    color: rgb(17, 34, 17);
+    background-color: rgb(141, 211, 187);
+    border-color: rgb(141, 211, 187);
+}
+
+.formbtnsubmit:hover {
+    height: 56px;
+    font-family: 'Montserrat';
+    font-size: 0.9rem;
+    color: rgb(17, 34, 17);
+    background-color: rgb(93, 161, 139);
+    border-color: rgb(93, 161, 139);
+}
+
+.homelogoname {
+    font-family: 'LexendTera';
     font-size: 1rem;
 }
 
-.nav-link:hover,
-.nav-link:focus {
-    color: black;
+.menuitemname,
+.servicesmenu,
+.servicessubmenu {
+    font-family: 'Inter';
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(99, 115, 129);
+    height: 35px;
+    text-decoration: none;
 }
 
-.nav-link::after {
-    content: '';
-    border-radius: 35px;
-    height: 4px;
+.menuitemname:hover,
+.servicesmenu:hover,
+.servicessubmenu:hover {
+    color: rgb(48, 86, 211);
+    background-color: rgb(244, 247, 255);
+    border-right: 3.55px solid rgb(48, 86, 211);
+}
+
+.menuitemname:focus,
+.servicesmenu:focus,
+.servicessubmenu:focus {
+    color: rgb(48, 86, 211);
+    background-color: rgb(244, 247, 255);
+    border-right: 3.55px solid rgb(48, 86, 211);
+}
+
+.servicesmenu-position {
+    margin-left: 68px;
+}
+
+.divider {
+    height: 1px;
+    margin-left: 50px;
+    background-color: rgb(231, 231, 231);
+}
+
+.username {
+    font-family: 'Inter';
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(99, 115, 129);
+}
+
+.useremail {
+    font-family: 'Inter';
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgb(99, 115, 129);
+}
+
+.locationheader {
+    font-family: 'Inter';
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgb(33, 43, 54);
+}
+
+.input-wrapper {
+    background-color: rgb(248, 250, 252);
+    height: 43.6px;
+    border-radius: 10px;
+    padding: 0 15px;
+}
+
+.inputsearch:focus {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
     width: 100%;
-    background-color: rgb(223, 105, 81);
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    opacity: 0;
-    transition: all 0.2s;
-    pointer-events: none;
-
 }
 
-.nav-link:hover::after,
-.nav-link:focus::after {
-    opacity: 1;
+#searchicon {
+    color: rgb(99, 115, 129);
 }
 
-.sub-nav {
-    display: none;
-    position: absolute;
-    background-color: #eee;
-    padding: 5px;
+.formradiolabel {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.formradiocheck {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.selectmenudropdown span,
+.selectmenus {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: rgb(99, 115, 129);
+}
+
+#dropdown-basic {
+    width: 225px;
+    border-color: rgb(224, 224, 224);
+}
+
+.chkinoutbtn {
+    padding: 14px;
+    border-color: rgb(48, 86, 211);
+    border-style: solid;
     border-radius: 5px;
-    margin-top: 10px;
-    width: 200%;
+    border-width: 1px;
+    background-color: transparent;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(48, 86, 211);
+    width: 47%;
 }
 
-.nav-link:hover .sub-nav {
-    display: block;
+.chkinoutbtn:hover {
+    background-color: rgb(19, 194, 150);
+    border-color: rgb(19, 194, 150);
 }
 
-Footer {
-    background-color: rgb(35, 35, 64);
-    padding: 0 0 115px 0;
+.dashcontentcol {
+    background-color: rgb(236, 236, 236);
 }
 
-Footer img {
-    width: 175px;
+.dashavailpending, 
+.dashavailpending:hover {
+    padding: 14px;
+    border-color: rgb(48, 86, 211);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: transparent;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(48, 86, 211);
+}
+
+.dashongoing, 
+.dashongoing:hover {
+    padding: 14px;
+    border-color: rgb(19, 194, 150);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: rgb(19, 194, 150);
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(248, 250, 252);
+}
+
+.dashoutgoing, 
+.dashoutgoing:hover {
+    padding: 14px;
+    border-color: rgb(48, 86, 211);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: rgb(48, 86, 211);
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(248, 250, 252);
+}
+
+.dashout, 
+.dashout:hover {
+    padding: 14px;
+    border-color: rgb(33, 43, 54);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: rgb(33, 43, 54);
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(248, 250, 252);
+}
+
+.servavailpend {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 2rem;
+    color: rgb(48, 86, 211);
+}
+
+.servavailpendbtn {
+    padding: 14px;
+    border-color: rgb(19, 194, 150);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: rgb(19, 194, 150);
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(248, 250, 252);
+}
+
+.servavailpendlistbtn {
+    border-radius: 0px;
+    width: 231px;
+    height: 50px;
+    background-color: rgb(217, 217, 217);
+    border-color: rgb(48, 86, 211);
+    border-width: 1px;
+    color: black;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.servcancelled,
+.servoutgoing {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 2rem;
+    color: rgb(48, 86, 211);
+}
+
+.servcancelledbtn,
+.servoutgoingbtn {
+    padding: 14px;
+    border-color: rgb(19, 194, 150);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: rgb(19, 194, 150);
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(248, 250, 252);
+}
+
+.servcancelledlistbtn {
+    border-radius: 0px;
+    width: 231px;
+    height: 50px;
+    background-color: rgb(217, 217, 217);
+    border-color: rgb(33, 43, 54);
+    border-width: 1px;
+    color: black;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.servoutgoinglistbtn {
+    border-radius: 0px;
+    width: 231px;
+    height: 50px;
+    background-color: rgb(217, 217, 217);
+    border-color: rgb(48, 86, 211);
+    border-width: 1px;
+    color: black;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
 }

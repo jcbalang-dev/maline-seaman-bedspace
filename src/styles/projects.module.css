@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'TradeGothic';
-    src: url('../fonts/Trade-Gothic-LT-Extended.otf');
+    src: url('../fonts/Trade\ Gothic\ LT\ Extended.ttf');
 }
 
 @font-face {
@@ -16,6 +16,12 @@
 @font-face {
     font-family: 'Inter';
     src: url('../fonts/Inter-VariableFont_slnt,wght.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .bg {
@@ -93,15 +99,6 @@
     font-size: 1rem;
 }
 
-.homemenu {
-    margin-left: 40px;	
-}
-
-.servicesmenuposition,
-.menuitemnameposition {
-    margin-left: 68px;
-}
-
 .menuitemname,
 .servicesmenu,
 .servicessubmenu {
@@ -111,7 +108,6 @@
     color: rgb(99, 115, 129);
     height: 35px;
     text-decoration: none;
-    border: 0;
 }
 
 .menuitemname:hover,
@@ -128,6 +124,10 @@
     color: rgb(48, 86, 211);
     background-color: rgb(244, 247, 255);
     border-right: 3.55px solid rgb(48, 86, 211);
+}
+
+.servicesmenu-position {
+    margin-left: 68px;
 }
 
 .divider {
@@ -223,12 +223,6 @@
     background-color: rgb(236, 236, 236);
 }
 
-.dashboarddateandtime span{	
-    font-family: 'Inter';	
-    font-weight: 600;	
-    font-size: 1.3rem;	
-}
-
 .dashavailpending, 
 .dashavailpending:hover {
     padding: 14px;
@@ -285,7 +279,6 @@
     color: rgb(248, 250, 252);
 }
 
-.servongoing ,
 .servavailpend {
     font-family: 'Inter';
     font-weight: 600;
@@ -293,7 +286,6 @@
     color: rgb(48, 86, 211);
 }
 
-.servongoingbtn ,
 .servavailpendbtn {
     padding: 14px;
     border-color: rgb(19, 194, 150);
@@ -307,13 +299,12 @@
     color: rgb(248, 250, 252);
 }
 
-.servongoinglistbtn ,
 .servavailpendlistbtn {
     border-radius: 0px;
     width: 231px;
     height: 50px;
     background-color: rgb(217, 217, 217);
-    border-color: rgb(19, 194, 150);
+    border-color: rgb(48, 86, 211);
     border-width: 1px;
     color: black;
     font-family: 'Inter';
@@ -367,72 +358,4 @@
     font-family: 'Inter';
     font-weight: 600;
     font-size: 1rem;
-}
-
-.modalsettings .modal-content {
-    border-radius: 46px;
-    border-width: 12px;
-    border-color: rgb(19, 194, 150);
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: rgb(247, 247, 247);   
-  }
-
-.modalsettingstitle{
-    color: rgb(33, 43, 54);
-    font-family: 'Inter';
-    font-weight: 600;
-    font-size: 1.5rem;
-}
-
-.modalsettingseditpro{
-    color: rgb(99, 115, 129);
-    font-family: 'Inter';
-    font-weight: 400;
-}
-
-.modalsettingsbody{
-    padding-bottom: 150px;
-}
-
-.inputSettingsLabel{
-    color: rgb(33, 43, 54);
-    font-family: 'Inter';
-    font-weight: 500;
-    font-size: 0.9rem;
-    padding-bottom: 10px;
-}
-
-.modalsettingsinput{
-    margin-right: 50px;
-}
-
-.fixedImageSettingsSize {
-    width: 136px;
-    height: 131px;
-}
-
-.modalsettingsconfirm{
-    width: 150px;
-    background-color: rgb(48, 86, 211);
-    color: rgb(248, 250, 252);
-    font-family: 'Inter';
-    font-size: 0.9rem;
-}
-
-.modalsettingscancel{
-    width: 150px;
-    background-color: rgb(33, 43, 54);
-    color: rgb(248, 250, 252);
-    font-family: 'Inter';
-    font-size: 0.9rem;
-}
-
-.modalsettingsconfirm:hover,
-.modalsettingscancel:hover{
-    width: 150px;
-    background-color: rgb(19, 194, 150);
-    color: rgb(248, 250, 252);
-    font-family: 'Inter';
-    font-size: 0.9rem;
 }
