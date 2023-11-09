@@ -1,37 +1,34 @@
+import Head from 'next/head'
+import Image from 'next/image'
+import { Inter } from 'next/font/google'
+import styles from '../styles/Home.module.css'
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import * as React from 'react'
-import Layout from '../components/Layout'
-import { StaticImage } from 'gatsby-plugin-image'
-import { Icon } from '@iconify/react'
-import facebookFill from '@iconify-icons/akar-icons/facebook-fill'
-import * as styles from '../styles/home.module.css'
 import { Container, Row, Col } from 'react-bootstrap'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-AOS.init();
 
-const Home = ({ data }) => {
+const inter = Inter({ subsets: ['latin'] })
+
+export default function Home() {
   return (
-    <Layout>
+    <>
       <section className={`${styles.hero2} px-5`}>
         <Container>
           <Row className="d-flex justify-content-center align-items-center">
-            <Col md={6} data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+            <Col md={6}>
               <div>
-                <StaticImage
-                  src="../images/website/aboutus2.png"
-                  alt=""
-                  className="img-fluid"
-                />
+                
               </div>
             </Col>
             <Col md={6}>
-              <Row className={`${styles.hero2sub1} d-flex justify-content-end`} data-aos="fade-up" data-aos-duration="1000">
+              <Row className={`${styles.hero2sub1} d-flex justify-content-end`}>
                 <Col xs={11} className="py-2">
                   <h1>Commitment to Sustainability</h1>
                 </Col>
                 <Col xs={1} className={`${styles.lines} rounded-pill px-1`}></Col>
               </Row>
-              <Row className={`${styles.hero2sub2} text-end`} data-aos="fade-up" data-aos-duration="1000">
+              <Row className={`${styles.hero2sub2} text-end`}>
                 <Col xs={12}>
                   <h2 className="josefinsitalic">We are committed to responsible business practices, including energy efficiency, waste reduction, and the use of eco-friendly products whenever possible.</h2>
                 </Col>
@@ -42,12 +39,8 @@ const Home = ({ data }) => {
       </section>
 
       <section className="py-5">
-        <Container className="d-flex justify-content-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-          <StaticImage
-            src="../images/website/iconblack2.png"
-            alt=""
-            className="img-fluid"
-          />
+        <Container className="d-flex justify-content-center">
+          
         </Container>
       </section>
 
@@ -55,27 +48,22 @@ const Home = ({ data }) => {
       <Container>
         <Row className="d-flex justify-content-center align-items-center">
           <Col>
-            <Row className={`${styles.hero2sub1}`} data-aos="fade-up" data-aos-duration="1000">
+            <Row className={`${styles.hero2sub1}`}>
               <Col xs={2} className={`${styles.lines} rounded-pill px-1`}></Col>
               <Col xs={7} className="py-2">
                 <h1>Social Media</h1>
               </Col>
             </Row>
-            <Row className="py-5" data-aos="fade-up" data-aos-duration="1000">
+            <Row className="py-5">
               <Col className="d-flex justify-content-center align-items-center">
                 <h2 className="josefinsitalic text-center w-50">Your home ashore awaits at Maline's Bedspace Seaman's Dormitory & Transient Inn. Discover comfort, community, and convenience tailored exclusively for seafarers. 🏠⚓ #SeafarersHaven #HomeAwayFromHome</h2>
               </Col>
             </Row>
             <Row>
-              <Col data-aos="fade-up" data-aos-duration="1000">
+              <Col>
                 <a href="https://www.facebook.com/lynsbedspace09260073532" target="_blank" rel="noreferrer">
                   <div className="d-flex justify-content-center align-items-center">
-                    <Icon
-                      icon={facebookFill}
-                      width={52}
-                      height={52}
-                      style={{ color: '#1877f2' }}
-                    />
+                  
                     <span className="px-3 pt-3">
                       <h2 className="josefinsitalic text-dark">/Malines Transient</h2>
                     </span>
@@ -86,40 +74,24 @@ const Home = ({ data }) => {
             <Row className="py-5">
               <Col>
                 <Row className="d-flex justify-content-center align-items-center">
-                  <Col md={3} data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="750">
+                  <Col md={3}>
                     <a href="https://www.facebook.com/lynsbedspace09260073532" target="_blank" rel="noreferrer">
-                      <StaticImage
-                        src="../images/website/soc1.png"
-                        alt=""
-                        className="img-fluid"
-                      />
+                    
                     </a>
                   </Col>
-                  <Col md={3} data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+                  <Col md={3}>
                     <a href="https://www.facebook.com/lynsbedspace09260073532" target="_blank" rel="noreferrer">
-                      <StaticImage
-                        src="../images/website/soc2.png"
-                        alt=""
-                        className="img-fluid"
-                      />
+                      
                     </a>
                   </Col>
-                  <Col md={3} data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2250">
+                  <Col md={3}>
                     <a href="https://www.facebook.com/lynsbedspace09260073532" target="_blank" rel="noreferrer">
-                      <StaticImage
-                        src="../images/website/soc3.png"
-                        alt=""
-                        className="img-fluid"
-                      />
+                      
                     </a>
                   </Col>
-                  <Col md={3} data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000">
+                  <Col md={3}>
                     <a href="https://www.facebook.com/lynsbedspace09260073532" target="_blank" rel="noreferrer">
-                      <StaticImage
-                        src="../images/website/soc4.png"
-                        alt=""
-                        className="img-fluid"
-                      />
+                     
                     </a>
                   </Col>
                 </Row>
@@ -129,8 +101,6 @@ const Home = ({ data }) => {
         </Row>
       </Container>
       </section>
-    </Layout>
+    </>
   )
 }
-
-export default Home
