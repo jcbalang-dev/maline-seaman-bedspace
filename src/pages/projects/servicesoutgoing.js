@@ -13,7 +13,10 @@ import {
 import { Icon } from '@iconify/react';
 import logo from '/src/images/logo.png';
 import userfooter from '/src/images/user.png';
+<<<<<<< HEAD
 import '/src/styles/global.css';
+=======
+>>>>>>> parent of d30a832 (test)
 
 const ServicesOutGoing = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
@@ -50,13 +53,21 @@ const ServicesOutGoing = () => {
                 <span className='mx-2'>Dashboard</span>
               </Nav.Link>
               {/* Services Menu */}
+<<<<<<< HEAD
               <button className='servicesmenu px-5 d-flex align-items-center justify-content-between' onClick={toggleMenu} onKeyDown={toggleMenu}>
+=======
+              <div className='servicesmenu px-5 d-flex align-items-center justify-content-between' onClick={toggleMenu}>
+>>>>>>> parent of d30a832 (test)
                 <div className="d-flex align-items-center">
                   <Icon icon="lucide:box" width="21.28" height="21.28" />
                   <span className='mx-2'>Services</span>
                 </div>
                 <Icon icon={isMenuOpen ? 'akar-icons:chevron-up' : 'akar-icons:chevron-down'} width="16" height="16" />
+<<<<<<< HEAD
               </button>
+=======
+              </div>
+>>>>>>> parent of d30a832 (test)
               {/* Services Submenu (conditionally rendered) */}
               {isMenuOpen && (
                 <div className="servicesmenu-position">
