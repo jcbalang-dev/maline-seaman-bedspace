@@ -1,10 +1,6 @@
 @font-face {
     font-family: 'TradeGothic';
-<<<<<<< HEAD
     src: url('../fonts/Trade-Gothic-LT-Extended.otf');
-=======
-    src: url('../fonts/Trade\ Gothic\ LT\ Extended.ttf');
->>>>>>> parent of d30a832 (test)
 }
 
 @font-face {
@@ -22,15 +18,6 @@
     src: url('../fonts/Inter-VariableFont_slnt,wght.ttf');
 }
 
-<<<<<<< HEAD
-=======
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
->>>>>>> parent of d30a832 (test)
 .bg {
     background-image: url('../images/bg.jpg');
     background-size: cover;
@@ -106,7 +93,6 @@
     font-size: 1rem;
 }
 
-<<<<<<< HEAD
 .homemenu {
     margin-left: 40px;	
 }
@@ -116,8 +102,6 @@
     margin-left: 68px;
 }
 
-=======
->>>>>>> parent of d30a832 (test)
 .menuitemname,
 .servicesmenu,
 .servicessubmenu {
@@ -127,10 +111,7 @@
     color: rgb(99, 115, 129);
     height: 35px;
     text-decoration: none;
-<<<<<<< HEAD
     border: 0;
-=======
->>>>>>> parent of d30a832 (test)
 }
 
 .menuitemname:hover,
@@ -149,13 +130,6 @@
     border-right: 3.55px solid rgb(48, 86, 211);
 }
 
-<<<<<<< HEAD
-=======
-.servicesmenu-position {
-    margin-left: 68px;
-}
-
->>>>>>> parent of d30a832 (test)
 .divider {
     height: 1px;
     margin-left: 50px;
@@ -249,15 +223,12 @@
     background-color: rgb(236, 236, 236);
 }
 
-<<<<<<< HEAD
 .dashboarddateandtime span{	
     font-family: 'Inter';	
     font-weight: 600;	
     font-size: 1.3rem;	
 }
 
-=======
->>>>>>> parent of d30a832 (test)
 .dashavailpending, 
 .dashavailpending:hover {
     padding: 14px;
@@ -314,10 +285,7 @@
     color: rgb(248, 250, 252);
 }
 
-<<<<<<< HEAD
 .servongoing ,
-=======
->>>>>>> parent of d30a832 (test)
 .servavailpend {
     font-family: 'Inter';
     font-weight: 600;
@@ -325,10 +293,7 @@
     color: rgb(48, 86, 211);
 }
 
-<<<<<<< HEAD
 .servongoingbtn ,
-=======
->>>>>>> parent of d30a832 (test)
 .servavailpendbtn {
     padding: 14px;
     border-color: rgb(19, 194, 150);
@@ -342,20 +307,13 @@
     color: rgb(248, 250, 252);
 }
 
-<<<<<<< HEAD
 .servongoinglistbtn ,
-=======
->>>>>>> parent of d30a832 (test)
 .servavailpendlistbtn {
     border-radius: 0px;
     width: 231px;
     height: 50px;
     background-color: rgb(217, 217, 217);
-<<<<<<< HEAD
     border-color: rgb(19, 194, 150);
-=======
-    border-color: rgb(48, 86, 211);
->>>>>>> parent of d30a832 (test)
     border-width: 1px;
     color: black;
     font-family: 'Inter';
@@ -410,7 +368,6 @@
     font-weight: 600;
     font-size: 1rem;
 }
-<<<<<<< HEAD
 
 .modalsettings .modal-content {
     border-radius: 46px;
@@ -479,5 +436,3 @@
     font-family: 'Inter';
     font-size: 0.9rem;
 }
-=======
->>>>>>> parent of d30a832 (test)
