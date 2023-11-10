@@ -1,0 +1,483 @@
+@font-face {
+    font-family: 'TradeGothic';
+<<<<<<< HEAD
+    src: url('../fonts/Trade-Gothic-LT-Extended.otf');
+=======
+    src: url('../fonts/Trade\ Gothic\ LT\ Extended.ttf');
+>>>>>>> parent of d30a832 (test)
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'LexendTera';
+    src: url('../fonts/LexendTera-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-VariableFont_slnt,wght.ttf');
+}
+
+<<<<<<< HEAD
+=======
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+>>>>>>> parent of d30a832 (test)
+.bg {
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cardform {
+    background-color: rgb(217, 217, 217);
+    border-color: rgb(217, 217, 217);
+}
+
+.loginheader {
+    font-family: 'TradeGothic';
+    font-size: 3rem;
+}
+
+.loginsubheader {
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    color: rgb(17, 34, 17);
+}
+
+.formlabellogin {
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    color: rgb(28, 27, 31);
+}
+
+.formtxtboxlogin {
+    height: 56px;
+    border-width: 1px;
+    border-color: rgb(121, 116, 126);
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    color: rgb(28, 27, 31);
+}
+
+.formlogincheckbox {
+    font-family: 'Montserrat';
+    font-size: 0.9rem;
+    color: rgb(17, 34, 17);
+}
+
+.forgotpass a {
+    font-family: 'Montserrat';
+    font-size: 0.9rem;
+    color: rgb(255, 134, 130);
+    text-decoration: none;
+}
+
+.formbtnsubmit {
+    height: 56px;
+    font-family: 'Montserrat';
+    font-size: 0.9rem;
+    color: rgb(17, 34, 17);
+    background-color: rgb(141, 211, 187);
+    border-color: rgb(141, 211, 187);
+}
+
+.formbtnsubmit:hover {
+    height: 56px;
+    font-family: 'Montserrat';
+    font-size: 0.9rem;
+    color: rgb(17, 34, 17);
+    background-color: rgb(93, 161, 139);
+    border-color: rgb(93, 161, 139);
+}
+
+.homelogoname {
+    font-family: 'LexendTera';
+    font-size: 1rem;
+}
+
+<<<<<<< HEAD
+.homemenu {
+    margin-left: 40px;	
+}
+
+.servicesmenuposition,
+.menuitemnameposition {
+    margin-left: 68px;
+}
+
+=======
+>>>>>>> parent of d30a832 (test)
+.menuitemname,
+.servicesmenu,
+.servicessubmenu {
+    font-family: 'Inter';
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(99, 115, 129);
+    height: 35px;
+    text-decoration: none;
+<<<<<<< HEAD
+    border: 0;
+=======
+>>>>>>> parent of d30a832 (test)
+}
+
+.menuitemname:hover,
+.servicesmenu:hover,
+.servicessubmenu:hover {
+    color: rgb(48, 86, 211);
+    background-color: rgb(244, 247, 255);
+    border-right: 3.55px solid rgb(48, 86, 211);
+}
+
+.menuitemname:focus,
+.servicesmenu:focus,
+.servicessubmenu:focus {
+    color: rgb(48, 86, 211);
+    background-color: rgb(244, 247, 255);
+    border-right: 3.55px solid rgb(48, 86, 211);
+}
+
+<<<<<<< HEAD
+=======
+.servicesmenu-position {
+    margin-left: 68px;
+}
+
+>>>>>>> parent of d30a832 (test)
+.divider {
+    height: 1px;
+    margin-left: 50px;
+    background-color: rgb(231, 231, 231);
+}
+
+.username {
+    font-family: 'Inter';
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(99, 115, 129);
+}
+
+.useremail {
+    font-family: 'Inter';
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgb(99, 115, 129);
+}
+
+.locationheader {
+    font-family: 'Inter';
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgb(33, 43, 54);
+}
+
+.input-wrapper {
+    background-color: rgb(248, 250, 252);
+    height: 43.6px;
+    border-radius: 10px;
+    padding: 0 15px;
+}
+
+.inputsearch:focus {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+}
+
+#searchicon {
+    color: rgb(99, 115, 129);
+}
+
+.formradiolabel {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.formradiocheck {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.selectmenudropdown span,
+.selectmenus {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: rgb(99, 115, 129);
+}
+
+#dropdown-basic {
+    width: 225px;
+    border-color: rgb(224, 224, 224);
+}
+
+.chkinoutbtn {
+    padding: 14px;
+    border-color: rgb(48, 86, 211);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: transparent;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(48, 86, 211);
+    width: 47%;
+}
+
+.chkinoutbtn:hover {
+    background-color: rgb(19, 194, 150);
+    border-color: rgb(19, 194, 150);
+}
+
+.dashcontentcol {
+    background-color: rgb(236, 236, 236);
+}
+
+<<<<<<< HEAD
+.dashboarddateandtime span{	
+    font-family: 'Inter';	
+    font-weight: 600;	
+    font-size: 1.3rem;	
+}
+
+=======
+>>>>>>> parent of d30a832 (test)
+.dashavailpending, 
+.dashavailpending:hover {
+    padding: 14px;
+    border-color: rgb(48, 86, 211);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: transparent;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(48, 86, 211);
+}
+
+.dashongoing, 
+.dashongoing:hover {
+    padding: 14px;
+    border-color: rgb(19, 194, 150);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: rgb(19, 194, 150);
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(248, 250, 252);
+}
+
+.dashoutgoing, 
+.dashoutgoing:hover {
+    padding: 14px;
+    border-color: rgb(48, 86, 211);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: rgb(48, 86, 211);
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(248, 250, 252);
+}
+
+.dashout, 
+.dashout:hover {
+    padding: 14px;
+    border-color: rgb(33, 43, 54);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: rgb(33, 43, 54);
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(248, 250, 252);
+}
+
+<<<<<<< HEAD
+.servongoing ,
+=======
+>>>>>>> parent of d30a832 (test)
+.servavailpend {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 2rem;
+    color: rgb(48, 86, 211);
+}
+
+<<<<<<< HEAD
+.servongoingbtn ,
+=======
+>>>>>>> parent of d30a832 (test)
+.servavailpendbtn {
+    padding: 14px;
+    border-color: rgb(19, 194, 150);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: rgb(19, 194, 150);
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(248, 250, 252);
+}
+
+<<<<<<< HEAD
+.servongoinglistbtn ,
+=======
+>>>>>>> parent of d30a832 (test)
+.servavailpendlistbtn {
+    border-radius: 0px;
+    width: 231px;
+    height: 50px;
+    background-color: rgb(217, 217, 217);
+<<<<<<< HEAD
+    border-color: rgb(19, 194, 150);
+=======
+    border-color: rgb(48, 86, 211);
+>>>>>>> parent of d30a832 (test)
+    border-width: 1px;
+    color: black;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.servcancelled,
+.servoutgoing {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 2rem;
+    color: rgb(48, 86, 211);
+}
+
+.servcancelledbtn,
+.servoutgoingbtn {
+    padding: 14px;
+    border-color: rgb(19, 194, 150);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: rgb(19, 194, 150);
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(248, 250, 252);
+}
+
+.servcancelledlistbtn {
+    border-radius: 0px;
+    width: 231px;
+    height: 50px;
+    background-color: rgb(217, 217, 217);
+    border-color: rgb(33, 43, 54);
+    border-width: 1px;
+    color: black;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.servoutgoinglistbtn {
+    border-radius: 0px;
+    width: 231px;
+    height: 50px;
+    background-color: rgb(217, 217, 217);
+    border-color: rgb(48, 86, 211);
+    border-width: 1px;
+    color: black;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
+}
+<<<<<<< HEAD
+
+.modalsettings .modal-content {
+    border-radius: 46px;
+    border-width: 12px;
+    border-color: rgb(19, 194, 150);
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(247, 247, 247);   
+  }
+
+.modalsettingstitle{
+    color: rgb(33, 43, 54);
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.modalsettingseditpro{
+    color: rgb(99, 115, 129);
+    font-family: 'Inter';
+    font-weight: 400;
+}
+
+.modalsettingsbody{
+    padding-bottom: 150px;
+}
+
+.inputSettingsLabel{
+    color: rgb(33, 43, 54);
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding-bottom: 10px;
+}
+
+.modalsettingsinput{
+    margin-right: 50px;
+}
+
+.fixedImageSettingsSize {
+    width: 136px;
+    height: 131px;
+}
+
+.modalsettingsconfirm{
+    width: 150px;
+    background-color: rgb(48, 86, 211);
+    color: rgb(248, 250, 252);
+    font-family: 'Inter';
+    font-size: 0.9rem;
+}
+
+.modalsettingscancel{
+    width: 150px;
+    background-color: rgb(33, 43, 54);
+    color: rgb(248, 250, 252);
+    font-family: 'Inter';
+    font-size: 0.9rem;
+}
+
+.modalsettingsconfirm:hover,
+.modalsettingscancel:hover{
+    width: 150px;
+    background-color: rgb(19, 194, 150);
+    color: rgb(248, 250, 252);
+    font-family: 'Inter';
+    font-size: 0.9rem;
+}
+=======
+>>>>>>> parent of d30a832 (test)

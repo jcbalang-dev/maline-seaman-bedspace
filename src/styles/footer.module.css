@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'LexendReg';
+    src: url('../fonts/LexendDeca-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'JosefinsItalic';
+    src: url('../fonts/JosefinSans-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'LexendLight';
+    src: url('../fonts/LexendDeca-Light.ttf');
+}
+
+.footersub1 {
+    padding: 115px 0 0 0;
+}
+
+.container h5 {
+    color: rgb(84, 104, 231);
+    font-size: 1.3rem;
+}
+
+.container ul li {
+    color: rgb(245, 245, 245);
+    list-style: none;
+}
+
+.lexendreg {
+    font-family: 'LexendReg';
+    font-size: 0.9rem;
+}
+
+.lexendlight {
+    font-size: 1.5rem;
+    font-family: 'LexendLight';
+}
+
+.josefinsitalic {
+    font-family: 'JosefinsItalic';
+}
