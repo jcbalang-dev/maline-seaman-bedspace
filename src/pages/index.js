@@ -1,11 +1,3 @@
-// import Layout from '../components/Layout'
-// import { StaticImage } from 'gatsby-plugin-image'
-// import { Icon } from '@iconify/react'
-// import facebookFill from '@iconify-icons/akar-icons/facebook-fill'
-// import AOS from 'aos';
-// import 'aos/dist/aos.css';
-// AOS.init();
-
 import * as React from 'react'
 import * as styles from '../styles/home.module.css'
 import { Container, Row, Col, Button } from 'react-bootstrap'
@@ -58,13 +50,7 @@ const Home = ({ data }) => {
       </section>
 
       <section className="py-5">
-        <Container className="d-flex justify-content-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-          {/* <StaticImage
-            src="../images/website/iconblack2.png"
-            alt=""
-            className="img-fluid"
-          /> */}
-        </Container>
+        <Container className="d-flex justify-content-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom"></Container>
       </section>
 
       <section className={`${styles.hero2} px-5`}>
@@ -91,12 +77,6 @@ const Home = ({ data }) => {
               <Col data-aos="fade-up" data-aos-duration="1000">
                 <a href="https://www.facebook.com/lynsbedspace09260073532" target="_blank" rel="noreferrer">
                   <div className="d-flex justify-content-center align-items-center">
-                    {/* <Icon
-                      icon={facebookFill}
-                      width={52}
-                      height={52}
-                      style={{ color: '#1877f2' }}
-                    /> */}
                     <span className="px-3 pt-3">
                       <h2 className="josefinsitalic text-dark">/Malines Transient</h2>
                     </span>
@@ -108,40 +88,16 @@ const Home = ({ data }) => {
               <Col>
                 <Row className="d-flex justify-content-center align-items-center">
                   <Col md={3} data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="750">
-                    <a href="https://www.facebook.com/lynsbedspace09260073532" target="_blank" rel="noreferrer">
-                      {/* <StaticImage
-                        src="../images/website/soc1.png"
-                        alt=""
-                        className="img-fluid"
-                      /> */}
-                    </a>
+                    <a href="https://www.facebook.com/lynsbedspace09260073532" target="_blank" rel="noreferrer"></a>
                   </Col>
                   <Col md={3} data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
-                    <a href="https://www.facebook.com/lynsbedspace09260073532" target="_blank" rel="noreferrer">
-                      {/* <StaticImage
-                        src="../images/website/soc2.png"
-                        alt=""
-                        className="img-fluid"
-                      /> */}
-                    </a>
+                    <a href="https://www.facebook.com/lynsbedspace09260073532" target="_blank" rel="noreferrer"></a>
                   </Col>
                   <Col md={3} data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2250">
-                    <a href="https://www.facebook.com/lynsbedspace09260073532" target="_blank" rel="noreferrer">
-                      {/* <StaticImage
-                        src="../images/website/soc3.png"
-                        alt=""
-                        className="img-fluid"
-                      /> */}
-                    </a>
+                    <a href="https://www.facebook.com/lynsbedspace09260073532" target="_blank" rel="noreferrer"></a>
                   </Col>
                   <Col md={3} data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000">
-                    <a href="https://www.facebook.com/lynsbedspace09260073532" target="_blank" rel="noreferrer">
-                      {/* <StaticImage
-                        src="../images/website/soc4.png"
-                        alt=""
-                        className="img-fluid"
-                      /> */}
-                    </a>
+                    <a href="https://www.facebook.com/lynsbedspace09260073532" target="_blank" rel="noreferrer"></a>
                   </Col>
                 </Row>
               </Col>
