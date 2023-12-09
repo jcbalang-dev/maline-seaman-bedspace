@@ -1,17 +1,17 @@
 .hero1 {
-    padding: 160px 0 160px 0;
+  padding: 160px 0 160px 0;
 }
 
 .hero1 p {
-    font-size: 3rem;
-    color: rgb(247, 247, 247);
-    line-height: 1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 3rem;
+  color: rgb(247, 247, 247);
+  line-height: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero1 span {
-    font-size: 2.6rem;
-    color: rgb(247, 247, 247);
-    line-height: 1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 2.6rem;
+  color: rgb(247, 247, 247);
+  line-height: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
