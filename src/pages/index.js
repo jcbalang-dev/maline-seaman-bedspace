@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 const handleClick = () => {
   Swal.fire({
     title: 'Hello!',
-    text: 'This is a SweetAlerts!',
+    text: 'Deployment is a success!',
     icon: 'success',
     confirmButtonText: 'OK',
   });
