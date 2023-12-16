@@ -1,19 +1,18 @@
 import * as React from "react";
 import { useState } from "react";
 
-import Logo from "../Logo";
-
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav, Container } from "react-bootstrap";
+import { List, ChevronUp, ChevronDown } from "react-bootstrap-icons";
 
-import { Image } from "next/image";
 import HeaderBackground from "/public/images/website/bg.png";
-// import { Icon } from "@iconify/react";
+import { Image } from "next/image";
+
+import Logo from "../Logo";
 import Hero from "../Hero";
 import Social from "../Social";
 
 const headerStyle = {
-  backgroundImage: `url(${HeaderBackground})`,
+  backgroundImage: `url(${HeaderBackground.src})`,
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
 };
@@ -40,7 +39,7 @@ const Header = () => {
             aria-controls="navbarButtonsExample"
             aria-label="Toggle navigation"
           >
-            {/* <Icon icon="lucide:menu" width="24" height="24" /> */}
+            <List width="24" height="24" />
           </Navbar.Toggle>
           <Navbar.Collapse id="navbarButtonsExample">
             <Nav className="me-auto">
@@ -57,15 +56,11 @@ const Header = () => {
                 className="text-white mx-4 circularmed"
               >
                 Services
-                {/* <Icon
-                  icon={
-                    isServicesHovered
-                      ? "lucide:chevron-up"
-                      : "lucide:chevron-down"
-                  }
-                  width="24"
-                  height="24"
-                /> */}
+                {isServicesHovered ? (
+                  <ChevronUp width={24} height={24} />
+                ) : (
+                  <ChevronDown width={24} height={24} />
+                )}
                 <Nav className="sub-nav">
                   <Nav.Link
                     href="/services/single-bedroom"
