@@ -7,10 +7,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav, Container } from "react-bootstrap";
 
 import { Image } from "next/image";
-import HeaderBackground from "../../public/images/website/bg.png";
+import HeaderBackground from "/public/images/website/bg.png";
 // import { Icon } from "@iconify/react";
-import Hero from "./Hero";
-import Social from "./Social";
+import Hero from "../Hero";
+import Social from "../Social";
 
 const headerStyle = {
   backgroundImage: `url(${HeaderBackground})`,
@@ -19,7 +19,6 @@ const headerStyle = {
 };
 
 const Header = () => {
-
   const [isServicesHovered, setIsServicesHovered] = useState(false);
 
   const handleServicesMouseEnter = () => {
@@ -35,7 +34,7 @@ const Header = () => {
       <Container>
         <Navbar expand="lg" variant="light">
           <Navbar.Brand href="/">
-            <Logo/>
+            <Logo />
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="navbarButtonsExample"
