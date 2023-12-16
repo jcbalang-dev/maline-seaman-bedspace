@@ -24,7 +24,7 @@ const Home = ({ data }) => {
             <Col md={6} data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
               <div>
                  <Image
-                  src="/images/aboutus2.png"
+                  src="/images/website/aboutus2.png"
                   alt=""
                   className="img-fluid"
                 />
@@ -67,7 +67,7 @@ const Home = ({ data }) => {
               <Col className="d-flex justify-content-center align-items-center">
                 <h2 className="josefinsitalic text-center w-50">Your home ashore awaits at Maline's Bedspace Seaman's Dormitory & Transient Inn. Discover comfort, community, and convenience tailored exclusively for seafarers. 🏠⚓ #SeafarersHaven #HomeAwayFromHome</h2>
                 <Image
-                  src="/images/aboutus2.png"
+                  src="/images/website/aboutus2.png"
                   alt=""
                   className="img-fluid"
                 />
