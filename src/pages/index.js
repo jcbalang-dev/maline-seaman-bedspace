@@ -71,6 +71,8 @@ const Home = ({ data }) => {
             src="/images/website/icon/iconblack2.png"
             alt=""
             className="img-fluid"
+            width={68}
+            height={77}
           />
         </Container>
       </section>
