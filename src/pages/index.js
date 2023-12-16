@@ -5,6 +5,7 @@ import { ArrowRight } from 'react-bootstrap-icons'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from 'next/image'
 import Swal from 'sweetalert2';
+import Footer from '../app/components/footer'
 
 const handleClick = () => {
   Swal.fire({
@@ -106,6 +107,7 @@ const Home = ({ data }) => {
         </Row>
       </Container>
       </section>
+      <Footer/>
       </>
   )
 }
