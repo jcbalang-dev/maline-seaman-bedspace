@@ -21,9 +21,11 @@ const Home = ({ data }) => {
             >
               <div>
                 <Image
-                  src="/public/images/website/aboutus2.png"
+                  src="/images/website/aboutus2.png"
                   alt=""
                   className="img-fluid"
+                  width={612}
+                  height={642}
                 />
               </div>
             </Col>
@@ -66,7 +68,7 @@ const Home = ({ data }) => {
           data-aos-anchor-placement="top-bottom"
         >
           <Image
-            src="/public/images/website/icon/iconblack2.png"
+            src="/images/website/icon/iconblack2.png"
             alt=""
             className="img-fluid"
           />
@@ -137,9 +139,11 @@ const Home = ({ data }) => {
                         rel="noreferrer"
                       >
                         <Image
-                          src="/public/images/website/soc1.png"
+                          src="/images/website/soc1.png"
                           alt=""
                           className="img-fluid"
+                          width={318}
+                          height={333}
                         />
                       </a>
                     </Col>
@@ -155,9 +159,11 @@ const Home = ({ data }) => {
                         rel="noreferrer"
                       >
                         <Image
-                          src="/public/images/website/soc2.png"
+                          src="/images/website/soc2.png"
                           alt=""
                           className="img-fluid"
+                          width={318}
+                          height={333}
                         />
                       </a>
                     </Col>
@@ -173,9 +179,11 @@ const Home = ({ data }) => {
                         rel="noreferrer"
                       >
                         <Image
-                          src="/public/images/website/soc3.png"
+                          src="/images/website/soc3.png"
                           alt=""
                           className="img-fluid"
+                          width={318}
+                          height={333}
                         />
                       </a>
                     </Col>
@@ -191,9 +199,11 @@ const Home = ({ data }) => {
                         rel="noreferrer"
                       >
                         <Image
-                          src="/public/images/website/soc4.png"
+                          src="/images/website/soc4.png"
                           alt=""
                           className="img-fluid"
+                          width={318}
+                          height={333}
                         />
                       </a>
                     </Col>
