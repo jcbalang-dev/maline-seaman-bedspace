@@ -1,11 +1,11 @@
 import React from "react";
-import Logo from "./Logo";
+import Logo from "../Logo";
 import Link from "next/link";
 import { Container, Row, Col, ListGroup } from "react-bootstrap";
 import * as styles from "../../../styles/footer.module.css";
 import { Facebook, People } from "react-bootstrap-icons";
 
-export default function FooterIndex({ data }) {
+export default function Footer({ data }) {
   const currentYear = new Date().getFullYear();
   return (
     <>
