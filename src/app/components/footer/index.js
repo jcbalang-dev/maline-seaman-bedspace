@@ -8,7 +8,7 @@ import { Facebook, People } from "react-bootstrap-icons";
 export default function Footer({ data }) {
   const currentYear = new Date().getFullYear();
   return (
-    <>
+    <footer>
       <Container className={styles.container}>
         <Row className={styles.footersub1}>
           <Col md={3} className="justify-content-md-center">
@@ -117,6 +117,6 @@ export default function Footer({ data }) {
           </p>
         </Row>
       </Container>
-    </>
+    </footer>
   );
 }
