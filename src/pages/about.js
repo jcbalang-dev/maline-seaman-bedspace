@@ -3,7 +3,7 @@ import * as React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 import Image from "next/image";
-import Layout from "../app/components/Layout";
+import Layout from "../app/components/layout";
 import * as styles from "../styles/about.module.css";
 
 const About = ({ data }) => {
