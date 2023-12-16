@@ -1,6 +1,8 @@
 import * as React from "react";
 import { useState } from "react";
 
+import Logo from "../Logo";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav, Container } from "react-bootstrap";
 
@@ -33,14 +35,7 @@ const Header = () => {
       <Container>
         <Navbar expand="lg" variant="light">
           <Navbar.Brand href="/">
-            <Image
-              src="../images/website/logo.png"
-              alt="Maline's Bedspace Seaman's Dormitory and Transient Inn"
-              loading="lazy"
-              className="img-fluid"
-              height="131"
-              width="132"
-            />
+            <Logo/>
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="navbarButtonsExample"
