@@ -1,20 +1,11 @@
 import * as React from "react";
-import * as styles from "../styles/home.module.css";
-import { Container, Row, Col, Button } from "react-bootstrap";
-import { ArrowRight } from "react-bootstrap-icons";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Image from "next/image";
-import Swal from "sweetalert2";
-import Layout from "../app/components/layout";
 
-const handleClick = () => {
-  Swal.fire({
-    title: "Hello!",
-    text: "Deployment is a success!",
-    icon: "success",
-    confirmButtonText: "OK",
-  });
-};
+import { Facebook } from "react-bootstrap-icons";
+import { Container, Row, Col } from "react-bootstrap";
+
+import Image from "next/image";
+import Layout from "../app/components/layout";
+import * as styles from "../styles/home.module.css";
 
 const Home = ({ data }) => {
   return (
@@ -33,11 +24,9 @@ const Home = ({ data }) => {
                   src="/images/website/aboutus2.png"
                   alt=""
                   className="img-fluid"
+                  width={612}
+                  height={642}
                 />
-                <ArrowRight color="royalblue" size={96} />
-                <Button onClick={handleClick} variant="danger">
-                  Danger
-                </Button>{" "}
               </div>
             </Col>
             <Col md={6}>
@@ -77,7 +66,15 @@ const Home = ({ data }) => {
           className="d-flex justify-content-center"
           data-aos="fade-up"
           data-aos-anchor-placement="top-bottom"
-        ></Container>
+        >
+          <Image
+            src="/images/website/icon/iconblack2.png"
+            alt=""
+            className="img-fluid"
+            width={68}
+            height={77}
+          />
+        </Container>
       </section>
 
       <section className={`${styles.hero2} px-5`}>
@@ -105,11 +102,6 @@ const Home = ({ data }) => {
                     convenience tailored exclusively for seafarers. 🏠⚓
                     #SeafarersHaven #HomeAwayFromHome
                   </h2>
-                  <Image
-                    src="/images/website/aboutus2.png"
-                    alt=""
-                    className="img-fluid"
-                  />
                 </Col>
               </Row>
               <Row>
@@ -120,6 +112,11 @@ const Home = ({ data }) => {
                     rel="noreferrer"
                   >
                     <div className="d-flex justify-content-center align-items-center">
+                      <Facebook
+                        width={52}
+                        height={52}
+                        style={{ color: "#1877f2" }}
+                      />
                       <span className="px-3 pt-3">
                         <h2 className="josefinsitalic text-dark">
                           /Malines Transient
@@ -142,7 +139,15 @@ const Home = ({ data }) => {
                         href="https://www.facebook.com/lynsbedspace09260073532"
                         target="_blank"
                         rel="noreferrer"
-                      ></a>
+                      >
+                        <Image
+                          src="/images/website/soc1.png"
+                          alt=""
+                          className="img-fluid"
+                          width={318}
+                          height={333}
+                        />
+                      </a>
                     </Col>
                     <Col
                       md={3}
@@ -154,7 +159,15 @@ const Home = ({ data }) => {
                         href="https://www.facebook.com/lynsbedspace09260073532"
                         target="_blank"
                         rel="noreferrer"
-                      ></a>
+                      >
+                        <Image
+                          src="/images/website/soc2.png"
+                          alt=""
+                          className="img-fluid"
+                          width={318}
+                          height={333}
+                        />
+                      </a>
                     </Col>
                     <Col
                       md={3}
@@ -166,7 +179,15 @@ const Home = ({ data }) => {
                         href="https://www.facebook.com/lynsbedspace09260073532"
                         target="_blank"
                         rel="noreferrer"
-                      ></a>
+                      >
+                        <Image
+                          src="/images/website/soc3.png"
+                          alt=""
+                          className="img-fluid"
+                          width={318}
+                          height={333}
+                        />
+                      </a>
                     </Col>
                     <Col
                       md={3}
@@ -178,7 +199,15 @@ const Home = ({ data }) => {
                         href="https://www.facebook.com/lynsbedspace09260073532"
                         target="_blank"
                         rel="noreferrer"
-                      ></a>
+                      >
+                        <Image
+                          src="/images/website/soc4.png"
+                          alt=""
+                          className="img-fluid"
+                          width={318}
+                          height={333}
+                        />
+                      </a>
                     </Col>
                   </Row>
                 </Col>

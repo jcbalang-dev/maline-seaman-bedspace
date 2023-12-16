@@ -1,107 +1,172 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+@font-face {
+  font-family: CircularMed;
+  src: url("/public/font/circular-std-medium-500.ttf");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@font-face {
+  font-family: JosefinsBold;
+  src: url("/public/font/JosefinSans-Bold.ttf");
+}
 
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
+@font-face {
+  font-family: JosefinsLight;
+  src: url("/public/font/JosefinSans-Light.ttf");
+}
 
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
+@font-face {
+  font-family: JosefinsItalic;
+  src: url("/public/font/JosefinSans-Italic.ttf");
+}
 
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
+@font-face {
+  font-family: JosefinsRegular;
+  src: url("/public/font/JosefinSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "TradeGothicLTExtended";
+  src: url("/public/font/Trade-Gothic-LT-Extended.otf");
+}
+
+@font-face {
+  font-family: MontserratMedium;
+  src: url("/public/font/Montserrat-Medium.ttf");
+}
+
+@font-face {
+  font-family: MontserratRegular;
+  src: url("/public/font/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: MontserratBold;
+  src: url("/public/font/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: BiryaniBold;
+  src: url("/public/font/Biryani-Bold.ttf");
+}
+
+.circularmed {
+  font-family: "CircularMed";
+}
+
+.josefinsbold {
+  font-family: "JosefinsBold";
+}
+
+.josefinslight {
+  font-family: "JosefinsLight";
+}
+
+.josefinsitalic {
+  font-family: "JosefinsItalic";
+}
+
+.montserratmedium {
+  font-family: "MontserratMedium";
+}
+
+.montserratbold {
+  font-family: "MontserratBold";
+}
+
+.tradeext {
+  font-family: "TradeGothicLTExtended";
+}
+
+.montserratregular {
+  font-family: "MontserratRegular";
+}
+
+.biryanibold {
+  font-family: "BiryaniBold";
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+header {
+  background-color: rgb(22, 137, 190);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+header img {
+  margin-top: -1px;
+  width: 132px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+big {
+  font-family: "JosefinsRegular";
+  font-size: 1.4em;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+nav-link {
+  padding-right: 100px;
+}
+
+.logo {
+  width: 132px;
+  height: auto;
+}
+
+.navbar {
+  box-shadow: none;
+}
+
+.nav-link {
+  position: relative;
+  font-size: 1rem;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: black;
+}
+
+.nav-link::after {
+  content: "";
+  border-radius: 35px;
+  height: 4px;
+  width: 100%;
+  background-color: rgb(223, 105, 81);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.2s;
+  pointer-events: none;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  opacity: 1;
+}
+
+.sub-nav {
+  display: none;
+  position: absolute;
+  background-color: #eee;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 200%;
+}
+
+.nav-link:hover .sub-nav {
+  display: block;
+}
+
+Footer {
+  background-color: rgb(35, 35, 64);
+  padding: 0 0 115px 0;
+}
+
+Footer img {
+  width: 175px;
 }
