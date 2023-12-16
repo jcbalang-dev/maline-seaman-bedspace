@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Row, Col } from "react-bootstrap";
 import { Facebook } from "react-bootstrap-icons";
-import * as styles from "../styles/social.module.css";
+import * as styles from "../../styles/social.module.css";
 
 const Social = () => {
   return (
