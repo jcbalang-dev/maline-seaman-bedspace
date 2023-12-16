@@ -3,7 +3,6 @@ import { useState } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav, Container } from "react-bootstrap";
-// import { graphql, useStaticQuery } from "gatsby";
 
 import { Image } from "next/image";
 import HeaderBackground from "../../public/images/website/bg.png";
@@ -18,17 +17,6 @@ const headerStyle = {
 };
 
 const Header = () => {
-  //   const data = useStaticQuery(graphql`
-  //     {
-  //       site {
-  //         siteMetadata {
-  //           title
-  //         }
-  //       }
-  //     }
-  //   `);
-
-  //   const { title } = data.site.siteMetadata;
 
   const [isServicesHovered, setIsServicesHovered] = useState(false);
 
@@ -47,7 +35,7 @@ const Header = () => {
           <Navbar.Brand href="/">
             <Image
               src="../images/website/logo.png"
-              //   alt={title}
+              alt="Maline's Bedspace Seaman's Dormitory and Transient Inn"
               loading="lazy"
               className="img-fluid"
               height="131"
