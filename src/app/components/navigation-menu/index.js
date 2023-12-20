@@ -51,8 +51,7 @@ const NavigationMenu = () => {
                     <Nav.Item className="nav-item dropdown px-4">
                       <Nav.Link
                         as={Link}
-                        href
-                        to="/services"
+                        href="/services"
                         className="text-white"
                         onMouseEnter={handleServicesMouseEnter}
                         onMouseLeave={handleServicesMouseLeave}
@@ -69,8 +68,7 @@ const NavigationMenu = () => {
                           </Nav.Link>
                           <Nav.Link
                             as={Link}
-                            href
-                            to="/services/double-deck-bedroom"
+                            href="/services/double-deck-bedroom"
                           >
                             Double-Deck Bedroom
                           </Nav.Link>
@@ -80,8 +78,7 @@ const NavigationMenu = () => {
                     <Nav.Item className="px-4">
                       <Nav.Link
                         as={Link}
-                        href
-                        to="/contact-us/"
+                        href="/contact-us/"
                         className="text-white"
                       >
                         Contact Us
