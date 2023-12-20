@@ -313,7 +313,7 @@ const DoubleDeckBedroom = ({ data }) => {
                     ></iframe>
 
                     <small className="montserratmed d-inline-block">
-                      <div className={gmapslocStyle}></div>
+                      <div style={gmapslocStyle}></div>
                       1856c Agoncillio Street Malate Manila
                     </small>
                   </Col>
