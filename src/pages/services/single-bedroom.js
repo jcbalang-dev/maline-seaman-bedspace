@@ -32,7 +32,7 @@ const SingleBedroom = ({ data }) => {
   };
 
   return (
-    <>
+    <SimpleLayout>
       <section>
         <Container className="py-5 montserratmedium breadcrumb px-3">
           <Breadcrumb>
@@ -321,7 +321,7 @@ const SingleBedroom = ({ data }) => {
           </Row>
         </Container>
       </section>
-    </>
+    </SimpleLayout>
   );
 };
 
