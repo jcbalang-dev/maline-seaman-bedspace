@@ -1,11 +1,11 @@
 import * as React from "react";
 import { useState } from "react";
-import { Link } from "next/link";
+import Link from "next/link";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Navbar, Col, Nav } from "react-bootstrap";
 import { ChevronUp, ChevronDown } from "react-bootstrap-icons";
 
-import { Image } from "next/image";
+import Logo from "../Logo";
 
 const NavigationMenu = () => {
   const [isServicesHovered, setIsServicesHovered] = useState(false);
@@ -26,13 +26,7 @@ const NavigationMenu = () => {
             <Navbar expand="lg" variant="light" className="shadow-none">
               <Col md={1} className="px-2">
                 <Navbar.Brand as={Link} href="/">
-                  <Image
-                    src="/images/website/logo/logo.png"
-                    loading="lazy"
-                    className="img-fluid"
-                    height="131"
-                    width="132"
-                  />
+                  <Logo />
                 </Navbar.Brand>
               </Col>
               <Col md={4} className="px-2">
