@@ -1,5 +1,5 @@
 import * as React from "react";
-// import SimpleLayout from "../../components/SimpleLayout";
+import SimpleLayout from "../../app/components/simple-layout";
 import { Breadcrumb, Col, Container, Row } from "react-bootstrap";
 import { Link } from "next/link";
 import * as styles from "../../styles/services.module.css";
@@ -32,7 +32,7 @@ const DoubleDeckBedroom = ({ data }) => {
   };
 
   return (
-    <>
+    <SimpleLayout>
       <section>
         <Container className="py-5 montserratmedium breadcrumb px-3">
           <Breadcrumb>
@@ -323,7 +323,7 @@ const DoubleDeckBedroom = ({ data }) => {
           </Row>
         </Container>
       </section>
-    </>
+    </SimpleLayout>
   );
 };
 
