@@ -1,4 +1,5 @@
 import * as React from "react";
+import Head from "next/head";
 import SimpleLayout from "../../app/components/simple-layout";
 import { Breadcrumb, Col, Container, Row } from "react-bootstrap";
 import { Link } from "next/link";
@@ -31,8 +32,15 @@ const DoubleDeckBedroom = ({ data }) => {
     padding: "0px 5px 5px 0px",
   };
 
+  const pageTitle = "Double Deck Bedroom";
+  const faviconUrl = "/images/website/icon/logo.ico";
+
   return (
     <SimpleLayout>
+      <Head>
+        <title>{pageTitle}</title>
+        <link rel="icon" href={faviconUrl} />
+      </Head>
       <section>
         <Container className="py-5 montserratmedium breadcrumb px-3">
           <Breadcrumb>
