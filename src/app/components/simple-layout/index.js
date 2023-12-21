@@ -1,6 +1,6 @@
 import * as React from "react";
 import "mdb-ui-kit/css/mdb.min.css";
-import "mdb-ui-kit/js/mdb.min.js";
+
 import Footer from "../footer";
 import NavigationMenu from "../navigation-menu";
 
