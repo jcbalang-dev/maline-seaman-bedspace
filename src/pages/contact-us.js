@@ -1,12 +1,20 @@
 import * as React from "react";
+import Head from "next/head";
 import SimpleLayout from "../app/components/simple-layout";
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as styles from "../styles/contact-us.module.css";
 
 const ContactUsPage = ({ data }) => {
+  const pageTitle = "Contact Us";
+  const faviconUrl = "/images/website/icon/logo.ico";
+
   return (
     <SimpleLayout>
+      <Head>
+        <title>{pageTitle}</title>
+        <link rel="icon" href={faviconUrl} />
+      </Head>
       <region>
         <Container className={styles.contacthero1}>
           <Row>
