@@ -1,5 +1,5 @@
 import * as React from "react";
-import Head from "next/head";
+import Favicon from "../app/components/favicon/Favicon";
 
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -8,15 +8,11 @@ import Layout from "../app/components/layout";
 import * as styles from "../styles/about.module.css";
 
 const About = ({ data }) => {
-  const pageTitle = "About";
-  const faviconUrl = "/images/website/icon/logo.ico";
+  const titleAbout = "About";
 
   return (
-    <Layout>
-      <Head>
-        <title>{pageTitle}</title>
-        <link rel="icon" href={faviconUrl} />
-      </Head>
+    <Layout pageTitle={titleAbout}>
+      <Favicon />
       <section className={`${styles.hero2} px-5`}>
         <Container>
           <Row className="d-flex justify-content-center align-items-center">
