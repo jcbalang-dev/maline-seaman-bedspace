@@ -1,26 +1,22 @@
 import * as React from "react";
-import Head from "next/head";
 
 import { Facebook, CursorFill } from "react-bootstrap-icons";
 import { Container, Row, Col, Carousel } from "react-bootstrap";
 
 import Image from "next/image";
 import Link from "next/link";
+import Favicon from "../../app/components/favicon/Favicon";
 
 import Layout from "../../app/components/layout";
 
 import * as styles from "../../styles/services.module.css";
 
 const Services = ({ data }) => {
-  const pageTitle = "Services";
-  const faviconUrl = "/images/website/icon/logo.ico";
+  const titleServices = "Services";
 
   return (
-    <Layout>
-      <Head>
-        <title>{pageTitle}</title>
-        <link rel="icon" href={faviconUrl} />
-      </Head>
+    <Layout pageTitle={titleServices}>
+      <Favicon />
       <section className={`${styles.hero2} px-5`}>
         <Container>
           <Row>
