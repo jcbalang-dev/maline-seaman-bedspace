@@ -5,6 +5,7 @@ import { Breadcrumb, Col, Container, Row } from "react-bootstrap";
 import { Link } from "next/link";
 import * as styles from "../../styles/services.module.css";
 import Image from "next/image";
+import Favicon from "../../app/components/favicon/Favicon";
 
 const SingleBedroom = ({ data }) => {
   const rightArrowIcon = {
@@ -32,15 +33,11 @@ const SingleBedroom = ({ data }) => {
     padding: "0px 5px 5px 0px",
   };
 
-  const pageTitle = "Single Bedroom";
-  const faviconUrl = "/images/website/icon/logo.ico";
+  const titleSingleBed = "Single Bedroom";
 
   return (
-    <SimpleLayout>
-      <Head>
-        <title>{pageTitle}</title>
-        <link rel="icon" href={faviconUrl} />
-      </Head>
+    <SimpleLayout pageTitle={titleSingleBed}>
+      <Favicon />
       <section>
         <Container className="py-5 montserratmedium breadcrumb px-3">
           <Breadcrumb>
