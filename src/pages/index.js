@@ -1,23 +1,18 @@
 import * as React from "react";
-import Head from "next/head";
-
 import { Facebook } from "react-bootstrap-icons";
 import { Container, Row, Col } from "react-bootstrap";
+import Favicon from "../app/components/favicon/Favicon";
 
 import Image from "next/image";
 import Layout from "../app/components/layout";
 import * as styles from "../styles/home.module.css";
 
 const Home = ({ data }) => {
-  const pageTitle = "Maline's Seaman's Dormitory";
-  const faviconUrl = "/images/website/icon/logo.ico";
+  const titleHome = "Maline's Seaman's Dormitory";
 
   return (
-    <Layout>
-      <Head>
-        <title>{pageTitle}</title>
-        <link rel="icon" href={faviconUrl} />
-      </Head>
+    <Layout pageTitle={titleHome}>
+      <Favicon />
       <section className={`${styles.hero2} px-5`}>
         <Container>
           <Row className="d-flex justify-content-center align-items-center">
