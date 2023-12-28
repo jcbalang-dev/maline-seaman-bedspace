@@ -89,9 +89,9 @@ export default function Footer({ data }) {
                 as="li"
                 className="list-unstyled bg-transparent border border-0"
               >
-                <Link href="/projects"></Link>
+                <Link href="/systems/hms"></Link>
                 <a
-                  href="/projects"
+                  href="/systems/hms"
                   className="d-flex justify-content-center align-items-center link-underline-opacity-0 link-underline"
                 >
                   <People
