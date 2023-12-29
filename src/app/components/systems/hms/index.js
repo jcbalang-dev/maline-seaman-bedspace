@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Splash from "./Splash";
 
 export default function HMSLayout({ children, pageTitle }) {
   return (
@@ -8,6 +9,7 @@ export default function HMSLayout({ children, pageTitle }) {
       </Head>
       <div className="layout">
         <div className="content">{children}</div>
+        <Splash />
       </div>
     </>
   );
