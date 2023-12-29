@@ -4,6 +4,7 @@ import SimpleLayout from "../app/components/simple-layout";
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as styles from "../styles/contact-us.module.css";
+import Favicon from "../app/components/favicon";
 
 const ContactUsPage = ({ data }) => {
   const pageTitle = "Contact Us";
@@ -11,10 +12,7 @@ const ContactUsPage = ({ data }) => {
 
   return (
     <SimpleLayout>
-      <Head>
-        <title>{pageTitle}</title>
-        <link rel="icon" href={faviconUrl} />
-      </Head>
+      <Favicon />
       <region>
         <Container className={styles.contacthero1}>
           <Row>

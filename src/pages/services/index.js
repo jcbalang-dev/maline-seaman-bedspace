@@ -5,7 +5,7 @@ import { Container, Row, Col, Carousel } from "react-bootstrap";
 
 import Image from "next/image";
 import Link from "next/link";
-import Favicon from "../../app/components/favicon/Favicon";
+import Favicon from "../../app/components/favicon";
 
 import Layout from "../../app/components/layout";
 

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Facebook } from "react-bootstrap-icons";
 import { Container, Row, Col } from "react-bootstrap";
-import Favicon from "../app/components/favicon/Favicon";
+import Favicon from "../app/components/favicon";
 
 import Image from "next/image";
 import Layout from "../app/components/layout";

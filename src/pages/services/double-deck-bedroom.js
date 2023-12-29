@@ -3,7 +3,7 @@ import SimpleLayout from "../../app/components/simple-layout";
 import { Breadcrumb, Col, Container, Row } from "react-bootstrap";
 import { Link } from "next/link";
 import * as styles from "../../styles/services.module.css";
-import Favicon from "../../app/components/favicon/Favicon";
+import Favicon from "../../app/components/favicon";
 import Image from "next/image";
 
 const DoubleDeckBedroom = ({ data }) => {

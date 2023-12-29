@@ -4,7 +4,7 @@ import { Breadcrumb, Col, Container, Row } from "react-bootstrap";
 import { Link } from "next/link";
 import * as styles from "../../styles/services.module.css";
 import Image from "next/image";
-import Favicon from "../../app/components/favicon/Favicon";
+import Favicon from "../../app/components/favicon";
 
 const SingleBedroom = ({ data }) => {
   const rightArrowIcon = {

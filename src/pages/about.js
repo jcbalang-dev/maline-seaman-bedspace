@@ -1,5 +1,5 @@
 import * as React from "react";
-import Favicon from "../app/components/favicon/Favicon";
+import Favicon from "../app/components/favicon";
 
 import { Container, Row, Col } from "react-bootstrap";
 
