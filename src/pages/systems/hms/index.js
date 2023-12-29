@@ -1,4 +1,4 @@
-import Favicon from "../../../app/components/favicon/Favicon";
+import Favicon from "../../../app/components/favicon";
 import HMSLayout from "../../../app/components/systems/hms/index";
 
 const HMS = () => {
