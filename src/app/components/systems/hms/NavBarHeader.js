@@ -12,7 +12,7 @@ const NavbarHeader = () => {
           1856C Agoncillio St. Malate Manila
         </Col>
         <Col>
-          <Search placeholder="input search text" style={{ width: 300 }} />
+          <Search placeholder="Search..." style={{ width: 300 }} />
         </Col>
         <Divider
           orientation="left"
