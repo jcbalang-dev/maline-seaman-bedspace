@@ -48,7 +48,8 @@ const NavbarFilter = () => {
           onClick={() => handleButtonClick("Button 1")}
           outline
           style={{
-            marginRight: 16,
+            marginRight: 55,
+            marginLeft: 620,
             color: "#3056D3",
             borderColor: "#3056D3",
             width: 120,
