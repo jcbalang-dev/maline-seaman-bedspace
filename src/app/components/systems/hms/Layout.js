@@ -7,7 +7,11 @@ const { Header, Footer, Sider, Content } = Layout;
 const SystemHMSLayout = () => (
   <Flex gap="middle" wrap="wrap">
     <Layout className={styles.layoutStyle}>
-      <Sider width="15%" className={styles.siderStyle}></Sider>
+      <Sider
+        width="15%"
+        className={styles.siderStyle}
+        style={{ background: "#f7f7f7" }}
+      ></Sider>
       <Layout>
         <Header className={styles.headerStyle}></Header>
         <Content className={styles.contentStyle}></Content>
