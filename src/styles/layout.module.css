@@ -1,6 +1,7 @@
 .layoutStyle {
   overflow: hidden;
   width: 100%;
+  background-color: #f7f7f7;
 }
 
 .headerStyle {
@@ -9,14 +10,13 @@
   height: 150;
   padding-inline: 48;
   line-height: 64px;
-  background-color: #4096ff;
+  background-color: #f7f7f7;
 }
 
 .contentStyle {
   text-align: center;
   line-height: 120px;
   color: #fff;
-  background-color: #0958d9;
   min-height: 85vh;
 }
 
@@ -24,11 +24,9 @@
   text-align: center;
   line-height: 120px;
   color: #fff;
-  background-color: #1677ff;
 }
 
 .footerStyle {
   text-align: center;
   color: #fff;
-  background-color: #4096ff;
 }
