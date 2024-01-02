@@ -14,13 +14,6 @@ const NavbarHeader = () => {
         <Col>
           <Search placeholder="Search..." style={{ width: 300 }} />
         </Col>
-        <Divider
-          orientation="left"
-          style={{
-            margin: "10px 0",
-            color: "#e7e7e7",
-          }}
-        />
       </Row>
     </>
   );
