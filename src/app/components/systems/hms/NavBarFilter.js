@@ -48,7 +48,8 @@ const NavbarFilter = () => {
           onClick={() => handleButtonClick("Button 1")}
           outline
           style={{
-            marginRight: 16,
+            marginRight: 55,
+            marginLeft: 620,
             color: "#3056D3",
             borderColor: "#3056D3",
             width: 120,
@@ -72,7 +73,7 @@ const NavbarFilter = () => {
       <br />
       <Select
         defaultValue="Open select menu"
-        style={{ width: 200, marginRight: 16 }}
+        style={{ width: 200, marginRight: 630, marginLeft: 300 }}
       >
         <Option value="option1">Option 1</Option>
         <Option value="option2">Option 2</Option>
