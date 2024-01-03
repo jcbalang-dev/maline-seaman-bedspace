@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as styles from "../../../../styles/layout.module.css";
 import SideBar from "./SideBar";
+import FooterLayout from "./Footer";
 
 const { Layout, Flex } = require("antd");
 const { Header, Footer, Content } = Layout;
@@ -13,7 +14,7 @@ const HMSLayout = () => {
         <Layout>
           <Header className={styles.headerStyle}></Header>
           <Content className={styles.contentStyle}></Content>
-          <Footer className={styles.footerStyle}></Footer>
+          <FooterLayout />
         </Layout>
       </Layout>
     </Flex>
