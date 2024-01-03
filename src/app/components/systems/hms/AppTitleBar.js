@@ -17,12 +17,10 @@ const AppTitleBar = () => {
   };
 
   return (
-    <>
+    <div className="demo-logo">
       <img src="/images/website/logo/logo.png" alt="Logo" style={logoStyle} />
-      <span style={{ fontWeight: 600 }}>Malyns</span>
-      <div style={appTitleBar}>Transient</div>
-      <div style={appTitleBar}>House</div>
-    </>
+      <span style={{ fontWeight: 600 }}>Malines Seaman's Dormitory</span>
+    </div>
   );
 };
 
