@@ -1,7 +1,7 @@
 import React from "react";
 import * as styles from "../../../../styles/login.module.css";
 import HMSLayout from "../hms/index";
-import Favicon from "../../favicon/Favicon";
+import Favicon from "../../favicon";
 
 const { Form, Input, Button, Checkbox, Card } = require("antd");
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
