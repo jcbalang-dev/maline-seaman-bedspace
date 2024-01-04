@@ -1,12 +1,12 @@
 import React from "react";
-import NavbarHeader from "./NavBarHeader";
-import NavbarFilter from "./NavBarFilter";
+import NavBarHeader from "./NavBarHeader";
+import NavBarFilter from "./NavBarFilter";
 
 const NavBar = () => {
   return (
     <>
-      <NavbarHeader />
-      <NavbarFilter />
+      <NavBarHeader />
+      <NavBarFilter />
     </>
   );
 };
