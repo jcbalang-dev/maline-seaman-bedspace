@@ -41,7 +41,11 @@ const UserProfile = () => {
   return (
     <div>
       <Menu theme="dark" mode="inline" items={items} style={userMenuStyle} />
-      <Avatar size="default" icon={<UserOutlined />} />
+      <Avatar
+        size="default"
+        icon={<UserOutlined />}
+        style={{ marginLeft: 22 }}
+      />
       <span style={nameStyle}>Do Little</span>
       <br />
       <p style={contactStyle}>dls@gmail.com</p>
