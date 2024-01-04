@@ -40,13 +40,7 @@ const UserProfile = () => {
 
   return (
     <div>
-      <Menu
-        theme="dark"
-        defaultSelectedKeys={["1"]}
-        mode="inline"
-        items={items}
-        style={userMenuStyle}
-      />
+      <Menu theme="dark" mode="inline" items={items} style={userMenuStyle} />
       <Avatar size="default" icon={<UserOutlined />} />
       <span style={nameStyle}>Do Little</span>
       <br />
