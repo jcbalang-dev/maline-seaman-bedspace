@@ -19,11 +19,13 @@ function getItem(label, key, icon, children) {
 
 const nameStyle = {
   marginLeft: 10,
+  color: "white",
 };
 
 const contactStyle = {
   position: "relative",
   left: "45px",
+  color: "white",
 };
 
 const items = [
@@ -32,6 +34,10 @@ const items = [
 ];
 
 const UserProfile = () => {
+  const userMenuStyle = {
+    color: "white",
+  };
+
   return (
     <div>
       <Menu
@@ -39,6 +45,7 @@ const UserProfile = () => {
         defaultSelectedKeys={["1"]}
         mode="inline"
         items={items}
+        style={userMenuStyle}
       />
       <Avatar size="default" icon={<UserOutlined />} />
       <span style={nameStyle}>Do Little</span>
