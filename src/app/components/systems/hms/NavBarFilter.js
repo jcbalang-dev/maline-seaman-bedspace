@@ -1,16 +1,35 @@
-import React, { useState } from "react";
-const { Radio, Button, Select } = require("antd");
+import React, { useState, useEffect } from "react";
+const { Radio, Button, Select, Typography } = require("antd");
 
 const { Option } = Select;
+const { Text } = Typography;
 
 const NavBarFilter = () => {
   const [selectedFilter, setSelectedFilter] = useState("");
   const handleFilterChange = (value) => {
     setSelectedFilter(value);
   };
+  const [currentDateTime, setCurrentDateTime] = useState(new Date());
   const handleButtonClick = (buttonType) => {
     console.log(`Button clicked: ${buttonType}`);
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentDateTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  const formattedDateTime = currentDateTime.toLocaleString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  });
 
   return (
     <>
@@ -64,13 +83,29 @@ const NavBarFilter = () => {
           </Button>
         </div>
       </div>
-      <Select
-        defaultValue="Open select menu"
-        style={{ width: 200, paddingTop: 11, marginLeft: 10 }}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          paddingTop: 11,
+          marginLeft: 10,
+        }}
       >
-        <Option value="option1">Option 1</Option>{" "}
-        <Option value="option2">Option 2</Option>{" "}
-      </Select>
+        <Select defaultValue="Open select menu" style={{ width: 200 }}>
+          <Option value="option1">Option 1</Option>
+          <Option value="option2">Option 2</Option>
+        </Select>
+        <Text
+          style={{
+            fontSize: 15,
+            fontWeight: 600,
+            color: "#212B36",
+            marginLeft: 770,
+          }}
+        >
+          {formattedDateTime}
+        </Text>
+      </div>
     </>
   );
 };
