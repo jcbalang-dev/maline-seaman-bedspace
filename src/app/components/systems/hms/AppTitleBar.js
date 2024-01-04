@@ -1,6 +1,6 @@
 import React from "react";
 
-const AppTitleBar = () => {
+const AppTitleBar = ({ collapsed }) => {
   const logoStyle = {
     width: "70px",
     height: "auto",
@@ -12,9 +12,11 @@ const AppTitleBar = () => {
   return (
     <div className="demo-logo">
       <img src="/images/website/logo/logo.png" alt="Logo" style={logoStyle} />
-      <span style={{ fontWeight: 600, color: "#fff" }}>
-        Malines Seaman's Dormitory
-      </span>
+      {!collapsed && (
+        <span style={{ fontWeight: 600, color: "#fff" }}>
+          Malines Seaman's Dormitory
+        </span>
+      )}
     </div>
   );
 };
