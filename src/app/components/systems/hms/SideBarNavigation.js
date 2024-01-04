@@ -29,12 +29,17 @@ const items = [
 ];
 
 const SideBarNavigation = () => {
+  const menuStyle = {
+    color: "white",
+  };
+
   return (
     <Menu
       theme="dark"
       defaultSelectedKeys={["1"]}
       mode="inline"
       items={items}
+      style={menuStyle}
     />
   );
 };
