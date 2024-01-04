@@ -33,7 +33,7 @@ const items = [
   getItem("Log out", "2", <LogoutOutlined />),
 ];
 
-const UserProfile = () => {
+const UserProfile = ({ collapsed }) => {
   const userMenuStyle = {
     color: "white",
   };
@@ -46,9 +46,13 @@ const UserProfile = () => {
         icon={<UserOutlined />}
         style={{ marginLeft: 22 }}
       />
-      <span style={nameStyle}>Do Little</span>
-      <br />
-      <p style={contactStyle}>dls@gmail.com</p>
+      {!collapsed && (
+        <>
+          <span style={nameStyle}>Do Little</span>
+          <br />
+          <p style={contactStyle}>dls@gmail.com</p>
+        </>
+      )}
     </div>
   );
 };
