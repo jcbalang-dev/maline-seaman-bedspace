@@ -19,7 +19,7 @@ const SideBar = () => {
     >
       <AppTitleBar collapsed={collapsed} />
       <SidebarNavigation />
-      <UserProfile />
+      <UserProfile collapsed={collapsed} />
     </Sider>
   );
 };
