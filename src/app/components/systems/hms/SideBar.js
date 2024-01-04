@@ -17,7 +17,7 @@ const SideBar = () => {
       onCollapse={(value) => setCollapsed(value)}
       width="15%"
     >
-      <AppTitleBar />
+      <AppTitleBar collapsed={collapsed} />
       <SidebarNavigation />
       <UserProfile />
     </Sider>
