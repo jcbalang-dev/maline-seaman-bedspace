@@ -33,15 +33,7 @@ const SideBarNavigation = () => {
     color: "white",
   };
 
-  return (
-    <Menu
-      theme="dark"
-      defaultSelectedKeys={["1"]}
-      mode="inline"
-      items={items}
-      style={menuStyle}
-    />
-  );
+  return <Menu theme="dark" mode="inline" items={items} style={menuStyle} />;
 };
 
 export default SideBarNavigation;
