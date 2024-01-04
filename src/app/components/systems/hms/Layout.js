@@ -5,7 +5,7 @@ import FooterLayout from "./Footer";
 import NavBar from "./NavBar";
 
 const { Layout, Flex } = require("antd");
-const { Header, Footer, Content } = Layout;
+const { Content } = Layout;
 
 const HMSLayout = () => {
   return (
