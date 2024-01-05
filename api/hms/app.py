@@ -4,6 +4,7 @@ from dotenv import dotenv_values
 from config import Config
 from db import Database
 from routes import Routes
+from flask_cors import CORS
 
 # Initialize the Flask app
 app = Flask(__name__)
@@ -22,6 +23,9 @@ db = Database
 
 # Initialize the Flask-RESTful API
 api = Api(app)
+
+# Enable CORS for your app
+CORS(app, resources={r"/*": {"origins": Config.CORS_ALLOWED_ORIGINS}})
 
 # Setup routes
 routes = Routes(api)
