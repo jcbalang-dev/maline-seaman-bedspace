@@ -1,7 +1,8 @@
 import React from "react";
+import Dashboard from "../../../app/components/systems/hms/Dashboard";
 
 const DashboardPage = () => {
-  return <div>Dashboard Page goes here</div>;
+  return <Dashboard />;
 };
 
 export default DashboardPage;
