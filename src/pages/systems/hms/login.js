@@ -1,7 +1,8 @@
 import React from "react";
+import LoginMenu from "../../../app/components/systems/hms/LoginMenu";
 
 const Login = () => {
-  return <div>Login Page goes here</div>;
+  return <LoginMenu />;
 };
 
 export default Login;
