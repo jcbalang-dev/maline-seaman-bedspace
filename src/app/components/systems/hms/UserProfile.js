@@ -39,7 +39,7 @@ const UserProfile = ({ collapsed }) => {
   const handleLogout = () => {
     sessionStorage.removeItem("userToken");
     if (!sessionStorage.getItem("userToken")) {
-      router.push("/");
+      router.push("/systems/hms/login");
     }
   };
 
