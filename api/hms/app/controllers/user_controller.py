@@ -29,4 +29,4 @@ class UserAuthController(Resource):
         if user:
             return UserView.render_user(user)
         else:
-            return {'error', 'Invalid Log In'}, 404
+            return {'error': 'Authentication failed. Please check your username and password'}, 401
