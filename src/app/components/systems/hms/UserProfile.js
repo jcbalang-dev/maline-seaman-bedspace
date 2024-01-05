@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 
 import {
   LogoutOutlined,
@@ -34,13 +35,28 @@ const items = [
 ];
 
 const UserProfile = ({ collapsed }) => {
+  const router = useRouter();
+  const handleLogout = () => {
+    sessionStorage.removeItem("userToken");
+    if (!sessionStorage.getItem("userToken")) {
+      router.push("/");
+    }
+  };
+
   const userMenuStyle = {
     color: "white",
   };
 
   return (
     <div>
-      <Menu theme="dark" mode="inline" items={items} style={userMenuStyle} />
+      <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
+        <Menu.Item key="1" icon={<SettingOutlined />}>
+          Settings
+        </Menu.Item>
+        <Menu.Item key="2" icon={<LogoutOutlined />} onClick={handleLogout}>
+          Log out
+        </Menu.Item>
+      </Menu>
       <Avatar
         size="default"
         icon={<UserOutlined />}
