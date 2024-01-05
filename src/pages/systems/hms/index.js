@@ -1,9 +1,7 @@
-import HMSLayout from "../../../app/components/systems/hms/Layout";
+import Splash from "../../../app/components/systems/hms/Splash";
 
 const HMS = () => {
-  const titleHome = "Hotel Management System";
-
-  return <HMSLayout />;
+  return <Splash />;
 };
 
 export default HMS;
