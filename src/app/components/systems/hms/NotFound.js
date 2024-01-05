@@ -2,6 +2,7 @@ import React from "react";
 import * as styles from "../../../../styles/not-found.module.css";
 import Logo from "../../Logo";
 const { Button } = require("antd");
+import Link from "next/link";
 
 const NotFound = () => {
   return (
@@ -28,7 +29,11 @@ const NotFound = () => {
         temporarily unavailable.
       </p>
       <div className={styles.notFoundButtonContainer}>
-        <Button className={styles.notFoundButton}>Back to HomePage</Button>
+        <Link href="/">
+          <a>
+            <Button className={styles.notFoundButton}>Back to HomePage</Button>
+          </a>
+        </Link>
       </div>
     </>
   );
