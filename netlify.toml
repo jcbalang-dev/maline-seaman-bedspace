@@ -7,6 +7,3 @@
 
 [[plugins]]
   package = "@netlify/plugin-functions-install"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
