@@ -3,7 +3,7 @@
   command = "bash ./netlify-scripts/build.sh"
 
 [[plugins]]
-  package = "./netlify-plugins/python-virtualenv"
+  package = "@netlify/plugin-functions-install"
 
 [[plugins]]
-  package = "@netlify/plugin-functions-install"
+  package = "@netlify/plugin-nextjs"
