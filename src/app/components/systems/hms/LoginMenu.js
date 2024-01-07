@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import * as styles from "../../../../styles/login.module.css";
 import axios from "axios";
 
@@ -9,6 +9,15 @@ import Logo from "../../Logo";
 const LoginMenu = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  useEffect(() => {
+    if (typeof sessionStorage !== "undefined") {
+      const storedUsername = sessionStorage.getItem("username");
+      if (storedUsername) {
+        setUsername(storedUsername);
+      }
+    }
+  }, []);
 
   const logInUser = (e) => {
     e.preventDefault();
@@ -25,6 +34,7 @@ const LoginMenu = () => {
         })
         .then(function (response) {
           if (response.status === 200) {
+            sessionStorage.setItem("username", username);
             window.location.href =
               "http://localhost:3000/systems/hms/dashboard";
           }
