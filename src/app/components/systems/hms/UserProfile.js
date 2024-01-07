@@ -37,7 +37,7 @@ const items = [
 const UserProfile = ({ collapsed }) => {
   const router = useRouter();
   const handleLogout = () => {
-    sessionStorage.removeItem("userToken");
+    sessionStorage.removeItem("username");
     if (!sessionStorage.getItem("userToken")) {
       router.push("/systems/hms/login");
     }
