@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 import {
@@ -37,7 +37,7 @@ const items = [
 const UserProfile = ({ collapsed }) => {
   const router = useRouter();
   const handleLogout = () => {
-    sessionStorage.removeItem("userToken");
+    sessionStorage.removeItem("username");
     if (!sessionStorage.getItem("userToken")) {
       router.push("/systems/hms/login");
     }
@@ -46,6 +46,15 @@ const UserProfile = ({ collapsed }) => {
   const userMenuStyle = {
     color: "white",
   };
+
+  const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    const storedUsername = sessionStorage.getItem("username");
+    if (storedUsername) {
+      setUsername(storedUsername);
+    }
+  }, []);
 
   return (
     <div>
@@ -64,7 +73,7 @@ const UserProfile = ({ collapsed }) => {
       />
       {!collapsed && (
         <>
-          <span style={nameStyle}>Do Little</span>
+          <span style={nameStyle}>{username}</span>
           <br />
           <p style={contactStyle}>dls@gmail.com</p>
         </>
