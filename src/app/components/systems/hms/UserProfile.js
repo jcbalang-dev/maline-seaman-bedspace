@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 import {
@@ -47,6 +47,15 @@ const UserProfile = ({ collapsed }) => {
     color: "white",
   };
 
+  const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    const storedUsername = sessionStorage.getItem("username");
+    if (storedUsername) {
+      setUsername(storedUsername);
+    }
+  }, []);
+
   return (
     <div>
       <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
@@ -64,7 +73,7 @@ const UserProfile = ({ collapsed }) => {
       />
       {!collapsed && (
         <>
-          <span style={nameStyle}>Do Little</span>
+          <span style={nameStyle}>{username}</span>
           <br />
           <p style={contactStyle}>dls@gmail.com</p>
         </>
