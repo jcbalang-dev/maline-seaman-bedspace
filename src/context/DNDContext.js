@@ -2,6 +2,6 @@
 
 import { DragDropContext } from "react-beautiful-dnd";
 
-export const DndContext = ({ children, onDragEnd }) => {
+export const DNDContext = ({ children, onDragEnd }) => {
   return <DragDropContext onDragEnd={onDragEnd}>{children}</DragDropContext>;
 };
