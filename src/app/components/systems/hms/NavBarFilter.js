@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 const { Radio, Button, Select, Typography } = require("antd");
+import { UserAddOutlined } from "@ant-design/icons";
 
 const { Option } = Select;
 const { Text } = Typography;
@@ -56,20 +57,7 @@ const NavBarFilter = () => {
             <Radio value="tag">Tag</Radio>
           </Radio.Group>
         </span>
-        <div style={{ marginLeft: 620, paddingTop: 10 }}>
-          <Button
-            onClick={() => handleButtonClick("Button 1")}
-            outline
-            style={{
-              marginRight: 10,
-              color: "#3056D3",
-              borderColor: "#3056D3",
-              width: 120,
-            }}
-          >
-            Check In
-          </Button>
-
+        <div style={{ marginLeft: 680, paddingTop: 15 }}>
           <Button
             onClick={() => handleButtonClick("Button 2")}
             style={{
@@ -79,7 +67,7 @@ const NavBarFilter = () => {
               width: 120,
             }}
           >
-            Check Out
+            <UserAddOutlined /> Add Guest
           </Button>
         </div>
       </div>
