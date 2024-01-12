@@ -57,7 +57,7 @@ const UserProfile = ({ collapsed }) => {
   }, []);
 
   return (
-    <div>
+    <div style={{ marginTop: "300px" }}>
       <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
         <Menu.Item key="1" icon={<SettingOutlined />}>
           Settings
