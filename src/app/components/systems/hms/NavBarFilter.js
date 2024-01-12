@@ -1,18 +1,30 @@
 import React, { useState, useEffect } from "react";
-const { Radio, Button, Select, Typography } = require("antd");
+const { Radio, Button, Select, Typography, Modal } = require("antd");
 import { UserAddOutlined } from "@ant-design/icons";
+import GuestModal from "./GuestModal";
 
 const { Option } = Select;
 const { Text } = Typography;
 
 const NavBarFilter = () => {
   const [selectedFilter, setSelectedFilter] = useState("");
+
   const handleFilterChange = (value) => {
     setSelectedFilter(value);
   };
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
-  const handleButtonClick = (buttonType) => {
-    console.log(`Button clicked: ${buttonType}`);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleModalOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleModalCancel = () => {
+    setIsModalVisible(false);
   };
 
   useEffect(() => {
@@ -69,6 +81,16 @@ const NavBarFilter = () => {
           >
             <UserAddOutlined /> Add Guest
           </Button>
+          <Modal
+            title="Guest Form"
+            open={isModalVisible}
+            onOk={handleModalOk}
+            onCancel={handleModalCancel}
+            style={{ marginLeft: "450px" }}
+            width={800}
+          >
+            <GuestModal />
+          </Modal>
         </div>
       </div>
       <div
