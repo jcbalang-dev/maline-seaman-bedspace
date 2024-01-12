@@ -3,9 +3,8 @@ import * as styles from "../../../../styles/layout.module.css";
 import SideBar from "./SideBar";
 import FooterLayout from "./Footer";
 import NavBar from "./NavBar";
-
 const { Layout, Flex } = require("antd");
-const { Content } = Layout;
+import DragAndDrop from "./DragAndDrop";
 
 const HMSLayout = () => {
   return (
@@ -14,7 +13,7 @@ const HMSLayout = () => {
         <SideBar />
         <Layout>
           <NavBar />
-          <Content className={styles.contentStyle}></Content>
+          <DragAndDrop />
           <FooterLayout />
         </Layout>
       </Layout>

@@ -1,0 +1,32 @@
+.dataContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.buttonContainer {
+  display: flex;
+  min-height: 80vh;
+  background-color: #f1f1f1;
+  justify-content: space-between;
+}
+
+.buttonContainer > div {
+  width: 500px;
+  margin: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.borderContainer {
+  background-color: #ececec;
+}
+
+.componentBorder {
+  background-color: #d9d9d9;
+  border: 1px solid #3056d3;
+  padding: 10px;
+  margin: 15px;
+}
