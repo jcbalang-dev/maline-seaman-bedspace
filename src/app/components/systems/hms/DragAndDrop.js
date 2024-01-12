@@ -56,7 +56,7 @@ const DragAndDrop = () => {
                 <Droppable key={index} droppableId={`droppable${index}`}>
                   {(provided) => (
                     <div
-                      className="p-5 border-gray-400 border border-dashed"
+                      className={`p-5 border-gray-400 border border-dashed" ${styles.borderContainer}`}
                       {...provided.droppableProps}
                       ref={provided.innerRef}
                       style={{ width: "290px", backgroundColor: "#ECECEC" }}
@@ -72,7 +72,7 @@ const DragAndDrop = () => {
                         >
                           {(provided) => (
                             <div
-                              className="bg-gray-200 mx-1 px-4 py-3 my-3"
+                              className={styles.componentBorder}
                               {...provided.dragHandleProps}
                               {...provided.draggableProps}
                               ref={provided.innerRef}
