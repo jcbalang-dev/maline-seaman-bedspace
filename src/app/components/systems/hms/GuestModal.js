@@ -1,7 +1,9 @@
-import React from "react";
-import Calendar from "./Calendar";
-const { Form, Input, Select, Row, Col } = require("antd");
-import onDayChange from "./RoomRateUtils";
+import React, { useState } from "react";
+const { Form, Input, Select, Switch, Checkbox } = require("antd");
+import validIDFormat from "./ValidIDFormat";
+import getCharacterLimit from "./CharacterLimit";
+
+const idType = ["Passport", "Drivers License", "UMID", "SSS", "PRC"];
 
 const { Option } = Select;
 
@@ -15,14 +17,14 @@ const layout = {
 };
 
 const GuestModal = () => {
-  const [form] = Form.useForm();
+  const [selectedIDType, setSelectedIDType] = useState([]);
+  const [switchStatus, setSwitchStatus] = useState(false);
 
-  const onRoomChange = (value) => {
-    const roomCode = value < 10 ? `0${value}` : `${value}`;
-    form.setFieldsValue({
-      roomCode,
-    });
+  const handleSwitchChange = (checked) => {
+    setSwitchStatus(checked);
   };
+
+  const [form] = Form.useForm();
 
   return (
     <Form
@@ -34,181 +36,110 @@ const GuestModal = () => {
         borderRadius: "8px",
       }}
     >
-      <Row gutter={16}>
-        <Col span={12}>
-          <Form.Item
-            name="last_name"
-            label="Lastname:"
-            rules={[
-              {
-                required: true,
-              },
-            ]}
-          >
-            <Input style={{ marginLeft: "5px" }} />
-          </Form.Item>
-        </Col>
-        <Col span={12}>
-          <Form.Item
-            name="first_name"
-            label="Firstname:"
-            rules={[
-              {
-                required: true,
-              },
-            ]}
-          >
-            <Input />
-          </Form.Item>
-        </Col>
-      </Row>
-      <Row gutter={16}>
-        <Col span={12}>
-          <Form.Item
-            name="middle_name"
-            label="Middlename:"
-            rules={[
-              {
-                required: true,
-              },
-            ]}
-          >
-            <Input style={{ marginLeft: "6px" }} />
-          </Form.Item>
-        </Col>
-        <Col span={12}>
-          <Form.Item
-            label="Suffix"
-            rules={[
-              {
-                required: true,
-              },
-            ]}
-          >
-            <Select placeholder="(if applicable)" allowClear>
-              <Option value="Jr.">Jr.</Option>
-              <Option value="II">II</Option>
-              <Option value="III">III</Option>
-            </Select>
-          </Form.Item>
-        </Col>
-      </Row>
-      <Row gutter={16}>
-        <Col span={12}>
-          <Form.Item
-            name="building number"
-            label="Building #:"
-            rules={[
-              {
-                required: true,
-              },
-            ]}
-          >
-            <Select placeholder="Select building" allowClear>
-              <Option value="1">1</Option>
-              <Option value="2">2</Option>
-            </Select>
-          </Form.Item>
-        </Col>
-        <Col span={12}>
-          <Form.Item
-            name="room number"
-            label="Room #:"
-            rules={[
-              {
-                required: true,
-              },
-            ]}
-          >
-            <Select
-              onChange={onRoomChange}
-              placeholder="Select a room number"
-              allowClear
-            >
-              {[...Array(16)].map((_, index) => (
-                <Option key={index + 1} value={(index + 1).toString()}>
-                  {index + 1}
-                </Option>
-              ))}
-            </Select>
-          </Form.Item>
-        </Col>
-      </Row>
-      <Row gutter={16}>
-        <Col span={12}>
-          <Form.Item
-            name="roomCode"
-            label="Room codes:"
-            rules={[
-              {
-                required: true,
-              },
-            ]}
-          >
-            <Input disabled style={{ color: "black", marginLeft: "15px" }} />
-          </Form.Item>
-        </Col>
-        <Col span={12}>
-          <Form.Item
-            name="room_tag"
-            label="Room tag:"
-            rules={[
-              {
-                required: true,
-              },
-            ]}
-          >
-            <Input disabled style={{ color: "black" }} />
-          </Form.Item>
-        </Col>
-      </Row>
-      <Row gutter={16}>
-        <Col span={14}>
-          <Form.Item
-            name="number of days"
-            label="Number of days:"
-            rules={[
-              {
-                required: true,
-              },
-            ]}
-          >
-            <Select
-              style={{ marginLeft: "15px" }}
-              onChange={(value) => onDayChange(value, form)}
-              allowClear
-            >
-              <Option value="1 day">1 day</Option>
-              <Option value="5 days">5 days</Option>
-              <Option value="1 week">1 week</Option>
-              <Option value="2 weeks">2 weeks</Option>
-              <Option value="1 month">1 month</Option>
-            </Select>
-          </Form.Item>
-        </Col>
-        <Col span={12}>
-          <Form.Item
-            name="room_rate"
-            label="Room rates:"
-            rules={[
-              {
-                required: true,
-              },
-            ]}
-          >
-            <Input disabled style={{ color: "black", marginLeft: "5px" }} />
-          </Form.Item>
-        </Col>
-      </Row>
-      <p
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          marginLeft: "100px",
-        }}
+      <Form.Item
+        name="last name"
+        label="Lastname:"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
       >
-        Checkin / Checkout: <Calendar />
-      </p>
+        <Input style={{ marginLeft: "5px" }} />
+      </Form.Item>
+
+      <Form.Item
+        name="first name"
+        label="Firstname:"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
+
+      <Form.Item
+        name="middle name"
+        label="Middlename:"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
+      >
+        <Input style={{ marginLeft: "6px", width: "auto" }} />
+      </Form.Item>
+
+      <Form.Item
+        label="Suffix"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
+      >
+        <Select placeholder="(if applicable)" allowClear>
+          <Option value="Jr.">Jr.</Option>
+          <Option value="II">II</Option>
+          <Option value="III">III</Option>
+        </Select>
+      </Form.Item>
+
+      <Form.Item
+        label="Status"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
+      >
+        <Switch
+          onChange={handleSwitchChange}
+          style={{ backgroundColor: switchStatus ? "green" : "red" }}
+        />
+      </Form.Item>
+
+      <Form.Item
+        name="validIDCheckbox"
+        label="Valid ID's:"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
+      >
+        <Checkbox.Group
+          options={idType}
+          onChange={(checkedValues) => setSelectedIDType(checkedValues)}
+        />
+      </Form.Item>
+      {idType.map((id) => (
+        <Form.Item
+          key={id}
+          name={`${id.toLowerCase()}`}
+          label={`${id}:`}
+          rules={[
+            {
+              required: true,
+            },
+          ]}
+        >
+          <Input
+            style={{ marginLeft: "6px", width: "auto" }}
+            maxLength={getCharacterLimit(id)}
+            disabled={!selectedIDType.includes(id)}
+            onChange={(e) => {
+              const inputVal = e.target.value;
+              const formattedVal = validIDFormat(inputVal, selectedIDType);
+              form.setFieldsValue({
+                [`${id.toLowerCase()}`]: formattedVal,
+              });
+            }}
+          />
+        </Form.Item>
+      ))}
     </Form>
   );
 };
