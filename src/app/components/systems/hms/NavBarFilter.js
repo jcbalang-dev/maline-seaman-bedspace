@@ -86,8 +86,8 @@ const NavBarFilter = () => {
             open={isModalVisible}
             onOk={handleModalOk}
             onCancel={handleModalCancel}
-            style={{ marginLeft: "450px" }}
-            width={800}
+            style={{ marginLeft: "480px" }}
+            width={700}
           >
             <GuestModal />
           </Modal>
