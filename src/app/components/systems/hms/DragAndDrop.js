@@ -7,54 +7,11 @@ import { DNDContext } from "../../../../context/DNDContext";
 import * as styles from "../../../../styles/drag-and-drop.module.css";
 import fetchRoomData from "./RoomDataFetching";
 import initializeDndData from "./DNDDataInitializer";
+import onDragEnd from "./DragAndDropUtils";
 
 const DragAndDrop = () => {
   const [data, setData] = useState([]);
   const [roomCodes, setRoomCodes] = useState([]);
-
-  const onDragEnd = (result) => {
-    const { source, destination } = result;
-
-    if (!destination) return;
-
-    const newData = [...data];
-
-    if (source.droppableId === destination.droppableId) {
-      const droppableIndex = parseInt(
-        source.droppableId.replace("droppable", ""),
-        10
-      );
-      const [movedItem] = newData[droppableIndex].components.splice(
-        source.index,
-        1
-      );
-      newData[droppableIndex].components.splice(
-        destination.index,
-        0,
-        movedItem
-      );
-    } else {
-      const sourceDroppableIndex = parseInt(
-        source.droppableId.replace("droppable", ""),
-        10
-      );
-      const destinationDroppableIndex = parseInt(
-        destination.droppableId.replace("droppable", ""),
-        10
-      );
-      const [movedItem] = newData[sourceDroppableIndex].components.splice(
-        source.index,
-        1
-      );
-      newData[destinationDroppableIndex].components.splice(
-        destination.index,
-        0,
-        movedItem
-      );
-    }
-
-    setData(newData);
-  };
 
   useEffect(() => {
     const fetchRoomCodes = async () => {
@@ -74,7 +31,7 @@ const DragAndDrop = () => {
   }
 
   return (
-    <DNDContext onDragEnd={onDragEnd}>
+    <DNDContext onDragEnd={(result) => onDragEnd(data, setData, result)}>
       <div className="flex">
         <div className="my-8 mx-8 rounded-xl border">
           <div className={styles.dataContainer}>
