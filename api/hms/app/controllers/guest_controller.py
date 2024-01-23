@@ -10,7 +10,7 @@ class GetAllGuestController(Resource):
         if guests:
             return GuestView.render_guests(guests)
         else:
-            return {'error', 'Data not exists'}, 404
+            return {'error': 'Data not exists'}, 404
 
 class GetGuestIDController(Resource):
     def get(self, guest_id):        
@@ -18,5 +18,5 @@ class GetGuestIDController(Resource):
         if guest:
             return GuestView.render_guest(guest)
         else:
-            return {'error', 'Guest not found'}, 404
+            return {'error': 'Guest not found'}, 404
         

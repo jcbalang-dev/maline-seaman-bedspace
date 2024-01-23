@@ -10,7 +10,7 @@ class GetAllRoomController(Resource):
         if rooms:
             return RoomView.render_rooms(rooms)
         else:
-            return {'error', 'Data not exists'}, 404
+            return {'error': 'Data not exists'}, 404
         
 class GetRoomIDController(Resource):
         def get(self, room_id):      
@@ -18,4 +18,4 @@ class GetRoomIDController(Resource):
             if room:
                 return RoomView.render_room(room)
             else:
-                return {'error', 'Room not found'}, 404
+                return {'error': 'Room not found'}, 404

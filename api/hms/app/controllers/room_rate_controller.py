@@ -10,7 +10,7 @@ class GetAllRoomRateController(Resource):
         if room_rates:
             return RoomRateView.render_room_rates(room_rates)
         else:
-            return {'error', 'Data not exists'}, 404
+            return {'error': 'Data not exists'}, 404
         
 class GetRoomRateIDController(Resource):
         def get(self, room_rate_id):      
@@ -18,4 +18,4 @@ class GetRoomRateIDController(Resource):
             if room_rate:
                 return RoomRateView.render_room_rate(room_rate)
             else:
-                return {'error', 'Room not found'}, 404
+                return {'error': 'Room not found'}, 404

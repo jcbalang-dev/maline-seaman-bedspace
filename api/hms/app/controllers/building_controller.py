@@ -10,7 +10,7 @@ class GetAllBuildingController(Resource):
         if buildings:
             return BuildingView.render_buildings(buildings)
         else:
-            return {'error', 'Data not exists'}, 404
+            return {'error': 'Data not exists'}, 404
         
 class GetBuildingIDController(Resource):
     def get(self, building_id):      
@@ -18,4 +18,4 @@ class GetBuildingIDController(Resource):
         if building:
             return BuildingView.render_building(building)
         else:
-            return {'error', 'Building not found'}, 404
+            return {'error': 'Building not found'}, 404
