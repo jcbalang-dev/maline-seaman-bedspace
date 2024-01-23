@@ -87,15 +87,7 @@ const GuestModal = () => {
         </Select>
       </Form.Item>
 
-      <Form.Item
-        name="validIDCheckbox"
-        label="Valid ID's:"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
-      >
+      <Form.Item name="validIDCheckbox" label="Valid ID's:">
         <Checkbox.Group
           options={idType}
           onChange={(checkedValues) => setSelectedIDType(checkedValues)}
