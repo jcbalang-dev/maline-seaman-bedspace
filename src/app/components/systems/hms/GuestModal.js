@@ -26,6 +26,13 @@ const GuestModal = () => {
 
   const [form] = Form.useForm();
 
+  const handleCheckboxChange = (checkedValues) => {
+    const uncheckedTypes = idType.filter((id) => !checkedValues.includes(id));
+    form.resetFields(uncheckedTypes.map((id) => `${id.toLowerCase()}`));
+
+    setSelectedIDType(checkedValues);
+  };
+
   return (
     <Form
       {...layout}
@@ -90,9 +97,13 @@ const GuestModal = () => {
       <Form.Item name="validIDCheckbox" label="Valid ID's:">
         <Checkbox.Group
           options={idType}
-          onChange={(checkedValues) => setSelectedIDType(checkedValues)}
+          onChange={(checkedValues) => {
+            handleCheckboxChange(checkedValues);
+            setSelectedIDType(checkedValues);
+          }}
         />
       </Form.Item>
+
       {idType.map((id) => (
         <Form.Item
           key={id}
