@@ -88,20 +88,6 @@ const GuestModal = () => {
       </Form.Item>
 
       <Form.Item
-        label="Status"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
-      >
-        <Switch
-          onChange={handleSwitchChange}
-          style={{ backgroundColor: switchStatus ? "green" : "red" }}
-        />
-      </Form.Item>
-
-      <Form.Item
         name="validIDCheckbox"
         label="Valid ID's:"
         rules={[
@@ -140,6 +126,20 @@ const GuestModal = () => {
           />
         </Form.Item>
       ))}
+
+      <Form.Item
+        label="Status"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
+      >
+        <Switch
+          onChange={handleSwitchChange}
+          style={{ backgroundColor: switchStatus ? "green" : "red" }}
+        />
+      </Form.Item>
     </Form>
   );
 };
