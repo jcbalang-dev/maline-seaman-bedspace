@@ -23,22 +23,24 @@ class GetGuestIDController(Resource):
 class AddGuestController(Resource):
     def post(self):
         new_guest_data = request.get_json()
-        new_guest = Guest(
-            id=None,
-            last_name=new_guest_data.get('last_name'),
-            first_name=new_guest_data.get('first_name'),
-            middle_name=new_guest_data.get('middle_name'),
-            suffix=new_guest_data.get('suffix'),
-            passport_id=new_guest_data.get('passport_id'),
-            drivers_license_id=new_guest_data.get('drivers_license_id'),
-            umid_id=new_guest_data.get('umid_id'),
-            sss_id=new_guest_data.get('sss_id'),
-            prc_id=new_guest_data.get('prc_id'),
-            status=new_guest_data.get('status'),
-            added_by=new_guest_data.get('added_by'),
-            added_date=new_guest_data.get('added_date'),
-            updated_by=new_guest_data.get('updated_by'),
-            updated_date=new_guest_data.get('updated_date'),
-        )
+        attribute_mapping = {
+            'last_name': 'last_name',
+            'first_name': 'first_name',
+            'middle_name': 'middle_name',
+            'suffix': 'suffix',
+            'passport_id': 'passport_id',
+            'drivers_license_id': 'drivers_license_id',
+            'umid_id': 'umid_id',
+            'sss_id': 'sss_id',
+            'prc_id': 'prc_id',
+            'status': 'status',
+            'added_by': 'added_by',
+            'added_date': 'added_date',
+            'updated_by': 'updated_by',
+            'updated_date': 'updated_date',
+        }
+        new_guest = Guest(id=None, **{attribute_mapping[key]: new_guest_data.get(key) for key in attribute_mapping})
+
         last_inserted_id = guest_model.add_guest(new_guest)
+
         return {'message': 'Guest added successfully', 'guest_id': last_inserted_id}, 201
