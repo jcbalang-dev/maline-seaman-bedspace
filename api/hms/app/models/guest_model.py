@@ -69,21 +69,28 @@ class GuestModel:
         result = self.db_exec.execute_query(query, params)
         
         if result:
-            id, last_name, first_name, middle_name, suffix, passport_id, drivers_license_id, umid_id, sss_id, prc_id, status = result
-            
-            return Guest(
-                id = id , 
-                last_name = last_name , 
-                first_name = first_name , 
-                middle_name = middle_name , 
-                suffix = suffix , 
-                passport_id = passport_id , 
-                drivers_license_id = drivers_license_id , 
-                umid_id = umid_id , 
-                sss_id = sss_id , 
-                prc_id = prc_id , 
-                status = status 
-            )
+            guest_data = dict(zip(fields, result))
+            return Guest(**guest_data)
         else:
             return None
-            
+        
+    def add_guest(self, guest):
+        fields = [
+            'last_name', 'first_name', 'middle_name', 'suffix',
+            'passport_id', 'drivers_license_id', 'umid_id', 'sss_id',
+            'prc_id', 'status', 'added_by', 'added_date', 'updated_by', 'updated_date'
+        ]
+
+        field_list = ', '.join(fields)
+        value_placeholders = ', '.join(['%s'] * len(fields))
+
+        query = f"""
+            INSERT INTO guest (
+                {field_list}
+            ) VALUES ({value_placeholders})
+        """
+
+        params = [getattr(guest, field) for field in fields]
+
+        last_insert_id = self.db_exec.execute_insert(query, params)
+        return last_insert_id
